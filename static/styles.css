@@ -10,7 +10,7 @@
 }
 
 body {
-  max-width: 45rem;
+  max-width: min(96%,45rem);
   margin: 3px auto;
 }
 
