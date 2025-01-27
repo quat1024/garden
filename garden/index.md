@@ -18,6 +18,8 @@ This is [my](https://highlysuspect.agency) public notes page!
 
 [Processing zip files in Java](zip)
 
+There might be more stuff in [the full listing](listing).
+
 ## What's not here
 
 * Class notes (which I should clean up for presentation)

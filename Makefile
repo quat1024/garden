@@ -4,21 +4,26 @@ static := static
 out    := out
 
 # surely theres a simpler glob syntax...
-garden-sources := $(shell find $(garden) -type f)
+garden-sources := $(shell find $(garden) -type f) $(garden)/listing.md
 garden-outs    := $(patsubst $(garden)/%.md,$(out)/%.html,$(garden-sources))
 
-static-sources := ${shell find $(static) -type f}
+static-sources := $(shell find $(static) -type f)
 static-outs    := $(patsubst $(static)/%,$(out)/%,$(static-sources))
 
-# target
 all: $(garden-outs) $(static-outs)
 
-# use pandoc to convert .md to .html files
-$(out)/%.html: $(garden)/%.md mytemplate.html filter.lua Makefile
+# listing.md contains links to all files other than listing.md
+$(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources)) Makefile
+	mkdir -p $(@D)
+	echo -e "# Listing\n\nAll files in my garden:\n" > $(garden)/listing.md
+	echo $(basename $(subst $(garden)/,,$(garden-sources))) | sed "s/ /\n/g" | sort | sed -E "s/(.*)/\* [\1](\/\1)/g" >> $(garden)/listing.md
+
+# create .html files from .md sources using pandoc
+$(out)/%.html: $(garden)/%.md mytemplate.html filter.lua
 	mkdir -p $(@D)
 	pandoc --from=markdown+autolink_bare_uris $< -o $@ --template=mytemplate.html --lua-filter=filter.lua
 
-# copy the rest as-is
+# copy static resources as-is
 $(out)/%: $(static)/%
 	mkdir -p $(@D)
 	cp $< $@
