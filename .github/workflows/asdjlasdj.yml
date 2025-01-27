@@ -28,7 +28,7 @@ jobs:
       - uses: pandoc/actions/setup@v1
         with:
           version: "3.6.2"
-      - run: make -j8
+      - run: make --always-make -j8
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

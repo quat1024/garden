@@ -28,7 +28,7 @@ $(out)/%: $(static)/%
 	mkdir -p $(@D)
 	cp $< $@
 
-.PHONY: clean serve open
+.PHONY: clean serve open push
 clean:
 	rm -rf ./out
 
@@ -37,3 +37,8 @@ serve:
 
 open:
 	start http://[::1]:8080
+
+push:
+	git add .
+	git commit -m "lazy commit"
+	git push
