@@ -1,6 +1,6 @@
 # "the essense of strategic programming" by eelco visser and joost visser
 
-[link to paper](https://www.researchgate.net/publication/2489573_The_Essence_Of_Strategic_Programming_-_An_inquiry_into_trans-paradigmatic_genericity?enrichId=rgreq-74b1a819e08311f073abb7b91a006cc0-XXX&enrichSource=Y292ZXJQYWdlOzI0ODk1NzM7QVM6OTkxMTY5MTQ4Mzk1NjdAMTQwMDY0MjcyMjgyNQ%3D%3D&el=1_x_2&_esc=publicationCoverPdf) (this url might still work idk) (open access)
+https://www.researchgate.net/publication/2489573 (open access)
 
 motivating example; imagine iterating over some fancy recursive structure, like
 a programming language AST

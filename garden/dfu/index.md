@@ -2,12 +2,14 @@
 
 In which I try to understand [DataFixerUpper](https://github.com/mojang/datafixerupper).
 
-## What's here
+## Individual papers
 
-about [The Essence Of Strategic Programming](/dfu/strategies)
+about [The Essence Of Strategic Programming](./strategies)
 
-about [Transformation of Structure-shy Programs](/dfu/structure-shy)
+about [Transformation of Structure-shy Programs](./structure-shy)
 
-about [Point Free Program Transformation](/dfu/pointfreeprogramtransformation)
+about [Point Free Program Transformation](./pointfreeprogramtransformation)
 
-[The Story So Far](/dfu/thestorysofar) (trying to put it all together)
+## Putting it all together
+
+["The Story So Far"](./thestorysofar)
