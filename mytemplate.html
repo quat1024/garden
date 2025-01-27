@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>$pagetitle$</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="$idprefix$toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+<footer>Back to <a href="/index.html">the garden</a> &dash; Email: <a href="mailto:quat@highlysuspect.agency">quat@highlysuspect.agency</a></footer>
+</body>
+</html>
