@@ -2,23 +2,27 @@
 
 This is [my](https://highlysuspect.agency) small [digital garden](garden), so my notes can stop rotting on my hard drive.
 
+There might be more pages in [the full listing](listing).
+
 ## What's here
 
-[Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
+Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 
-["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
+### Math and science
 
-[How does Maven work?](maven)
+* [Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
 
-[How does `tiny-remapper` work?](remapper) Definitely minecrafty.
+### Minecrafty stuff
 
-[How do you set up SSH keys?](sshkey)
+* ["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
+* [How does `tiny-remapper` work?](remapper)
 
-[Tmux cheat sheet](tmux)
+### General Java and computery topics
 
-[Processing zip files in Java](zip)
-
-There might be more stuff in [the full listing](listing).
+* [How does Maven work?](maven)
+* [Processing zip files in Java](zip)
+* [How do you set up SSH keys?](sshkey)
+* [Tmux cheat sheet](tmux)
 
 ## What's not here
 
