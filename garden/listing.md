@@ -10,7 +10,6 @@ All files in my garden:
 * [dfu/thestorysofar](/dfu/thestorysofar)
 * [index](/index)
 * [listing](/listing)
-* [listing](/listing)
 * [maven](/maven)
 * [remapper](/remapper)
 * [sshkey](/sshkey)

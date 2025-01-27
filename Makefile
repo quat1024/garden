@@ -13,10 +13,10 @@ static-outs    := $(patsubst $(static)/%,$(out)/%,$(static-sources))
 all: $(garden-outs) $(static-outs)
 
 # listing.md contains links to all files other than listing.md
-$(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources)) Makefile
+$(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
 	mkdir -p $(@D)
 	echo -e "# Listing\n\nAll files in my garden:\n" > $(garden)/listing.md
-	echo $(basename $(subst $(garden)/,,$(garden-sources))) | sed "s/ /\n/g" | sort | sed -E "s/(.*)/\* [\1](\/\1)/g" >> $(garden)/listing.md
+	echo $(basename $(subst $(garden)/,,$(garden-sources))) | sed "s/ /\n/g" | sort | uniq | sed -E "s/(.*)/\* [\1](\/\1)/g" >> $(garden)/listing.md
 
 # create .html files from .md sources using pandoc
 $(out)/%.html: $(garden)/%.md mytemplate.html filter.lua
