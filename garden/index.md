@@ -1,16 +1,16 @@
 # garden
 
-This is [my](https://highlysuspect.agency) public notes page!
+This is [my](https://highlysuspect.agency) small [digital garden](garden), so my notes can stop rotting on my hard drive.
 
 ## What's here
 
-[Collected notes on DataFixerUpper](/dfu/index)
+[Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
 
-[Apathy lang](apathylang)
+["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
 
 [How does Maven work?](maven)
 
-[How does `tiny-remapper` work?](remapper)
+[How does `tiny-remapper` work?](remapper) Definitely minecrafty.
 
 [How do you set up SSH keys?](sshkey)
 
