@@ -32,31 +32,7 @@ Forge for 1.5 and earlier did not ship binpatches; it was a jarmod you could pas
 
 Binpatches are contained in the file `binpatches.pack.lzma` inside release copies of Forge. Decompress with `LZMAInputStream` from `xz`, a `Pack200CompressorInputStream` from Apache Commons Compress, and finally a `ZipInputStream` from stock java. Oold versions of Apache Commons Compress contain a [broken Pack200CompressorInputStream](https://github.com/apache/commons-compress/pull/360), but a [workaround](https://github.com/apache/commons-compress/pull/360#issuecomment-1429003923) is possible.
 
-Client binpatches are stored in `binpatch/client/` and server binpatches are stored in `binpatch/server/`. The file format is defined in terms of Java's `DataInputStream`:
-
-* `readUtf()` - internal "name" field, only used in Forge for debugging printouts
-* `readUtf()` - source class name. The original name of the target class.
-* `readUtf()` - target class name. The MCP mapped name of the target class.
-  * This field exists because Forge applies binpatches during classloading.
-* `readBoolean()` - exists at target.
-  * If true, this patch modifies an existing class, if false, this is a "patch" that "patches" a 0-byte file into the desired class.
-* `if(existsAtTarget) readInt()` - Adler32 checksum of the original class. This field isn't written for `!existsAtTarget` patches.
-* `readInt()` - Length of the rest of the patch.
-
-immediately followed by a patch in the [Generic Diff Format](https://www.w3.org/TR/NOTE-gdiff-19970825.html).
-
-To apply binpatches statically:
-
-* Loop through class files in the vanilla jar, apply diffs where the vanilla class name equals the `sourceClassName` field of an `existsAtTarget` binpatch, and write the patched class.
-* Loop through `!existsAtTarget` binpatches, apply them to `new byte[0]`, and write the patched class under the name given in the `sourceClassName` field of the binpatch. (Not the target class name!)
-
-To apply binpatches at runtime:
-
-* When loading a vanilla class, first see if a binpatch exists with the same `targetClassName`. If so:
-  * If the patch `existsAtTarget`, get the bytes of the vanilla class with the corresponding `sourceClassName`, apply the patch, and return the patched class bytes.
-  * Otherwise, apply the patch to `new byte[0]` and return the patched class bytes.
-
-(Forge technically supports applying more than one binpatch to the *same* vanilla class, but AFAIK they never shipped any versions that do that.)
+**I've written more information about binpatching [on its own page](binpatches-pack-lzma).**
 
 ## Joining client and server jars
 

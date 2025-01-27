@@ -3,6 +3,7 @@
 All files in my garden:
 
 * [apathylang](/apathylang)
+* [binpatches-pack-lzma](/binpatches-pack-lzma)
 * [broken-bone](/broken-bone)
 * [dfu/index](/dfu/index)
 * [dfu/pointfreeprogramtransformation](/dfu/pointfreeprogramtransformation)

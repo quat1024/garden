@@ -47,6 +47,14 @@ blockquote::before {
 	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
 
+table {
+	border-collapse: collapse;
+}
+th, td {
+	border: 1px solid var(--linecolor);
+	padding: 3px;
+}
+
 footer {
   margin-top: 1.5rem;
   font-size: smaller;
