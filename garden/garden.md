@@ -30,6 +30,6 @@ I also think it's possible to work yourself into a corner trying to make your th
 
 ## Their gardens
 
-I like the famous [wikiblogarden](https://www.todepond.com/wikiblogarden/) by todepond. They just [write html](https://html.energy) and dont bother with this whole site-generator crap. Commendable.
+I like the famous [wikiblogarden](https://www.todepond.com/wikiblogarden/) by todepond.
 
 There's a [subreddit](https://www.reddit.com/r/DigitalGardens/). People seem to like Obsidian? I don't use Obsidian but that's cool. There's also a lot of commercial offerings. Somehow I feel like that goes against the spirit of the thing.
