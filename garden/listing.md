@@ -16,4 +16,5 @@ All files in my garden:
 * [remapper](/remapper)
 * [sshkey](/sshkey)
 * [tmux](/tmux)
+* [voldeloom-stages](/voldeloom-stages)
 * [zip](/zip)

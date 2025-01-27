@@ -15,6 +15,7 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 ### Minecrafty stuff
 
 * ["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
+* [How Voldeloom works at a high level.](voldeloom-stages). Very detailed.
 * [How does `tiny-remapper` work?](remapper)
 
 ### General Java and computery topics
