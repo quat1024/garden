@@ -8,6 +8,7 @@ All files in my garden:
 * [dfu/strategies](/dfu/strategies)
 * [dfu/structure-shy](/dfu/structure-shy)
 * [dfu/thestorysofar](/dfu/thestorysofar)
+* [garden](/garden)
 * [index](/index)
 * [listing](/listing)
 * [maven](/maven)
