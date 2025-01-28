@@ -11,6 +11,7 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 ### Math and science
 
 * [Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
+* [Reading OSTEP for class.](/ostep/index)
 
 ### Minecrafty stuff
 
