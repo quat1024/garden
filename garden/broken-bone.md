@@ -20,7 +20,7 @@ The orthopedics took one look at the x-ray and were like "these usually heal oka
 
 ## Now
 
-It's been about two weeks since the incident. It still hurts a lot to put weight on it, but I am able to walk a little if I put weight on my right heel and left leg. I have been spending a lot of time out of college lying on the floor. Contacted college disability services and they're going to help me schedule transportation when I'm feeling a *bit* more ready to walk around.
+It's been about two weeks since the incident. It still hurts a lot to put weight on it, but I am able to walk a little if I put weight on my right heel and left leg. I have been spending a lot of time out of college lying on the floor. Contacted college disability services and they're going to help me [schedule transportation](/wrong-abstraction) when I'm feeling a *bit* more ready to walk around.
 
 I can walk with one crutch sometimes. Two is better and easier, but then I don't have a free hand.
 
