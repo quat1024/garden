@@ -9,3 +9,5 @@ I'm [reading OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/) for an operating sy
 * A main theme of the book is ["virtualization"](./virtualization); the operating system pretending limited physical resources are more plentiful, or fooling programs into believing they have exclusive access over something they don't.
   * Accomplished with [timeslicing](./timeslicing), [virtual memory](./virtualmemory), and other techniques.
 * A [process](./processes) is some task that can have a turn on the CPU.
+
+Currently left off on chapter 6. I'm [behind the rest of the class](/broken-bone); going to catch up more later.
