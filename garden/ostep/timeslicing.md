@@ -19,4 +19,14 @@ They bring up the shortcomings of *cooperative multitasking*, in reference to Ma
 
 Later systems invented *preemptive multitasking*, which introduces a *context switch* mechanism. All of the CPU registers (including the program counter) are dumped into the process's *process control block* and execution returns to the process scheduler. The process scheduler picks a different process to run, loads *its* saved registers out of its process control block, and jumps back to where it was. The process continues, none the wiser it was interrupted for a bit.
 
-\[Include a link to the scheduling page, when I make one.\]
+## Limited direct execution
+
+You could make the [process](./processes) scheduler act like an emulator, simulating instructions one-by-one from the process it's "running" but never actually passing control to it. That way the scheduler always has control. It should be obvious why that's a bad idea.
+
+Instead we have *limited direct execution*. It's "direct execution", because the instructions in the process run directly on the CPU, but it's "limited" because we retain the ability to stop the process. How does that work?
+
+It's easy: a hardware timer interrupt. The process scheduler passes control directly to the program, but eventually the interrupt fires and the CPU jumps back to the process scheduler. Then the scheduler can choose to let that process continue running, or whether a different process gets a turn.
+
+### What happens when the timer interrupt fires when the process scheduler is already running
+
+Good question. Bad things would happen. That's why the kernel can disable interrupts.
