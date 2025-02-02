@@ -36,13 +36,4 @@ Then there's signals, process groups, owning users...
 
 ## Scheduling policies
 
-Which processes run when?
-
-If you have several processes all running concurrently, it makes sense to divide time equally between them. If you have several processes waiting on a network request, it makes sense to run *different* processes while those ones wait. Some processes (like moving the mouse pointer) are more important than others (like updating the on-screen digital clock)
-
-OSs have lots of process states, but it's possible to divide them into three categories:
-
-* *Running*. The process is currently the one using the CPU.
-* *Ready*. The process is not using the CPU, but if the scheduler decided to give it a turn, it's ready to go.
-* *Blocked*. The process is not using the CPU, and additionally, there's no reason for the process to run because it's waiting on another part of the system.
-  * For example, a program asks for the first character of a file. There's no reason to schedule the process until we get that first character, because we can't even allow that function to return without giving it a character to return with.
+[Scheduling](./scheduling)

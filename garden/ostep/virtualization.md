@@ -7,6 +7,7 @@ When I think of "virutalization" I think of VirtualBox, hypervisors, Docker, and
 Virtual resources are resources that are easier to share:
 
 * [*Timeslicing*](./timeslicing), allowing dozens of programs to have exclusive control over the CPU
+  * Each process is given a turn on the [scheduler](./scheduling)
 * [*Memory protection*](./virtualmemory) or *virtual memory*, allowing dozens of programs to think they have exclusive control over the memory
 
 and easier to work with:
