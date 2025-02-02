@@ -2,15 +2,14 @@
 
 *Note: I'm a functional programming beginner, this is just my understanding*
 
-Lean has very complicated syntax for function definitions.
+Lean has complicated syntax for function definitions. There are some reasons it's tricky to understand:
 
-There are some reasons it's so tricky to understand:
-
-* In order to write a dependently-typed function, you need some way of referring back to the types of previous function arguments, which means they need a name stuffed inside the type definition
-  * People like the syntax used for that, so they use that syntax even if they aren't writing dependently-typed functions (!)
+* In order to write a dependently-typed function, you need some way of referring back to the types of previous function arguments, which means they need syntax for cramming a name into the type definition
+  * People like this syntax, so they use it even if they aren't writing dependently functions (!)
   * This syntax looks different from more commonly-used languages like Haskell
+  * Named and non-named syntaxes can be mixed in the same function definition
 * There are some syntactical abbreviations for defining functions
-* Argument implicit-ness is also communicated in the type signature
+* Other information, like whether an argument is implicit, is communicated with sigils in the type signature
 
 ## Non-dependent function types
 
