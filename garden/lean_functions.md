@@ -5,7 +5,7 @@
 Lean has complicated syntax for function definitions. There are some reasons it's tricky to understand:
 
 * In order to write a dependently-typed function, you need some way of referring back to the types of previous function arguments, which means they need syntax for cramming a name into the type definition
-  * People like this syntax, so they use it even if they aren't writing dependently functions (!)
+  * People like this syntax, so they use it even if they aren't writing dependent functions (!)
   * This syntax looks different from more commonly-used languages like Haskell
   * Named and non-named syntaxes can be mixed in the same function definition
 * There are some syntactical abbreviations for defining functions
