@@ -27,14 +27,14 @@ def add : Nat → Nat → Nat := Nat.add
 
 ## Shorthand: Pattern matching definitions
 
-*Instead of* writing `:=`, you may continue with the body of a `match` expression. The match expression scrutinizes all arguments to the function. This is called a [pattern matching definition](https://lean-lang.org/functional_programming_in_lean/getting-to-know/conveniences.html#pattern-matching-definitions).
+*Instead of* writing `:=`, you may continue with the body of a `match` expression. The match expression will scrutinize all arguments to the function. This is called a [pattern matching definition](https://lean-lang.org/functional_programming_in_lean/getting-to-know/conveniences.html#pattern-matching-definitions).
 
 ```lean
 def add : Nat → Nat → Nat
 | a, b => a + b
 ```
 
-This desugars to a real `match` expression, so you can include as many arms as you want, and you must cover all cases.
+This desugars to a real `match` expression. You can include as many arms as you want and you must cover all cases.
 
 ```lean
 def add : Nat → Nat → Nat
@@ -56,9 +56,9 @@ def add (a: Nat) : Nat → Nat
 | b => a + b
 ```
 
-Notice how there is one fewer →, and in the pattern-matching function I cannot see `a` from the match arm. Do not get tricked: the type of the function is still `Nat → Nat → Nat`, as confirmed by `#check add`.
+Notice how there is one fewer `→`. Also notice how the pattern-matching statement has one fewer argument to match over. Do not get tricked: the type of `add` is still `Nat → Nat → Nat`, as confirmed by `#check add`.
 
-If you move more than one argument to the left of the colon, put whitespace between them. If you move all the arguments you won't have any → arrows left, and you can't use a pattern matching function (there is nothing left to pattern-match over).
+If you move more than one argument to the left of the colon, put whitespace between them. If you move all the arguments you won't have any `→` arrows left, and you can't use a pattern matching function (there is nothing left to pattern-match over).
 
 ```lean
 def add (a: Nat) (b: Nat) : Nat := a + b
@@ -97,7 +97,9 @@ Remember that `List Option String` parses as `List<Option, String>`, not as `Lis
 
 ## Named arguments in braces
 
-You may use braces instead of parenthesis around an argument to the left of the colon. This is now an "implicit argument". Lean tries to guess its value with type inference instead of requiring callers to write it. Very commonly used for type-generic functions like `List.filter` and `List.map`.
+You may use braces instead of parenthesis around an argument to the left of the colon. This is now an "implicit argument", and Lean tries to guess its value at the call site instead of requiring callers to write it.
+
+Most functions that take type parameters use implicit parameters for them.
 
 ```lean
 def twoOfThem {α : Type} : α → List α
@@ -109,7 +111,7 @@ def twoOfThem {α : Type} : α → List α
 
 This function still takes two arguments. It is a convenience only.
 
-There is also call-site syntax for explicitly specifying the value of an implicit argument.
+If you need to explicitly specifying the value of an implicit argument, there's syntax for that at the call site:
 
 ```lean
 #eval twoOfThem (α := UInt8) 5
@@ -117,7 +119,9 @@ There is also call-site syntax for explicitly specifying the value of an implici
 
 ## Typeclass arguments in square brackets
 
-If you mention a typeclass in square brackets to the left of the colon, you can use the typeclass inside the function. Of course, this is most useful when your function also takes type arguments.
+If you mention a typeclass in square brackets to the left of the colon, you can use the typeclass inside the function.
+
+Of course, this is most useful when type arguments appear inside the requested typeclass.
 
 ```lean
 def add {α : Type} [Add α] : α → α → α
@@ -167,7 +171,7 @@ def pear : α → β → α × β
 
 This acts exactly as if you had written `{α β : Type}` before the colon. The shortcut only applies if the Greek letters are otherwise undefined variables. Adding `def α = 5` above this code breaks it.
 
-Compare Haskell, which does the same thing (with lowercase ASCII letters, of course).
+Compare Haskell, which does the same thing with lowercase ASCII letters.
 
 ## Digression: ×
 
@@ -192,3 +196,5 @@ Sometimes `{α : Type}` is not enough and you need to explicity specify a univer
 The `universe` statement is a bit of a parser hack. Even though the `universe` statement appears at file-level, `u` and `v` stand for fresh universe variables in every type definition they appear in.
 
 When you use an undefined lowercase Greek letter as a type variable, Lean assumes it comes from a fresh type universe.
+
+All of this is probably wrong because I haven't looked into type universes very much.
