@@ -170,7 +170,7 @@ The object `inst` provides tangible evidence that `α` belongs to typeclass `Add
 
 Owing to the dependent types, Lean's typeclasses are unusual compared to nondependent languages. Conversion and coercion typeclasses like `OfNat` and `Coe` provide the value they're converting from as an argument *to the typeclass*, enabling typeclass implementers to only implement `OfNat` for an appropriate range of values, and typeclass users to only request `OfNat` implementations for the values they need. So don't be surprised if you see constants and non-type variables appearing within square brackets.
 
-### Aside: Non-generic typeclass arguments (for fun)
+### Digression: Non-generic typeclass arguments?
 
 Of course typeclass arguments are most useful when they depend on a type argument. You don't *need* type arguments in the square brackets, though:
 
@@ -179,7 +179,7 @@ def what [Inhabited Empty] {α : Type} : Unit → α
 | _ => Empty.rec (fun _ => α) default
 ```
 
-This function promises to turn `Unit` into any type `α` at all, as long as an instance of `Inhabited Empty` exists. It's impossible to create such an instance. Exactly analogous to how `False` implies everything, but no statements that prove `False` are correct.
+This function promises to turn `Unit` into any type `α` at all, as long as an instance of `Inhabited Empty` exists, which it doesn't.
 
 ## Shorthand: Repeated parentheized/braced types
 
