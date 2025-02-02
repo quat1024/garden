@@ -171,8 +171,6 @@ def pear : α → β → α × β
 
 This acts exactly as if you had written `{α β : Type}` before the colon. The shortcut only applies if the Greek letters are otherwise undefined variables. Adding `def α = 5` above this code breaks it.
 
-Compare Haskell, which does the same thing with lowercase ASCII letters.
-
 ## Digression: ×
 
 You're already familiar with using `→` as an infix type operator; i.e. you write `Nat → Bool` instead of something like `Function Nat Bool`. Another one to be aware of is `α × β`. This is a macro for `Prod α β`, the product (pair) type.
