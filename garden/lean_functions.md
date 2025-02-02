@@ -13,7 +13,7 @@ Lean has complicated syntax for function definitions. There are some reasons it'
 
 ## Non-dependent function types
 
-On the left, we declare that `add` has type `Nat → Nat → Nat`. On the right, we supply an expression of that type. This is no different from, say, `def greeting : String = "hello"`.
+On the left, we declare that `add` has type `Nat → Nat → Nat`. On the right, we supply an expression of that type. This is no different from, say, `def greeting : String := "hello"`.
 
 ```lean
 def add : Nat → Nat → Nat := (fun a b => a + b)
