@@ -26,6 +26,7 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 * [Processing zip files in Java](zip)
 * [How do you set up SSH keys?](sshkey)
 * [Tmux cheat sheet](tmux)
+* [How to read and write Lean function definitions](/lean_functions)
 
 ## What's not here
 
