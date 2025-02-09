@@ -1,3 +1,5 @@
+*Part of the [linear algebra notes](./index)*
+
 # Vectors
 
 Pretty familiar with these so wont take too many notes
@@ -24,3 +26,27 @@ Vectors where one component is 1 and all the other components are 0, aka the col
 Pointer in the direction of x, flip the bird in the direction of y, and the thumb is in the direction of z. There's two choices for a z that's perpendicular to both x and y, so the right hand rule decides for you.
 
 This is more accurately a right hand *convention*. The left-handed coordinate system isn't *wrong*, it's just a mirror image of the right-hand system.
+
+## Consequences of the dot product
+
+`A⬝B = |A||B|cos(θ)` where `|A|`, `|B|` denotes the length of `A` and `B`, and `θ` is the angle between the vectors. ( Two vectors always define a plane, so it always makes sense to talk about the angle between two vectors.)
+
+This looks like the law of cosines and it's not a coincidence (TODO fill this in, went over it in class)
+
+Vectors are perpendicular when they have 90 degrees between them. Cosine of 90 degrees is 0. So the dot product of perpendiculuar vectors is 0 exactly when the vectors are perpendicular.
+
+# Projections
+
+Book goes through this nice derivation:
+
+1. The projection of `u` onto `q` (denoted by `v`) would be a vector in the direction of `q` and with some length `|v|`.
+   
+   So you can write `v` as `|v| norm(q)`, where `norm(q)` is q normalized to 1 unit, i.e. `q / |q|`. This way the length of the vector is entirely determined by the `|v|` term, not the length of q.
+
+2. From the picture you can see that `|v| = |u|cos(θ)`. This is just right-triangle stuff from high school, nothing to do with the dot product
+
+   So you can write `v` as `|u| cos(θ) norm(q)`
+
+3. If you don't know `cos(θ)` you can compute it with the dot product: `cos(θ) = (u⬝q) / (|u||q|)`
+
+   So you can write `v` as `((|u| u⬝q) / (|u||q|)) norm(q)`, and then cancel the `|u|`s leaving `((u⬝q)/(|q|))norm(q)`
