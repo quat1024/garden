@@ -12,7 +12,7 @@ static-outs    := $(patsubst $(static)/%,$(out)/%,$(static-sources))
 
 all: $(garden-outs) $(static-outs)
 
-# listing.md contains links to all files other than listing.md
+# listing.md contains links to all files
 $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
 	mkdir -p $(@D)
 	printf "# Listing\n\nAll files in my garden:\n\n" > $(garden)/listing.md

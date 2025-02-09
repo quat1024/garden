@@ -45,4 +45,18 @@ In other words: A set of vectors is linearly independent if there is no way to c
 
 A matrix `M` is "nonsingular" if the only solution to `Mx = 0` is `x = 0`, which is the case only if it is linearly independent.
 
-I belieeeeeve only nonsingular matrices have a multiplicative inverse?
+Only nonsingular matrices have multiplicative inverses. All matrices with multiplicative inverses are nonsingular.
+
+# Inverses
+
+[Here](./inverse)
+
+## "Ill conditioned"
+
+Matrices `A` where small changes to `b` in `Ax=b` can result in large changes to `x`. This text doesn't define "small" and "large"; illconditionedness is a domain-specific classification, something that's useful to know if you're solving linear systems for some real-world application. The term comes from numerical analysis.
+
+You can spot ill-conditioned matrices because the inverse has big numbers when the regular matrix has small numbers. Book mentions the "Hilbert matrix", which is composed entirely of small unit fractions (half, third, fourth etc), but its inverse contains numbers as large as 4 million in the 6x6 case. (And, oddly enough, are all integers.)
+
+# Vectors
+
+[Over here](./vectors)
