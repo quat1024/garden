@@ -19,7 +19,7 @@ $1/$2/build/%.$$($3_osuf) : \
 
 *Real* software is more than a couple C89 files and a makefile.
 
-The makefile I use for this garden is somewhat atrocious as well. I'm not claiming this is *good* `make`, just -- these are the things that tend to happen when you use macro-expansion systems. `echo -e` didn't work on Github Actions so I had to replace it with `printf`; regular expressions, so elegant and beautiful, peppered with backslashes because they're in a string; basename subst garden comma comma dollar slash parens; awkwardly building Markdown lists out of sticks and rocks because I'm working at the level of text (but unix pipes are so elegant, right?).
+The makefile I use for this garden is somewhat atrocious as well. I'm not claiming this is *good* `make`, just -- these are the things that tend to happen when you use macro-expansion systems. `echo -e` didn't work on Github Actions so I had to replace it with `printf`; regular expressions, so "elegant" and "beautiful", further sullied by peppering them with backslashes; basename subst garden comma comma dollar slash parens; awkwardly building Markdown lists out of sticks and rocks because I'm working at the level of text (but unix pipes are so elegant, right?).
 
 ```make
 # listing.md contains links to all files
@@ -29,7 +29,9 @@ $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
 	echo $(basename $(subst $(garden)/,,$(garden-sources))) | sed "s/ /\n/g" | sort | uniq | sed -E "s/(.*)/\* [\1](\/\1)/g" >> $(garden)/listing.md
 ```
 
-God help me if I put a space in a filename. These "elegant" programs are dragging us back into the world of "special characters". I agree that the version of Make that exists in my head is an elegant system. The Make that actually exists is not.
+God help me if I ever put a space in a filename. These "elegant" programs are dragging us back into the world of "special characters".
+
+I agree that the version of Make that exists in my head is an elegant system. The Make that actually exists is not.
 
 > We are destroying software with an absurd chain of dependencies, making everything bloated and fragile.
 
