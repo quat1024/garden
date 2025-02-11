@@ -19,6 +19,7 @@ All files in my garden:
 * [linalg/inverse](/linalg/inverse)
 * [linalg/vectors](/linalg/vectors)
 * [listing](/listing)
+* [math-test](/math-test)
 * [maven](/maven)
 * [not-destroying](/not-destroying)
 * [note-notes](/note-notes)

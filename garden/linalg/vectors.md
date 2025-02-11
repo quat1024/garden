@@ -29,7 +29,7 @@ This is more accurately a right hand *convention*. The left-handed coordinate sy
 
 ## Consequences of the dot product
 
-`A⬝B = |A||B|cos(θ)` where `|A|`, `|B|` denotes the length of `A` and `B`, and `θ` is the angle between the vectors. ( Two vectors always define a plane, so it always makes sense to talk about the angle between two vectors.)
+$A⬝B = \|A\|\|B\|\cos(θ)$ where $\|A\|, \|B\|$ denotes the length of $A$ and $B$, and $θ$ is the angle between the vectors. (Two vectors always define a plane, so it always makes sense to talk about the angle between two vectors.)
 
 This looks like the law of cosines and it's not a coincidence (TODO fill this in, went over it in class)
 
@@ -37,16 +37,30 @@ Vectors are perpendicular when they have 90 degrees between them. Cosine of 90 d
 
 # Projections
 
+The projection of a vector $u$ onto a vector $q$ is denoted $\textbf{Proj}_q u$. (In other words, the function that projects vectors onto $q$ is written as $\textbf{Proj}_q$.)
+
 Book goes through this nice derivation:
 
-1. The projection of `u` onto `q` (denoted by `v`) would be a vector in the direction of `q` and with some length `|v|`.
+1. If $v = \textbf{Proj}_q u$, then $v$ is a vector in the direction of $q$ and with its own length $\|v\|$. So you can write $v$ as
    
-   So you can write `v` as `|v| norm(q)`, where `norm(q)` is q normalized to 1 unit, i.e. `q / |q|`. This way the length of the vector is entirely determined by the `|v|` term, not the length of q.
+   $$\|v\| norm(q)$$
+   
+   where $norm(q)$ is q normalized to 1 unit, i.e. $q / \|q\|$. This way the length of the vector is entirely determined by the $\|v\|$ term, not the length of q.
 
-2. From the picture you can see that `|v| = |u|cos(θ)`. This is just right-triangle stuff from high school, nothing to do with the dot product
+2. From the picture you can see that $\|v\| = \|u\|\cos(θ)$. This is just right-triangle stuff from high school, nothing to do with the dot product
 
-   So you can write `v` as `|u| cos(θ) norm(q)`
+   So you can write $v$ as
+   
+   $$\|u\| \cos(θ) norm(q)$$
 
-3. If you don't know `cos(θ)` you can compute it with the dot product: `cos(θ) = (u⬝q) / (|u||q|)`
+3. If you don't know $\cos(θ)$ you can compute it with the dot product: $\cos(θ) = (u⬝q) / (\|u\|\|q\|)$
 
-   So you can write `v` as `((|u| u⬝q) / (|u||q|)) norm(q)`, and then cancel the `|u|`s leaving `((u⬝q)/(|q|))norm(q)`
+   So you can write $v$ as
+   
+   $$\frac{\|u\| (u⬝q)}{\|u\|\|q\|} norm(q)$$
+   
+   and then cancel the $\|u\|$s leaving
+   
+   $$\frac{u⬝q}{\|q\|}norm(q)$$
+
+TODO  typeset this better lol

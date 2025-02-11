@@ -1,5 +1,14 @@
 * { box-sizing: border-box; }
 
+@font-face {
+	font-family: LibertinusMath;
+	src: url("/LibertinusMath-Regular.woff2") format("woff2");
+}
+
+math {
+  font-family: "LibertinusMath", "Cambria Math", serif;
+}
+
 :root {
 	font-family: sans-serif;
 	line-height: 1.3;

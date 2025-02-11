@@ -2,19 +2,19 @@
 
 # Matrix inverse
 
-For some real numbers `a`, there is a unique real number `b` such that `ab = 1`. `a = 5`, `b = 1/5`, for example. 1 is interesting because it is the multiplicative identity for real numbers (`1a = a`). Not every real number has an inverse (namely, 0).
+For some real numbers $a$, there is a unique real number $b$ such that $ab = 1$. One example is $a = 5, b = 5^{-1} = 1/5$. The product 1 is interesting because it is the multiplicative identity for real numbers ($1a = a$). Not every real number has an inverse (namely, 0).
 
-Matrices are similar: some matrices have an inverse matrix such that `AB` equals the identity matrix -- the multiplicative identity for matrices. 
+Matrices are similar: some matrices $A$ have an inverse matrix $A^{-1}$ such that $AA^{-1} = A^{-1}A =$ the identity matrix -- the multiplicative identity for matrices. The notation $A^{-1}$ is used because it's reminiscent of raising real numbers to the power $-1$.
 
 * Unlike real numbers, there are many matrices that lack a multiplicative inverse (not just 0).
   * We call matrices that *do* have an inverse "invertible".
-* There are two ways to multiply matrices (`AB` is not necessarily the same as `BA`), but the multiplication must result in the identity matrix in either direction.
+* There are two ways to multiply matrices ($AB$ is not necessarily the same as $BA$), but the multiplication must result in the identity matrix in either direction.
   * This implies all invertible matrices are *square*.
 * The inverse is unique.
 
 ## Noninvertible matrices
 
-Nonsquare matrices are clearly noninvertible (there is no *one* matrix where `AX` and `XA` are both defined, except for square matrices)
+Nonsquare matrices are clearly noninvertible (there is no *one* matrix where $AX$ and $XA$ are both defined, except for square matrices)
 
 Singular matrices (where one row or column can be reduced to all zeroes) are noninvertable.
 
@@ -24,61 +24,65 @@ Singular matrices (where one row or column can be reduced to all zeroes) are non
 ## Properties of the inverse
 
 * If one exists, the inverse is unique (so it makes sense to talk about "the" inverse)
-* if A and B are invertible then so is AB and its inverse is B'A'
+* if $A$ and $B$ are invertible then so is $AB$; its inverse is $B^{-1}A^{-1}$
 * The inverse of the inverse is the original
 * The transpose of the inverse is the inverse of the transpose
 
 ## Solving linear systems with the inverse
 
-Linear systems look like `Ax = b` where `A` is a matrix, `x` is an unknown vector, and `b` is a known vector.
+Linear systems look like $Ax = b$ where $A$ is a matrix, $x$ is an unknown vector, and $b$ is a known vector.
 
-Multiply both sides on the left by the inverse of `A` (which I will write as `A'` due to lack of latex support in my notes lol). Then you have `A'Ax=A'b`. The left side collapses to the identity matrix (by definition) times `x`, which equals `x`. Then you just need to find `A'b` which is a straightforward computation.
+Multiply both sides on the left by $A^{-1}$. Then you have $A^{-1}Ax=A^{-1}b$. The left side collapses to the identity matrix (by definition) times $x$, which equals $x$. Then you just need to find $A^{-1}b$ which is a straightforward matrix vector product.
 
 Inverting a matrix is a lot of work and not every matrix is invertible. So this method is best when:
 
-* you have a lot of equations `Ax = b_0`, `Ax = b_1`, `Ax = b_2` to solve. Finding `A'` will help you stamp out lots of solutions.
+* you have a lot of equations $Ax = b_0$, $Ax = b_1$, $Ax = b_2$ to solve. Finding $A^{-1}$ will help you stamp out lots of solutions.
 * you are using a computer.
 
 If you are working by hand and only have one matrix equation to solve it's usually easier to augment the matrix and do gaussian elimination.
 
 ## Finding the inverse
 
-* If `AB = I` then `A` times the first column of `B` equals the first column of `I`, which is also written as `e1`
-* If `AB = I` then `A` times the second column of `B` equals the second column of `I`, which is also written as `e2`
+* If $AB = I$ then $A$ times the first column of $B$ equals the first column of $I$, which is also written as $e_1$
+* If $AB = I$ then $A$ times the second column of $B$ equals the second column of $I$, which is also written as $e_2$
 * And so on
 
 One way to find the inverse is to solve all of those equations to reveal each column of B. (Or, symmetrically, reveal columns of A)
 
 Instead of setting up lots of little equations, you can solve them all at once. Make this
 
-```
-a b c 1 0 0
-d e f 0 1 0
-g h i 0 0 1
-```
+$$
+\begin{bmatrix}
+a&b&c&1&0&0\\
+d&e&f&0&1&0\\
+g&h&i&0&0&1
+\end{bmatrix}
+$$
+
 and row-reduce the whole thing. If the matrix is invertible, when row-reduced the left side looks like the identity matrix and the right side contains the inverse matrix
 
-```
-1 0 0 a' b' c'
-0 1 0 d' e' f'
-0 0 1 g' h' i'
-```
+$$
+\begin{bmatrix}
+1&0&0&a'&b'&c'\\
+0&1&0&d'&e'&f'\\
+0&0&1&g'&h'&i'
+\end{bmatrix}
+$$
 
-Basically you're solving "A adjoined with e1", "A adjoined with e2", and "A adjoined with e3" at the same time because the solutions don't interfere with each other.
+Basically you're solving "$A$ adjoined with $e_1$", "$A$ adjoined with $e_2$", and "$A$ adjoined with $e_3$" at the same time because the solutions don't interfere with each other.
 
 ## Inverse of a 2x2 matrix
 
 To invert
-```
-a b
-c d
-```
 
-first take
-```
-d -b
--c a
-```
-and divide by the determinant of the matrix `(ad-bc)`.
+$$
+\begin{bmatrix}a&b\\c&d\end{bmatrix}
+$$
 
-That's why the determinant being 0 implies a noninvertable matrix (you can't divide by the determinant)
+simply calculate
+
+$$
+\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}
+$$
+
+Note that $ad-bc$ is the determinant of the matrix. That's why the determinant being 0 implies a noninvertible matrix (you can't divide by the determinant)

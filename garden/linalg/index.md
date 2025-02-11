@@ -14,18 +14,18 @@ Matrix multiplication:
 
 * Not commutative.
 * It's associative, provided the shapes line up.
-* Not cancellable; AB = AC doesn't imply B = C
+* Not cancellable; $AB = AC$ doesn't imply $B = C$
 * Distributes over scalar addition.
 
 ## Transpose
 
-Flip it diagonally over a sloping-downwards 45° line. Rows become columns.Usually denoted with a superscript T but i don't have TeX in these notes.
+Flip it diagonally over a sloping-downwards 45° line. Rows become columns. Denoted with a superscript T.
 
-Distributes over addition `(A+B)' = A' + B'`.
+Distributes over addition: $(A+B)^T = A^T + B^T$.
 
-Sorta over multiplication `(AB)' = B'A'` - need to switch the order
+Sorta over multiplication $(AB)^T = B^{T}A^{T}$ - need to switch the order.
 
-"Symmetric" matrices: `A' = A`.
+"Symmetric" matrices are matrices where: $A^T = A$.
 
 If you take two column vectors, transpose the left one, and matrix-multiply them: you end up with the dot product. (Similar to how matrix multiplication is like taking a bunch of dot products.)
 
@@ -35,7 +35,7 @@ Has 1s on the diagonal line and 0s everywhere else. The identity for matrix mult
 
 # Linear independence
 
-Formal definition: If the only solution to `a1v1 + a2v2 + a3v3 + ... + anvn = 0` is `a1 = a2 = a3 = ... = an = 0`, where a1, a2, a3 are coefficients and v1, v2, v3 are the columns of the matrix.
+Formal definition: If the only solution to $a_1v_1 + a_2v_2 + a_3v_3 + ... + a_nv_n = 0$ is $a_1 = a_2 = a_3 = \cdots = a_n = 0$, where $a_1, a_2, a_3$ are coefficients and $v_1, v_2, v_3$ are the columns of the matrix.
 
 Pracitcal definition: Set the vectors up as columns in a matrix, one column per vector. Augment with a column of zeroes. Row-reduce. If the matrix is reducible to that matrix with 1s on the diagonal and 0s everywhere else, the vectors are linearly independent. Otherwise (if there is a row or column of zeroes), the vectors are linearly dependent.
 
@@ -43,7 +43,7 @@ In other words: A set of vectors is linearly independent if there is no way to c
 
 ## Singular matrices
 
-A matrix `M` is "nonsingular" if the only solution to `Mx = 0` is `x = 0`, which is the case only if it is linearly independent.
+A matrix $M$ is "nonsingular" if the only solution to $Mx = 0$ is $x = 0$, which is the case only if it is linearly independent.
 
 Only nonsingular matrices have multiplicative inverses. All matrices with multiplicative inverses are nonsingular.
 
@@ -53,7 +53,7 @@ Only nonsingular matrices have multiplicative inverses. All matrices with multip
 
 ## "Ill conditioned"
 
-Matrices `A` where small changes to `b` in `Ax=b` can result in large changes to `x`. This text doesn't define "small" and "large"; illconditionedness is a domain-specific classification, something that's useful to know if you're solving linear systems for some real-world application. The term comes from numerical analysis.
+Matrices $A$ where small changes to $b$ in $Ax=b$ can result in large changes to $x$. This text doesn't define "small" and "large"; illconditionedness is a domain-specific classification, something that's useful to know if you're solving linear systems for some real-world application. The term comes from numerical analysis.
 
 You can spot ill-conditioned matrices because the inverse has big numbers when the regular matrix has small numbers. Book mentions the "Hilbert matrix", which is composed entirely of small unit fractions (half, third, fourth etc), but its inverse contains numbers as large as 4 million in the 6x6 case. (And, oddly enough, are all integers.)
 
