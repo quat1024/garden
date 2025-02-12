@@ -25,3 +25,9 @@ It's been about two weeks since the incident. It still hurts a lot to put weight
 I can walk with one crutch sometimes. Two is better and easier, but then I don't have a free hand.
 
 Showering was hard but I've figured it out.
+
+## Later
+
+That stuff was written about 2 or 3 weeks ago. I've improved a lot; I am somewhat ambulatory on my own if I am careful. I still use crutches for safety and comfort because putting weight on my foot still does hurt, sometimes, if it's feeling like it.
+
+Transportation to and from school has been going swimmingly. I am happy to get back in class!
