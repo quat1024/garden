@@ -26,13 +26,19 @@ The dream is that you can add ten datapacks and they all act independently. This
 
 Apart from the usual overhead in parsing and validating commands, reading NBT, repeatedly selecting the same entities, etc etc etc: there is no generalized system for "event handlers". You cannot *react* to an event from a datapack, you must check every single tick if the conditions for the event are now met.
 
+There is one exception: you can jank something together with advancements, *if* the event you want to listen for is something Mojang decided an advancementis necessary for. Just remember to revoke the advancement immediately after it's granted -- which is more overhead, and not something you *ever* have to worry about with a real event system.
+
 ## Tags are a bad abstraction
 
 Tags can create lists of things that are in some way "the same". This is great if you want to add "more of the same", and is not useful if you want to add something actually *new*.
 
 By tagging your item with `boats` you can make it have a furnace burn time of 1200 ticks. By tagging an item with `banners` you can make it have a burn time of 300 ticks. If you want to make an item with a different burn time than the tags permit: too bad. If these tags are later bestowed with meaning other than "burn times", your items will pick that up too.
 
-Quilt experimented with some form of key-value tags; IIRC they never really caught on, but either way in order to give the values in a keyvalue tag some meaning, you need to write code.
+(Quilt experimented with some form of key-value tags; IIRC they never really caught on, but unless you plug the system into the scoreboard or whatever, in order to give the values in a keyvalue tag meaning, you need to write code either way.)
+
+## Data ossifies
+
+Making something configurable through JSON causes "special cases" to become against the grain. Going with the grain of JSON means that every recipe/loot-table/whatever functions in exactly the same way; the list of exceptions is small.
 
 ## Data is not code
 
