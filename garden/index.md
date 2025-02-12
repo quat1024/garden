@@ -21,7 +21,6 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 * [How Voldeloom works at a high level.](voldeloom-stages) Very detailed.
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
-* [Datapacks bad](datapacks-bad)
 
 ### General Java and computery topics
 
@@ -31,8 +30,14 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 * [Tmux cheat sheet](tmux)
 * [How to read and write Lean function definitions](/lean_functions)
 
+### These heinous things called "opinions"
+
+* [The wrong abstraction.](wrong-abstraction)
+* [No, we're not destroying software.](not-destroying)
+* [Datapacks bad](datapacks-bad)
+* [Always a student](always-a-student)
+* [Note notes](note-notes)
+
 ## What's not here
 
-* Class notes (which I should clean up for presentation)
-* Math notes (need to take some in the first place)
 * Anything useful or interesting

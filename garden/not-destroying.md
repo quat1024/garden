@@ -1,4 +1,4 @@
-# We are not destroying software
+# No, we're not destroying software
 
 Sigh. [The C programmers at at it again.](https://antirez.com/news/145)
 
