@@ -12,3 +12,9 @@ I'm [reading OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/) for an operating sy
 * The [scheduler](./scheduling) decides which processes get to run when.
 
 Currently left off on chapter 9. I'm [behind the rest of the class](/broken-bone); going to catch up more later.
+
+## Unsorted stuff
+
+Because if i spend time organizing notes instead of taking notes I'll never get anything done. Also I have a headache and homework is due soon.
+
+* On [memory](./memory)
