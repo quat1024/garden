@@ -22,7 +22,9 @@ You do have to, eventually, take the first step anyway.
 
 When I accomplish things, I feel good. Therefore, instead of spending time beating myself up because I haven't accomplished anything, I can spend the same time accomplishing a few things, safe in the knowledge that I will feel better about myself at the end of the day.
 
-When I finish a project right before it's due, I still feel stressed for some time after. When I finish a project days before it's due, I feel better over the same duration of time.
+When I finish a project right before it's due, I still feel stressed for some time after. When I finish a project days before it's due, I feel better over the same duration of time. If the project takes longer than expected, there's no need to rush.
+
+I don't always do this. I have submitted my fair share of projects at 11:59pm. But it is a motivator.
 
 ## Threshold
 
@@ -34,13 +36,15 @@ I find it easy to get distracted by social media websites. These websites make m
 
 Those damn Reddit links will still be there two hours from now. All my social media feeds are completely chronological. I wasn't going to read the entire Internet anyway. Why dwell on what I might miss?
 
+Recognize when you're genuinely keeping up with conversations and when you're playing notification-dot whack-a-mole. Are you clicking just to see *if* there's anything interesting going on?
+
 ## Time
 
-You're probably well aware of the sensation of 5 minutes slipping through your fingers. Are you aware of the sensation of doing work for 5 minutes? How many words you can write, problems you can solve? I'm always surprised by the answer.
+You're probably well aware of the sensation of 5 minutes slipping through your fingers. Are you aware of the sensation of doing work for 5 minutes? How many words you can write, problems you can solve? I'm always surprised by the answer. And I'm always surprised about how simple it was. Maybe another 5 minutes is called for.
 
 ## Ritual
 
-Get a nice glass of water that you only fill when you want to work. Find a place to sit and only sit there when you work. Click your phone off and put it face-down in a spot that you only put it when you want to work.
+Get a nice glass of water that you only fill when you want to work. Find a place to sit and only sit there when you want to work. Click your phone off and put it face-down in a spot that you only put it when you want to work. Use a nice pencil that you only use when you want to work. Log in to a user account that you only use when you want to work (and then don't sign in to Discord from it.)
 
 Find a timer that you only use when you want to work. Thoughtfully and intentionally set the timer and think about the action of putting it down.
 
