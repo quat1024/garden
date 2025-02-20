@@ -37,6 +37,7 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 * [Datapacks bad](datapacks-bad)
 * [Always a student](always-a-student)
 * [Note notes](note-notes)
+* [Executive function](executive-function)
 
 ## What's not here
 
