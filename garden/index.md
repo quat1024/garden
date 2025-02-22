@@ -41,4 +41,4 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 
 ## What's not here
 
-* Anything useful or interesting
+* Want to browse off this website as soon as possible? Click on something from [the link dump](link-dump).

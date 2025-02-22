@@ -21,6 +21,7 @@ All files in my garden:
 * [linalg/index](/linalg/index)
 * [linalg/inverse](/linalg/inverse)
 * [linalg/vectors](/linalg/vectors)
+* [link-dump](/link-dump)
 * [listing](/listing)
 * [math-test](/math-test)
 * [maven](/maven)

@@ -116,3 +116,7 @@ what does mouse mode enable:
 * drag border between panes to resize them
 * scroll with mouse wheel
 * probably more (i've noticed there is a special tmux selection mode that is different from the native terminal selection, hmm)
+
+## See also
+
+* Will Richardson's ["tmux.conf, With Commentary"](https://willhbr.net/2024/03/06/tmux-conf-with-commentary/)

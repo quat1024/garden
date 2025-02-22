@@ -51,3 +51,13 @@ Find a timer that you only use when you want to work. Thoughtfully and intention
 ## Detail
 
 There is a certain chunked-work technique named after a tomato-themed kitchen timer that happened to be available to the author. It advocates working in 25-minute chunks only because the author performed a short experiment and found 25 minutes was most acceptable to him, personally. You're not him.
+
+# Further reading
+
+You're only allowed to click these if you're not procrastinating on something by reading shit online. Okay?
+
+* [`productivity-or-something` tag](https://www.noidea.dog/blog/category/productivity-or-something) on Tanya Reilly's blog.
+* ["Tactics to keep up your motivation"](https://anaulin.org/blog/tactics-to-keep-up-your-motivation/) by Ana Ulin.
+* [Contexts, Frictions, and Distractions](https://www.marginalia.nu/log/99_context/) by Viktor (Margnialia).
+* [Scattered Thoughts on Why I Waste My Own Time](https://mbuffett.com/posts/wasting_time/) by Marcus Buffet
+* [1000s of years of Paper and No Real Digital Alternative](https://www.ductile.systems/1000s-of-years-of-paper/) by Michael Gattozzi.
