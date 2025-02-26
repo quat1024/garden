@@ -86,3 +86,9 @@ $$
 $$
 
 Note that $ad-bc$ is the determinant of the matrix. That's why the determinant being 0 implies a noninvertible matrix (you can't divide by the determinant)
+
+## "Ill conditioned"
+
+A matrix $A$ is "ill-conditioned" if small changes to $b$ in $Ax=b$ can result in large changes to $x$. This text doesn't define "small" and "large"; illconditionedness is a domain-specific classification, something that's useful to know if you're solving linear systems for some real-world application. The term comes from numerical analysis.
+
+You can spot ill-conditioned matrices because the inverse has big numbers when the regular matrix has small numbers. Book mentions the "Hilbert matrix", which is composed entirely of small unit fractions (half, third, fourth etc) but its inverse contains numbers as large as 4 million in the 6x6 case. (And, oddly enough, are all integers.)
