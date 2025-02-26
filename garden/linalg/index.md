@@ -110,7 +110,7 @@ The basis of the zero space is an empty set (instead of a set containing just th
 
 The size of that set.
 
-The dimension of the zero space is 0. The dimension of the smallest space containing $(1, 2)$ (aka a line) is 1. Planes are 2. Volumes are 3. Etc.vIt's like the number of different "directions" in the space.
+The dimension of the zero space is 0. The dimension of the smallest space containing $(1, 2)$ (aka a line) is 1. Planes are 2. Volumes are 3. Etc. It's like the number of different "directions" in the space.
 
 # Linear maps
 
