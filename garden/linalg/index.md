@@ -82,7 +82,7 @@ Why is matrix multiplication defined like that? Why can't it be easy and element
 
 ### Identity matrix
 
-A square matrix with 1s on the diagonal and 0s everywhere else. It's the identity for matrix multiplication (like the number `1` for scalar multiplication),both on the left and on the right.
+A square matrix with 1s on the diagonal and 0s everywhere else. It's the identity for matrix multiplication (like the number `1` for scalar multiplication), both on the left and on the right.
 
 ## Transpose
 

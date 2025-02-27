@@ -41,7 +41,7 @@ Here are some examples of vector spaces:
 
 When we talk about matrices as a vector space, we only worry about matrix-matrix addition and matrix-scalar scaling. We don't concern ourseles with matrix multiplication. Matrix multiplication *is* a useful operation, it just doesn't correspond to any vector space concepts.
 
-Similarly for polynomials/function spaces. When we talk about functions as a vector space, we are just concerning ourselves with the ability to add and scale functions. The act of *applying* the function to some particular $x$ doesn't correspond to any vector space concepts. That's why we can *talk about* functions like $f(x) = x^2 + 6$ as points in the space of polynomials, and we can perform linear algebra with the polynomials, even though $g$ is not a "linear function".
+Similarly for polynomials/function spaces. When we talk about functions as a vector space, we are just concerning ourselves with the ability to add and scale functions. The act of *applying* the function to some particular $x$ doesn't correspond to any vector space concepts. That's why we can *talk about* functions like $f(x) = x^2 + 6$ as points in the space of polynomials, and we can perform linear algebra with the polynomials, even though $f$ is not a "linear function".
 
 ## Subspaces
 
@@ -82,7 +82,7 @@ Consider any vector space $V$, and think about the subset containing *only* the 
 
 * It contains the zero element (by construction),
 * it is closed under addition (because $0+0=0$),
-* it is closed under scaling (because $a0 = 0$ for all $a$).
+* it is closed under scaling (because $a0 = 0$ for all real numbers $a$).
 
 So this subset is indeed a subspace. This is called the *zero subspace* of $V$.
 
@@ -91,6 +91,8 @@ So this subset is indeed a subspace. This is called the *zero subspace* of $V$.
 A minimal set of vectors which can be used to span an entire space.
 
 For example, the two vectors $(1, 0)$ and $(0, 1)$ are enough to span the entire real plane.
+
+Todo blah blah
 
 ### Dimension
 
@@ -118,7 +120,7 @@ You can also take 2x2 matrices to a real number by picking the upper-left corner
 
 ## Linear maps and matrix multiplication
 
-All matrices can be *used* as linear maps where $F(x) = Ax$. Here, $x$ stands for some a vector.
+All matrices can be *used* as linear maps where $F(x) = Ax$. Here, $x$ stands for some vector.
 
 Generally when we use a "space" term on a matrix $A$ (like, when we talk about the *span* of $A$, or the *dimension* of $A$) we are talking about the properties of the map $F(x) = Ax$.
 
@@ -150,13 +152,13 @@ In other words: A matrix can choose to send some values to 0, shrinking its colu
 
 ## Row space
 
-If the range space is the span of the column vectors, the row space is the span of the row vectors.
+The column space is the span of the column vectors, so the row space is the span of the row vectors.
 
 Important things to know:
 
 * Transposing a matrix swaps its row and column spaces. That makes sense.
-* Performing row operations *doesn't change the row space* (!)
+* Performing row operations *doesn't change the row space* (!). That's interesting!
 
 Therefore if you transpose a matrix, do row operations, and transpose it back, you preserve the column space. This is a great way to actually *state* the column space of a matrix in a simple form: transpose, reduce, transpose.
 
-Maybe you wonder why we have "row operations" and not "column operations". That's why: they are redundant.
+Maybe you wonder why we have "row operations" and not "column operations". This is why: they are redundant.
