@@ -20,6 +20,8 @@ All files in my garden:
 * [lean_functions](/lean_functions)
 * [linalg/index](/linalg/index)
 * [linalg/inverse](/linalg/inverse)
+* [linalg/matrices](/linalg/matrices)
+* [linalg/spaces](/linalg/spaces)
 * [linalg/vectors](/linalg/vectors)
 * [link-dump](/link-dump)
 * [listing](/listing)
