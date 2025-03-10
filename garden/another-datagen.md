@@ -1,13 +1,13 @@
 # Another way to do datagen
 
-Super late, writing this on my phone before bed. Link this before i forget https://codeberg.org/quat/templates-mod/src/commit/d748e7ca0fe27b25e30f81915951d9553433330d/src/dgen/java/io/github/cottonmc/templates/dgen/Dgen.java#L64
+Super late, writing this on my phone before bed.
 
 What's bad about datagen?
 
 - Poor locality. Generally you gen all the blockstates then gen all the item models then gen all the recipes. All of this stuff might "belong" to one piece of content but it's spread across ten files.
 - Too-loose coupling. Easy to forget the blockstate or whatever, out of sight out of mind.
-- Too-tight coupling. Sometimes you just want to pass an item ID as an argument, but the game makes you pass the actual `Item`.
-- Gentime/runtime distinction. The gentime code has little to do with the game so there's a large incentive to leave it out of the built jar.
+- Too-tight coupling. Sometimes you just want to pass an item ID as an argument but the game makes you pass the actual `Item`.
+- Gentime/runtime distinction. The gentime code has little to do with the game at runtime, so there's a large incentive to leave it out of the built jar, so there's large incentive to keep the coupling loose.
 - Churn, of course, because Mojang touches it
 
 Can we do better
@@ -32,19 +32,25 @@ Here are some facets that are less traditionally datagenned:
 
 ## Facet Holders
 
-A facet holder is anything with a bag of related facets. An item might have an associated lang entry, creative tab, and crafting recipe, for example, so it makes sense as a facet holder.
+A facet holder is anything with a bag of related facets. An "item" might have an associated lang entry, creative tab, and crafting recipe, for example, so it makes sense as a facet holder.
 
-The main purpose of creating specialized facet holders is building domain-specific languages over facets. The "add to lang file" facet requires a lang key and a value, but if you have an Item facet holder you can make a "give the item a name" function which can prefill the lang key
+The purpose of creating specialized facet holders is building a domain-specific languages over facets. The facet for assigning an item model requires a model and an item to assign it to. When you are working within an item's facet holder, you have the item ID available and don't need to manually thread it through.
 
-Importantly: There is no restriction on what facets you can add to what holders, there is no restriction on how many facets you can add, and it never matters *which* hole a facet was put in. The domain-specific language for some facet might prefill the ID for you but you can always pick a different one
+Importantly:
+
+- There is no restriction on what facets you can add to what holders,
+- there is no restriction on how many facets you can add of any type,
+- it never matters *which* holder a facet was put in. (it's always safe to slosh facets around between collections)
+
+The domain-specific language for a recipe facet might prefill the recipe ID based off the crafting result's ID, but you can always pick a different ID. Special-cases (like an item with two recipes or models or whatever) do not break the system.
 
 ## Implementation
 
-In templates I have a `Tmpl` holder which represents a block/item pair. They take the block id as an argument and then the double-brace init idiom is used https://codeberg.org/quat/templates-mod/src/commit/d748e7ca0fe27b25e30f81915951d9553433330d/src/dgen/java/io/github/cottonmc/templates/dgen/Dgen.java#L64 . The constructor sets the blockId variable and then the class initializer can use it.
+In templates I have a `Tmpl` holder which represents a block/item pair. The block ID is taken as argument and double-brace init idiom is used to execute code within that context. https://codeberg.org/quat/templates-mod/src/commit/d748e7ca0fe27b25e30f81915951d9553433330d/src/dgen/java/io/github/cottonmc/templates/dgen/Dgen.java#L64 .
 
 So i make a bunch of `Tmpl`s.
 
-Then i create a single giant FacetHolder, pour all the facets into it (plus a few more that don't belong to any `Tmpl`) and loop over them by type. Sometimes 1 facet = 1 json file, other times i loop over all facets of a type and collect then into one file
+Then i create a single giant FacetHolder, pour all the facets into it (plus a few more that don't belong to any `Tmpl`) and loop over each facet by type. Sometimes 1 facet = 1 json file, other times i loop over all facets of a type and collect then into a bug array which i write out as a json file.
 
 ## Facet types themselves
 
@@ -58,13 +64,54 @@ Then i create a single giant FacetHolder, pour all the facets into it (plus a fe
 
 ## Further work
 
-Anonymous classes work pretty well for this. You can just write `blockId` and get "the current" block id.
-
 I am very pleased with the locality.
 
-Something something good night it's getting late
+Templates really only adds one *kind* of thing twenty times, which is probably why I can get away with this. I'll have to wait and see how it works in a larger mod.
 
+I want the source of *truth* to live entirely within the datagen system -- i.e., I want datagen to drive the actual block registration code too. This means double-brace init will have to go, because I initialize a bunch of recipe shit that I have no business calling at runtime. It's just a matter of splitting the double brace init into gentime and runtime methods and calling the appropriate one.
 
+Instead of manually adding all FacetHolders into a list, I could scan my own classpath and look for classes with a certan annotation or a specific naming pattern (ex. looking for classes named `$Gen` means i can nest gen code for a block inside the block's class). I could even datagen *a list of gen classes* and load that at runtime instead of scanning the classpath ;)
 
+- construct the genclass
+- call a method like "prepareData" or "prepareRuntime" which takes a context grab-bag as parameter. ex the block facetholder will grab whatever it needs to make its `registerBlock()` function actually make a note to register the block
+- call the data or runtime functions
+- resolve all the facets. so you go through and (at gen time) write all the files (at run time) register all the blocks
 
+Sketch:
 
+```java
+class MyBlock {
+  public static final Id ID = MyMod.id("myblock");
+
+  //puts the runtime representation
+  //of MyBlock here as soon as it's available
+  @Inject
+  public static MyBlock inst;
+
+  // block code ...
+
+  static class Gen extends BlockFacetHolder {
+    //the zero-arg constructor would grab
+    //the block ID automatically from a field
+    //called "ID". you could override it
+
+    @Override void data() {
+      dropsSelf();
+      shapeless().add("minecraft:stick");
+    }
+
+    @Override void runtime() {
+      registerBlock(...);
+      blockEntity(MyBlockEntity.ID);
+    }
+  }
+}
+```
+
+And remember that you can do whatever wherever, if you wanted to make a sixteen colors block you could just put loops inside these methods and ignore or reassign the block/item id fields
+
+## Lessons
+
+- It is a lot more fun to use datagen when it's split out from the game and doesn't require waiting 100 years for the game to start.
+- Serializing your own json isn't that hard. In particular you don't need to write a deserializer which simplifies things a lot
+- Can lead to happy accidents like, well fuck if datagenning this is as easy as loading it at runtime, might as well try and make it loadable through a resourcepack
