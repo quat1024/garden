@@ -6,8 +6,6 @@ There might be more pages in [the full listing](listing).
 
 ## What's here
 
-Lately I'm dealing with a [broken bone](broken-bone) in my foot.
-
 ### Math and science
 
 * [Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
@@ -21,6 +19,7 @@ Lately I'm dealing with a [broken bone](broken-bone) in my foot.
 * [How Voldeloom works at a high level.](voldeloom-stages) Very detailed.
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
+* [Another way to do datagen](another-datagen)
 
 ### General Java and computery topics
 
