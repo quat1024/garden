@@ -31,3 +31,12 @@ Showering was hard but I've figured it out.
 That stuff was written about 2 or 3 weeks ago. I've improved a lot; I am somewhat ambulatory on my own if I am careful. I still use crutches for safety and comfort because putting weight on my foot still does hurt, sometimes, if it's feeling like it.
 
 Transportation to and from school has been going swimmingly. I am happy to get back in class!
+
+## Today
+
+Been about a month since that last section. I've been doing a lot better and I haven't used my crutches in a few days.
+
+The new problems are
+
+* need to re-learn how to walk -- I'd gotten in the habit of keeping my right foot flat and avoiding pushing on the toes, which I don't need to do anymore
+* generally just dealing with the fallout from two months of not walking. I am already in very poor shape and that didn't help. I should have done some exercises in bed or something
