@@ -30,7 +30,9 @@ I also think it's possible to work yourself into a corner trying to make your th
 
 ## Their gardens
 
-I like the famous [wikiblogarden](https://www.todepond.com/wikiblogarden/) by todepond.
+* I like the famous [wikiblogarden](https://www.todepond.com/wikiblogarden/) by todepond.
+* [Una's garden](https://garden.unascribed.com/).
+* [Arty's garden](https://garden.arty.gay/).
 
 There's a [subreddit](https://www.reddit.com/r/DigitalGardens/). People seem to like Obsidian? I don't use Obsidian but that's cool. There's also a lot of commercial offerings. Somehow I feel like that goes against the spirit of the thing.
 
