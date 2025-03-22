@@ -3,6 +3,7 @@
 All files in my garden:
 
 * [always-a-student](/always-a-student)
+* [another-datagen](/another-datagen)
 * [apathylang](/apathylang)
 * [binpatches-pack-lzma](/binpatches-pack-lzma)
 * [bool/index](/bool/index)
@@ -20,13 +21,13 @@ All files in my garden:
 * [lean_functions](/lean_functions)
 * [linalg/index](/linalg/index)
 * [linalg/inverse](/linalg/inverse)
-* [linalg/matrices](/linalg/matrices)
 * [linalg/spaces](/linalg/spaces)
 * [linalg/vectors](/linalg/vectors)
 * [link-dump](/link-dump)
 * [listing](/listing)
 * [math-test](/math-test)
 * [maven](/maven)
+* [mill](/mill)
 * [nook-simple-touch](/nook-simple-touch)
 * [not-destroying](/not-destroying)
 * [note-notes](/note-notes)
