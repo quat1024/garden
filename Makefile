@@ -29,7 +29,7 @@ $(out)/%: $(static)/%
 	cp $< $@
 	
 # run pagefind after creating all the html files
-$(out)/pagefind: $(static-outs)
+$(out)/pagefind: $(garden-outs) $(static-outs)
 	npx -y pagefind --site $(out)
 
 .PHONY: clean serve open push
