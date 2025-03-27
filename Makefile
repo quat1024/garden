@@ -10,7 +10,7 @@ garden-outs    := $(patsubst $(garden)/%.md,$(out)/%.html,$(garden-sources))
 static-sources := $(shell find $(static) -type f)
 static-outs    := $(patsubst $(static)/%,$(out)/%,$(static-sources))
 
-all: $(garden-outs) $(static-outs)
+all: $(garden-outs) $(static-outs) $(out)/pagefind
 
 # listing.md contains links to all files
 $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
@@ -21,12 +21,16 @@ $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
 # create .html files from .md sources using pandoc
 $(out)/%.html: $(garden)/%.md mytemplate.html filter.lua
 	mkdir -p $(@D)
-	pandoc --from=markdown+autolink_bare_uris $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml
+	pandoc --from=markdown+autolink_bare_uris+raw_attribute $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml
 
 # copy static resources as-is
 $(out)/%: $(static)/%
 	mkdir -p $(@D)
 	cp $< $@
+	
+# run pagefind after creating all the html files
+$(out)/pagefind: $(static-outs)
+	npx -y pagefind --site $(out)
 
 .PHONY: clean serve open push
 clean:

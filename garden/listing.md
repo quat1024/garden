@@ -41,6 +41,7 @@ All files in my garden:
 * [p2-republish](/p2-republish)
 * [rails](/rails)
 * [remapper](/remapper)
+* [search](/search)
 * [signify](/signify)
 * [sshkey](/sshkey)
 * [tmux](/tmux)
