@@ -39,6 +39,7 @@ All files in my garden:
 * [ostep/virtualization](/ostep/virtualization)
 * [ostep/virtualmemory](/ostep/virtualmemory)
 * [p2-republish](/p2-republish)
+* [rails](/rails)
 * [remapper](/remapper)
 * [signify](/signify)
 * [sshkey](/sshkey)
