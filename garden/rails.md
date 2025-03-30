@@ -125,3 +125,25 @@ you don't describe the shape of the database *directly*, but you describe how to
 `rails generate migration` helps you make a migration file. there are other arguments to append which set the name and prefill some bits of the migration (todo look those up). the current datetime is prepended to the file, so that `rails db:migrate` can run the migrations in order.
 
 theyve got activerecord ORM stuff so you dont write too much sql directly. thats the idea anyway.
+
+# databases
+
+i took a databases class before but yeah the basics
+
+* you have some objects
+* there's a primary key to identiy each object (afaik rails likes to use arbitrary object ids)
+* relationships between objects are "associations" in rails. which are foreign key constraints
+  * 1:n and n:1 just slap a field on one of the tables
+  * n:m needs a secondary table to hold the associations
+
+associations can have like, "on delete" actions
+
+```ruby
+class Student < ApplicationRecord
+  student belongs_to :team
+end
+
+class Team < ApplicationRecord
+  team has_many :students
+end
+```

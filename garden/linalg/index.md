@@ -125,3 +125,7 @@ Intuition: if a matrix does some transformation that sends two distinct points t
 # Vector spaces and subspaces
 
 [This way](./spaces). This is when linear algebra starts getting fun.
+
+# Eigenstuff
+
+[here](./eigen)

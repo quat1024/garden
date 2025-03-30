@@ -19,6 +19,7 @@ All files in my garden:
 * [garden](/garden)
 * [index](/index)
 * [lean_functions](/lean_functions)
+* [linalg/eigen](/linalg/eigen)
 * [linalg/index](/linalg/index)
 * [linalg/inverse](/linalg/inverse)
 * [linalg/spaces](/linalg/spaces)
