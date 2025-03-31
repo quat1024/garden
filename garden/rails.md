@@ -135,6 +135,7 @@ i took a databases class before but yeah the basics
 * relationships between objects are "associations" in rails. which are foreign key constraints
   * 1:n and n:1 just slap a field on one of the tables
   * n:m needs a secondary table to hold the associations
+* foreign key should be "primary key" or "candidate key"
 
 associations can have like, "on delete" actions
 

@@ -23,12 +23,12 @@ It feels like it'd be easier to find the eigenvectors then look for their values
 
 The usual trick is to subtract some number from everything along the diagonal and tweak the number until the determinant equals 0.
 
-\[A = \begin{bmatrix}a - λ & b \\ c & d - λ\end{bmatrix}\]
-\[det A = (a-λ)(d-λ) - (bc)\]
+$$A = \begin{bmatrix}a - λ & b \\ c & d - λ\end{bmatrix}$$
+$$det A = (a-λ)(d-λ) - (bc)$$
 
 This is a quadratic and meh. Theres a good 3blue1brown about what this exactly means. ANyway so you'll get some solutions of λ, so you plug those lambdas into
 
-\[(A - λ_{i}I)x = 0\]
+$$(A - λ_{i}I)x = 0$$
 
 for each eigenvalue $λ_0$, $λ_1$ etc, where $x$ is the eigenvector you're looking for, and $λ_{i}I$ is like the identity matrix but with $λ_{i}$ in place of 1's on the diagonal.
 
@@ -37,3 +37,7 @@ for each eigenvalue $λ_0$, $λ_1$ etc, where $x$ is the eigenvector you're look
 you might have equations like $(1-λ)(1-λ)(2-λ)$
 
 it still has 3 eigen vectors even though it's $(1-λ)^{2}(2-λ)$
+
+## eigenspace
+
+uhhhhh

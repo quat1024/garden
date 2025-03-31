@@ -10,7 +10,11 @@ garden-outs    := $(patsubst $(garden)/%.md,$(out)/%.html,$(garden-sources))
 static-sources := $(shell find $(static) -type f)
 static-outs    := $(patsubst $(static)/%,$(out)/%,$(static-sources))
 
-all: $(garden-outs) $(static-outs) $(out)/pagefind
+.PHONY: no-search all
+
+# default target (pagefind is a lil slow)
+no-search: $(garden-outs) $(static-outs)
+all: no-search $(out)/pagefind
 
 # listing.md contains links to all files
 $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))

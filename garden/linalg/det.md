@@ -34,12 +34,62 @@ Multiplying a column by a scalar $c$ multiplies the det by the same scalar. (Vis
 
 Adding one row to another does nothing to the determinant. (neat) Even adding a *multiple* of one row to another does nothing to the determinant.
 
-### easy ways to find the det
+### using this to find the det
 
-Because row operations do predictable things to the determinant, instead of doing a gigantic cofactor expansion you can simplify the matrix; maybe into a triangular one. Then find the determinant of that and work back.
+Because row operations do predictable things to the determinant, instead of doing a gigantic cofactor expansion, you can simplify the matrix. Then find the determinant of that and work back. Adding rows to each other is the easiest way because it does nothing to the det. But other things like scaling a row is possible, and might be useful to avoid fractions.
 
-Adding rows to each other is the easiest way because it does nothing to the det. But other things like scaling a row is possible and might be useful to avoid fractions
+Don't forget column operations!
+
+* If you end up with a row or column that's all zeroes, you instantly know the det is 0
+  * Corollary: If you end up with two identical rows or two identical columns, you instantly know the det is 0
+* If you end up with a row or column that's all zeroes except for one digit, take that digit out, find the det of the corresponding minor, and multiply the two
+
+$$\det\begin{bmatrix}0&0&x&0\\1&2&3&4\\5&6&7&8\\9&10&11&12\end{bmatrix} = x\det\begin{bmatrix}1&2&4\\5&6&8\\9&10&12\end{bmatrix}$$
+
+Don't forget the correct sign. It's this type of grid anchored at the top left
+
+$$\begin{bmatrix}+&-&+&-\\-&+&-&+\\+&-&+&-\\-&+&-&+\end{bmatrix}$$
+
+Repeat until you have a 2x2 which are easy to find the det of.
 
 ## matrix operations and the det
 
-$det(AB) = det(A)det(B)$. It multiplies, but doesn't add. In general $det(A+B) ≠ det(A) + det(B)$. The visual interpretation is clear (scale by x then scale by y -> scale by xy)
+$\det(AB) = \det(A)\det(B)$. Visual interpretation: scale by x then scale by y -> scale by xy
+
+$\det(A^{-1}) = 1/\det(A)$. Visual interpretation: changing a "scale up by 3" into a "scale down by 3" or somesuch.
+
+(It multiplies, but doesn't add; in general $\det(A+B) ≠ \det(A) + \det(B)$. )
+
+Remember that $\det(A^T) = \det(A)$.
+
+## diagonalizable matrices and the det
+
+A matrix $A$ is *diagonalizable* if it can be written as $BDB^{-1}$ for some matrix $B$ and some *diagonal* matrix D.
+
+The opposite of diagonalizable is *defective*. For example, a rotation matrix is defective because it is not diagonalizable (because it has no nontrivial eigenvectors).
+
+Every symmetric matrix is diagonalizable.
+
+If $A$ is diagonalizable and you have $B$ and $D$, then computing the determinant is easy: $\det(A) = \det(B)\det(D)\det(B^{-1})$, but since $\det(B^{-1}) = 1/\det(B)$ the terms cancel and $\det(A) = \det(D)$; and since $D$ is diagonal the determinant is just the product of its diagonal.
+
+How do you find it: by a process inspired by polynomial long division or something???? Smething something characteristic polynomial (Im gonna be honest i'm not paying attention in class)
+
+### why talk about this in relation to eigenvectors?
+
+$BDB^{-1}$ looks a lot like a change-of-basis and that's not a mistake:
+
+* Diagonalizable matrices are *anisotropic scaling* matrices: they're scaling matrices which can scale along the axes in different amounts.
+* Because an anisotropic scaling scales along the axes, and because each vector is axis-aligned (b/c it only has one nonzero entry in the vector), this means every basis vector is an eigenvector (called an *eigenbasis*.)
+* So $B$ is the change-of-basis required to *axis-align the eigenvectors of $D$.*
+
+Pretty interesting
+
+https://en.wikipedia.org/wiki/File:Diagonalization_as_rotation.gif <- this specific visual intuition only works when the matrix is symmetric i guess?? but it's the thought that counts
+
+### fun
+
+If $A$ is diagonalizable, then finding $A^p$ is easier than doing $(p-1)$ matrix multiplications.
+
+$$A^5 = (BDB^{-1})^5 = BDB^{-1}BDB^{-1}BDB^{-1}BDB^{-1}BDB^{-1} = BDDDDDB^{-1} = BD^5D^{-1}$$
+
+and $D$ is diagonal so finding its fifth power can be done elementwise.
