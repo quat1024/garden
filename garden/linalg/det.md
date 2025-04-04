@@ -86,6 +86,14 @@ Pretty interesting
 
 https://en.wikipedia.org/wiki/File:Diagonalization_as_rotation.gif <- this specific visual intuition only works when the matrix is symmetric i guess?? but it's the thought that counts
 
+## which matrices are diagonalizable
+
+ummm, i guess if it has "enough" different eigenvectors. like a 2x2 matrix should have at least 2 non-colinear nonzero vectors which are eigenvectors
+
+i guess another way of saying that - a matrix is diagonalizable if it has an *eigenbasis* which spans the whole space. (because if there are $n$ distinct noncolinear eigenvectors on an $n×n$ matrix, that is by definition a basis)
+
+
+
 ### fun
 
 If $A$ is diagonalizable, then finding $A^p$ is easier than doing $(p-1)$ matrix multiplications.

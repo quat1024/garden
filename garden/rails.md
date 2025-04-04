@@ -148,3 +148,32 @@ class Team < ApplicationRecord
   team has_many :students
 end
 ```
+
+# alright whats in this next class
+
+```ruby
+class User < ApplicationRecord
+(..something...) password validates: has_secure_password
+```
+
+can add the `bcrypt` gem like `gem "bcrypt", "~> 3.1.7"`
+
+`rails g migration add_pasword_to_users password_digest:string`
+
+there was a little script with `faker` to add fake users for testing
+
+## another class whatever
+
+`rails generate migration add_password_to_users password_digest:string`
+
+`rails generate controller user index new show edit`
+
+typical crud apis:
+
+* GET `/users` - action "index" - show everyone
+* GET `/users/1` - action "show" - show one user
+* GET `/users/new` - action "new" - form to make a new user
+* POST `/users` - action "create" - endpoint to make a new user
+* GET `/users/1/edit` - action "edit" - form to edit a user
+* PATCH `/users/1` - action "update" - endpoint to edit a user
+* DELETE `/users/1` - action "delete" - delete a user
