@@ -2,6 +2,7 @@
 
 All files in my garden:
 
+* [ai-error-diagnosis](/ai-error-diagnosis)
 * [always-a-student](/always-a-student)
 * [another-datagen](/another-datagen)
 * [apathylang](/apathylang)
@@ -41,6 +42,7 @@ All files in my garden:
 * [ostep/virtualization](/ostep/virtualization)
 * [ostep/virtualmemory](/ostep/virtualmemory)
 * [p2-republish](/p2-republish)
+* [protest-registering](/protest-registering)
 * [rails](/rails)
 * [remapper](/remapper)
 * [search](/search)

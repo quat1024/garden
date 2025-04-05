@@ -29,19 +29,25 @@ Anyway, user B shows up and pastes this wall-of-text into the discord channel. I
 >
 > Repeated lines like this show up:
 >
->    Cowardly refusing to send event [...] to a broken mod state
+> ```
+> Cowardly refusing to send event [...] to a broken mod state
+> ```
 >
 > This means NeoForge (mod loader) is identifying one or more mods as broken and is refusing to initialize events like `TextureAtlasStitchedEvent`, `EntityRenderersEvent$CreateSkullModels`, etc. These are important for rendering textures and models.
 > 
 > ## 2. Shader Issue
 >
->    Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2
+> ```
+> Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2
+> ```
 >
 > This indicates a missing or improperly configured shader. This could be from a mod with custom shaders.
 > 
 > ## 3. Crash Report
 > 
->    [Render thread/FATAL] [...] Crash report saved to [...]\crash-2025-04-02_17.55.01-fml.txt
+> ```
+> [Render thread/FATAL] [...] Crash report saved to [...]\crash-2025-04-02_17.55.01-fml.txt
+> ```
 > 
 > This confirms a full crash occurred during the render thread’s attempt to load or render assets.
 > 
@@ -55,8 +61,10 @@ Anyway, user B shows up and pastes this wall-of-text into the discord channel. I
 >
 > 1. Check crash report file: Located at
 > 
->    C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
->
+> ```
+> C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
+> ```
+> 
 > 2. Update all mods: Make sure they’re compatible with your version of Minecraft and NeoForge.
 > 3. Narrow down the cause: Temporarily remove mods and reintroduce them one by one to isolate the issue.
 
@@ -68,7 +76,9 @@ Here it is again with my comments interspersed.
 >
 > Repeated lines like this show up:
 >
->    Cowardly refusing to send event [...] to a broken mod state
+> ```
+> Cowardly refusing to send event [...] to a broken mod state
+> ```
 >
 > This means NeoForge (mod loader) is identifying one or more mods as broken and is refusing to initialize events like `TextureAtlasStitchedEvent`, `EntityRenderersEvent$CreateSkullModels`, etc. These are important for rendering textures and models.
 
@@ -80,7 +90,9 @@ When you see these "cowardly refusing to send event to ..." lines, the best thin
 
 > ### 2. Shader Issue
 >
->    Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2
+> ```
+> Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2
+> ```
 >
 > This indicates a missing or improperly configured shader. This could be from a mod with custom shaders.
 
@@ -88,7 +100,9 @@ When you see these "cowardly refusing to send event to ..." lines, the best thin
 
 > ### 3. Crash Report
 > 
->    [Render thread/FATAL] [...] Crash report saved to [...]\crash-2025-04-02_17.55.01-fml.txt
+> ```
+> [Render thread/FATAL] [...] Crash report saved to [...]\crash-2025-04-02_17.55.01-fml.txt
+> ```
 > 
 > This confirms a full crash occurred during the render thread’s attempt to load or render assets.
 
@@ -112,13 +126,15 @@ The main Minecraft client thread just happens to be called "Render thread". It d
 
 > * Possible resource loading failure (like animations, textures, or shaders).
 
-Lol.
+Only technically correct. A lot of shit happens during "resource loading" other than animations/textures/shaders.
 
 > ### What You Can Do
 >
 > 1. Check crash report file: Located at
 > 
->    C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
+> ```
+> C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
+> ```
 
 Again, this is already the file that the user uploaded.
 
@@ -138,8 +154,10 @@ More generic broadly-applicable advice.
   >
   > You already uploaded the crash report located at:
   > 
-  >     C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
-  > 
+	> ```
+  > C:\Users\???\AppData\Roaming\.minecraft\crash-reports\crash-2025-04-02_17.55.01-fml.txt
+  > ```
+	> 
   > Have you tried looking in there? Huh?
   
   helps nobody.
