@@ -118,6 +118,8 @@ Also, here we see the AI starting to go off on a weird tangent about "the render
 
 The main Minecraft client thread just happens to be called "Render thread". It does rendering, sure, but also does other stuff. Much of the initial game-boot process happens on "the render thread". So just because a thread named "Render thread" crashed doesn't mean something is wrong with specifically rendering.
 
+Oh, and the thread that crashed was `Worker-Main-5`, not the render thread. There were a bunch of unrelated, non-crashing "render thread" problems in the log, though?
+
 > * Mod compatibility issues (some mods may not work well with others or with your game version).
 
 "some mods may not work well with others": Here we finally have some actual advice, although it's extremely generic and probably something you already knew.
