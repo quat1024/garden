@@ -27,6 +27,8 @@ Unsurprisingly this is the largest category.
 * [The TTY](https://www.linusakesson.net/programming/tty/).
 * ["A more modern CSS reset"](https://piccalil.li/blog/a-more-modern-css-reset/).
 * ["How Google is killing independent sites like ours"](https://housefresh.com/david-vs-digital-goliaths/).
+* [Something about old JS promises (without async/await)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) that i liked
+* [Streaming iframe hack](https://jakearchibald.com/2016/fun-hacks-faster-content/)
 
 ## Academia
 
