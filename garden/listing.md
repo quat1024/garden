@@ -24,6 +24,7 @@ All files in my garden:
 * [linalg/eigen](/linalg/eigen)
 * [linalg/index](/linalg/index)
 * [linalg/inverse](/linalg/inverse)
+* [linalg/more](/linalg/more)
 * [linalg/spaces](/linalg/spaces)
 * [linalg/vectors](/linalg/vectors)
 * [link-dump](/link-dump)
