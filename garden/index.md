@@ -12,6 +12,7 @@ There might be more pages in [the full listing](listing).
 * [Reading OSTEP for class.](/ostep/index)
 * [Linear algebra stuff](/linalg/index)
 * [Boolean algebra stuff](/bool/index) (for an engineering class)
+* somethin about [Rails](/rails/index)
 
 ### Minecrafty stuff
 

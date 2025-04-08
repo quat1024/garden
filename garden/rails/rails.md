@@ -177,3 +177,200 @@ typical crud apis:
 * GET `/users/1/edit` - action "edit" - form to edit a user
 * PATCH `/users/1` - action "update" - endpoint to edit a user
 * DELETE `/users/1` - action "delete" - delete a user
+
+# these notes are a mess
+
+let's start over
+
+## bigger picture
+
+rails is a model-view-controller framework
+
+* the model: the bit that talks to the database. this is handled with an ORM called Active Record
+* the view: the bit that renders html. this is done with erb templates (it's called "active view")
+* the controller: vaguely-defined glue beteween everything else.
+* there's also a routing table which decides which controller to use for a given request.
+
+probably the most important thing: methods in the controller configure the view basically. when you set instance-variables (`@var`) you can read `@var` from the erb template
+
+basically dhh likes the word Active like how mr melon musk likes the letter x
+
+## routing
+
+https://guides.rubyonrails.org/routing.html
+
+the most general syntax:
+
+```ruby
+get "/users/:id", controller: "users", action: :show
+```
+
+get -> the HTTP verb, there are ruby methods for each verb.
+
+controller -> the controller to pass this to. this corresponds to some file in the controllers directory. (if there's more than one word, you need to snake_case it)
+
+show -> the method to call inside the controller. this is a symbol
+
+the routing file is interpreted top-to-bottom and the first matching rule will work
+
+### "to" shorthand
+
+you can glue `controller` to `action` by using `to` instead
+
+```ruby
+get "/users/:id", to: `users#show`
+```
+
+### "resources" shorthand
+
+this set of eight routes 
+
+```ruby
+get    "/photos"         , to: "photos#index"   # list photos
+get    "/photos/new"     , to: "photos#new"     # form for making photo
+post   "/photos"         , to: "photos#create"  # endpoint for making photo
+get    "/photos/:id"     , to: "photos#show"    # show photo
+get    "/photos/:id/edit", to: "photos#edit"    # form for editing photo
+patch  "/photos/:id"     , to: "photos#update"  # endpoint for editing photo
+put    "/photos/:id"     , to: "photos#update"  # endpoint for editing photo (2)
+delete "/photos/:id"     , to: "photos#destroy" # delete photo
+```
+
+can be abbreviated simply as 
+
+```ruby
+resources :photos
+```
+
+if you only want a few of these, use `only: `. for example
+
+```ruby
+resources :photos, only: [:index, :show, :edit, :update]
+```
+
+and if you want to move it, use `path: `.
+
+```ruby
+resources :things, path: "/some/path/things`
+```
+
+### "resource" shorthand
+
+afaik this is basically `resources :thing` but doesn't include `:index` and with different rules about pluralization
+
+### path helpers
+
+every route comes with two "route helpers", global variables that contain paths to the route
+
+for example
+
+```ruby
+get "/foo", to: "foo#index"
+```
+
+defines
+
+* `foo_path`, containing `/users`
+* `foo_url`, containing `https://example.com/users`
+
+also, somehow this works (this is from the example)
+
+```ruby
+get "/users/:id", to: "users#show", as: "user"
+
+#...
+
+<%= link_to 'User Record', user_path(@user) %>
+```
+
+(`as` gives an explicit name for the route helpers)
+
+so this time `user_path` and `user_url` are functions that take a `User` object and presumably plucks out its id. `user_path` is like a way of saying "url to this user". imagine you're emitting, like, a comments section and want to link to each user: yeah.
+
+if you want to make your own url helpers, use `direct :helper_name do` and return a `url_for`rable thing in there (string, hash, array, activemodel instance or class)
+
+from the guide.
+
+```ruby
+direct :homepage do
+  "https://rubyonrails.org"
+end
+
+# >> homepage_url
+# => "https://rubyonrails.org"
+```
+
+### listing routes
+
+the `rails routes` command will parse your routes table and list them all
+
+### namespaces
+
+```
+namespace :admin do
+  resources :articles
+```
+
+this puts the `articles` routes under `/admin`, i.e. `/admin/articles/new`
+
+the controller is also namespaced. it will look for `Admin::ArticlesController`
+
+* to namespace only the controller, use `scope module: "admin"`. stuff inside the block is still routed at the top-level but it will look for `Admin::ArticlesController`
+* to scope only the routes, use `scope "/admin"`. this will nest all the routes under `/admin`, but the controller is still `ArticlesController` without the module
+
+## nested routes
+
+now we're at the good stuff
+
+if you have two models
+
+```ruby
+class Post < ApplicationRecord
+  has_many :comments
+end
+
+class Comment < ApplicationRecord
+  belongs_to :post
+end
+```
+
+then this makes sense
+
+```ruby
+resources :posts do
+  resources :comments
+end
+```
+
+this creates routes for posts and also creates routes for comments. for example `get /posts/:post_id/comments/:comment_id/edit`. the url helpers take a `Post` and a `Comment` record
+
+you can nest routes as deeply as you like but it does kinda become a mess. the right amount of nesting depends on what you want the urls to look like.
+
+## optional segments
+
+`get "photos(/:id)", to: "photos#display"` routes both `/photos/:id` and `/photos` to `photos#display`. this controller should handle the case where the parameter is not present
+
+## wildcard segments
+
+`get "photos/*id"`, the id can contain slashes.
+
+## routing-table level redirections
+
+`get "/stories", to: redirect("/articles")`
+
+this serves a 301 by default. you can serve a 302 like this
+
+`get "/stories", to: redirect("/articles", status: 302)`
+
+## "Rack applications"
+
+"Rack" is a ruby standard for web server middleware. a "rack application" is anything with a function `call` that returns `[status, headers, body]`.
+
+you can specify a rack application in `to` instead of a string. The guide mentions that when rails sees a string in `to` (say `posts#index`), it expands that to `PostsController.action(:index)` and that is a rack application. probably somewhere in rails machinery
+
+## `root`
+
+```ruby
+root to: "posts#index"
+root "posts#index" # same thing
+```

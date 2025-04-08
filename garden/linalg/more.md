@@ -13,3 +13,21 @@ how to find $P$? they give the equation $P_i = [u_i]_C$, where $u_1, u_2, u_3$ r
 this leads to another, smaller problem: how to take the *vector* $u_i$ and write it with $C$'s coordinates? this is just a matrix-vector product equation ^^
 
 $$Cx = u_i \qquad\rightarrow\qquad x = [u_i]_C$$
+
+## rotations
+
+rotation matrices (cos sin sin cos or whatever)
+
+## uhh
+
+complex value time oasjdiasdjajskdlasdkjasd
+
+if λ is an eigenvalue of a matrix A, then λ conj is an eigenvalue of A conj
+
+## similarity
+
+$P$ and $Q$ are similar if $Q = S^{-1}PS$ for some matrix $S$. in other words, $P$ is similar to $Q$ if $P$ and $Q$ represent the same space under different coordinate bases.
+
+similarity is an equivalence relation: reflexive, symmetric, transitive.
+
+if $P$ is similar to $Q$ then $P$ and $Q$ have the same set of eigenvalues with the same algebraic multiplicity. the converse is not true.
