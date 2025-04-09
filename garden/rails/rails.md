@@ -374,3 +374,56 @@ you can specify a rack application in `to` instead of a string. The guide mentio
 root to: "posts#index"
 root "posts#index" # same thing
 ```
+
+# i will split these off again
+
+how does a "creation" actually work from the user's end?
+
+* GET a blank form
+* fill in the information they need
+* POST it back
+
+how does a deletion actually work?
+
+* GET the item
+* look at the form with a delete button
+* DELETE it
+
+a modification?
+
+* GET a prefilled form for this item
+* edit the form
+* PUT it back
+
+n.b. HTTP only supports GET and POST but ruby adds a hidden field to forms for the "real" verb. the server receives a POST but routes it according to the route in the hidden field
+
+the `:resources` action pack gives you all these forms and all the endpoints. (if u want you can add more routes on a specific member or on the whole collection)
+
+---
+
+* GET /students, list all students (also a form for a new student's data?)
+* POST create a new student
+
+* GET /students/42 get a specific student
+* PUT an update to a specific student /students/42
+* DELETE a specific student
+
+---
+
+on request types:
+
+* GET, HEAD should be idempotent and additionally have no side effects
+* PUT should be idempotent (can be repeated)
+* DELETE should be idempotent (can be repeated, other ones might error since the student is already deleted but thats ok)
+* POST is Not idempotent since it creates a new entry
+  * for example you might post data twice to create two of the same thing
+
+these arent enforced in http. they're a convention
+
+---
+
+"two problems with routes"
+
+- take a URL and find which route it corresponds to
+  - that's what your link helpers are for (`xxx_path`, `xxx_url`)
+- take some view of some resource and find the appropriate route for it
