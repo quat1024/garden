@@ -7,7 +7,7 @@
 </form>
 ```
 
-There's a lot of resources floating around about styling form *controls* -- I like [Adrian Roselli's 'underengineered' posts](https://adrianroselli.com/2023/05/under-engineered-patterns-for-wcbuf.html) -- but I wanted to write down how to actually *lay out* the form IMO.
+There's a lot of resources floating around about styling form *controls* -- I like [Adrian Roselli's 'underengineered' posts](https://adrianroselli.com/2023/05/under-engineered-patterns-for-wcbuf.html) -- but I wanted to write down how to actually *lay out* the form.
 
 Most form controls are inline elements, so the "default" is to create single-line forms. Sometimes this is fine, such as the checkbox above. Other times it is less fine:
 
