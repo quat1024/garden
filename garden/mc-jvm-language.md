@@ -36,6 +36,8 @@ Most modders use Java.
 
 If you are only familiar with Java 6 or something, you're missing out on lambda functions, records, pattern-matching `instanceof`, pattern-matching `switch`, streams, new convenience functions, and a whole host of other things. I personally think it is very fun to write "modern Java".
 
+If this is starting to sound complicated: you don't have to use these language features if you don't want. You don't need to know all of Java inside and out to write mods. But these features will be there for you when you want them.
+
 ## Mixin
 
 Minecraft mods are able to directly change the code of Minecraft using a brilliant library called Mixin. Mixin is able to weave the JVM bytecode of your method into the JVM bytecode of a method from Minecraft. It's exciting stuff, but it's as hacky as it sounds, and everything needs to be set up *just so* in order for the weaving to work.
@@ -52,6 +54,10 @@ I've heard from several prospective modders that they're considering non-Java la
 
 There are some old books on "modding minecraft with Python" and such. These all rely on someone's library to do the heavy lifting for you. Every single one is out of date. Don't bother.
 
-Generally these products are aimed at people who aren't really interested in writing full-fat Minecraft mods, but they just want to learn programming inside a visual environment. If you want to draw some pictures and learn programming in the process, there are non-Minecraft ecosystems like [Scratch](https://scratch.mit.edu) and [Processing](https://processing.org) that are better suited for learning, very visual, and *much* more well-supported with high-quality learning materials.
+I think these products are aimed at two audiences:
 
-If you are just starting your computer programming journey, I don't want to dissuade you from having fun with Minecraft, but I also don't want to sic the ridiculous moving-target spaghetti-code Minecraft ecosystem on you either.
+* People who aren't really interested in writing full-fat Minecraft mods, but they just want to learn programming inside a visual environment. If you want to draw some pictures and learn programming in the process, there are non-Minecraft ecosystems like [Scratch](https://scratch.mit.edu) and [Processing](https://processing.org) that are better suited for learning, very visual, and *much* more well-supported with high-quality learning materials.
+
+  If you are just starting your computer programming journey, I don't want to dissuade you from having fun with Minecraft, but I also don't want to sic the ridiculous moving-target spaghetti-code Minecraft ecosystem on you either.
+
+* People who have learned Python in the past. But: if you have learned one programming language, picking up a second is *so* much easier. So I would not worry about "I know python but I don't know java, so I can't do modding", because you will be up-to-speed on Java within a week.
