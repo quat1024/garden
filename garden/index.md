@@ -40,6 +40,7 @@ There might be more pages in [the full listing](listing).
 * [Executive function](executive-function)
 * [Do not register for any protest action](protest-registering)
 * [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
+* [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
 
 ## What's not here
 
