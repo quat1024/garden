@@ -14,7 +14,7 @@ Maybe your exposure to Java is through Spring Boot, Jakarta, or heinous object-o
 
 ## The translation layer
 
-Not only will you need to understand Kotlin, you will need to understand [*how Kotlin maps onto Java bytecode*](https://kotlinlang.org/docs/java-to-kotlin-interop.html). You'll need to get comfortable with [`@JvmStatic`](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/), what a `companion object` actually *is*, etc.
+Not only will you need to understand Kotlin, you will need to understand [*how Kotlin maps onto Java bytecode*](https://kotlinlang.org/docs/java-interop.html). You'll need to get comfortable with [`@JvmStatic`](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/), what a `companion object` actually *is*, etc.
 
 You'll also need to understand the reverse -- how Java maps back onto Kotlin -- because every time you look at a learning resource or look at code from the loader or game, you will be looking at Java. If you're going to be thinking about Java in your head anyway, why not cut out the middleman and just write the Java you're thinking about?
 
