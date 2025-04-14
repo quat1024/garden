@@ -44,7 +44,7 @@ So you will need to write your mixins in Java. Even mods that use Kotlin end up 
 
 ## The boilerplate is somewhere else
 
-I've heard from several prospective modders that they're looking at non-Java languages to cut down on "boilerplate code". To be frank, Minecraft modding does not involve that much "boilerplate code".
+I've heard from several prospective modders that they're considering non-Java languages to cut down on "boilerplate code". To be frank, Minecraft modding does not involve that much "boilerplate code".
 
 *(Instead, the boilerplate exists in the form of "a steaming pile of JSON files you need to write", but that's a story for [another day](./datapacks-bad).)*
 
