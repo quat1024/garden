@@ -57,3 +57,7 @@ By working at the level of JSON files, you're working as a second-class Minecraf
 # In conclusion
 
 Datapacks are not my favorite method of authoring content.
+
+# See also
+
+the ["inner-platform effect"](inner-platform)

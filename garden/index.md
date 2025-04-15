@@ -20,13 +20,24 @@ There might be more pages in [the full listing](listing).
 * [How Voldeloom works at a high level.](voldeloom-stages) Very detailed.
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
+
+Opinions:
+
 * [Another way to do datagen](another-datagen)
+* [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
+* ["Can you make the game a little less lonely?"](can-you-make-the-game-a-little-less-lonely)
+* [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
+
+Tools:
+
+* the [lang trimmer](lang-trimmer)
 
 ### General Java and computery topics
 
 * [How does Maven work?](maven)
 * [Processing zip files in Java](zip)
 * [How do you set up SSH keys?](sshkey)
+* [How do you set up `signify`?](signify)
 * [Tmux cheat sheet](tmux)
 * [How to read and write Lean function definitions](/lean_functions)
 
@@ -39,8 +50,6 @@ There might be more pages in [the full listing](listing).
 * [Note notes](note-notes)
 * [Executive function](executive-function)
 * [Do not register for any protest action](protest-registering)
-* [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
-* [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
 
 ## What's not here
 
