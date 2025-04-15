@@ -20,6 +20,7 @@ All files in my garden:
 * [garden](/garden)
 * [index](/index)
 * [inner-platform](/inner-platform)
+* [lang-trimmer](/lang-trimmer)
 * [lean_functions](/lean_functions)
 * [linalg/det](/linalg/det)
 * [linalg/eigen](/linalg/eigen)
