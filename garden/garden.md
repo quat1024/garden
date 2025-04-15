@@ -47,3 +47,7 @@ When Cohost closed, a lot of people were bringing up RSS as an alternative to ke
 > this is a secret third thing  
 >   
 > centiblogging
+
+## "Gardening" is kind of silly isn't it
+
+Sometimes I look back at this website and think "oh, 'digital gardening', also known as 'putting stuff on your website'". It has a web 1.0 feel to it somehow. The idea of a personal website created by "dumping whatever you want onto it" feels outdated? lately it's like every website needs to be chronological or have a clearly-defined topic or some central gimmick. Is that good or is that growthhacking nonsense
