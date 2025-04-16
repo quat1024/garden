@@ -14,7 +14,7 @@ For Minecraft-format language jsons.
 </p>
 <p>
 	<input type=checkbox id=rm_missing>
-	<label for=rm_identical>Remove keys missing from <code>en_us</code></label>
+	<label for=rm_missing>Remove keys missing from <code>en_us</code></label>
 </p>
 <p>
 	Indent result with:
