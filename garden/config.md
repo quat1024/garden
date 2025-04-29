@@ -32,13 +32,13 @@ As a programmer you understand it's because numbers, strings, and booleans are d
 Relevant links from the StrictYAML guy:
 
 * [Syntax typing](https://hitchdev.com/strictyaml/why/syntax-typing-bad/); introducing types at the syntax level is bad.
-* [Implicit typing](https://hitchdev.com/strictyaml/why/implicit-typing-removed/); guessing the type based off the syntax instead of the schema is bad.
+* [Implicit typing](https://hitchdev.com/strictyaml/why/implicit-typing-removed/); guessing the type based off the syntax instead of the schema is bad. (YAML's "norway problem")
 
 Solution: At the *config format* level, everything is just a string. When you are loading the config file into a well-typed value, *that's* when you choose to parse things into numbers or booleans or whatever you need in the program. Parsing a string into a number is a validation problem, not a well-formedness problem, and deserves to be reported with the same thoughtfulness that all errors are reported in the system. Reporting this well is *your responsibility*, not something you can kick to the authors of your TOML library.
 
 You also don't end up with blessed types. In every config system I've used, you get a small set of types which are "free" to put in the config file -- strings, numbers, whatnot -- but even basic non-JSON types like `ResourceLocation`s are "expensive" to put in a config file and feel like an afterthought. (Well, if everything's a string, everything is an afterthought. At least now the need for custom types is more obvious and might actually be addressed!)
 
-Also, if everything is a string anyway, you don't need quoting. Or you can make quoting optional/irrelevant. Or you can make quoting required, but now that every option is quoted and parsed as a string, there are no rules to remember. Point is, this opens up file format design space.
+Also, if everything is a string anyway, you don't need quoting. Or you can make quoting optional/irrelevant. Or you can make quoting required, but now that every option is quoted and parsed the same way, there are no rules to remember. Point is, this opens up file format design space.
 
 ## POJO and pray
 
