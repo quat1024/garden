@@ -27,6 +27,7 @@ Opinions:
 * [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
 * ["Can you make the game a little less lonely?"](can-you-make-the-game-a-little-less-lonely)
 * [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
+* [Reddit hivemind opinions](reddit)
 
 Tools:
 
@@ -40,6 +41,7 @@ Tools:
 * [How do you set up `signify`?](signify)
 * [Tmux cheat sheet](tmux)
 * [How to read and write Lean function definitions](/lean_functions)
+* [Towards a good config system](config)
 
 ### These heinous things called "opinions"
 
