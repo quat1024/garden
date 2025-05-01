@@ -17,6 +17,11 @@ Unsurprisingly this is the largest category.
 * [tinywm](http://incise.org/tinywm.html), might be useful for learning how to write window managers.
 * ["A virtual DOM in 200 lines of Javascript"](https://lazamar.github.io/virtual-dom/)
 
+### Putting up with LLMs
+
+* [On Large Language Models](https://www.jsbarretto.com/blog/on-llms/) by Joshua Barretto
+* [A season on Iocaine](https://chronicles.mad-scientist.club/tales/a-season-on-iocaine/) / [The cost of poison](https://chronicles.mad-scientist.club/tales/the-cost-of-poison/) by the developer of [iocaine](https://iocaine.madhouse-project.org/)
+
 ### Other stuff 
 
 * [thought leadersand chicken sexers](https://ideolalia.com/essays/thought-leaders-and-chicken-sexers.html).
