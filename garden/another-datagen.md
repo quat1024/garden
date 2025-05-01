@@ -115,3 +115,19 @@ And remember that you can do whatever wherever, if you wanted to make a sixteen 
 - It is a lot more fun to use datagen when it's split out from the game and doesn't require waiting 100 years for the game to start.
 - Serializing your own json isn't that hard. In particular you don't need to write a deserializer which simplifies things a lot
 - Can lead to happy accidents like, well fuck if datagenning this is as easy as loading it at runtime, might as well try and make it loadable through a resourcepack
+
+# Holder-baded registration
+
+Addendum.
+
+There's a vanilla class called `Holder<T>` which pairs together a registry, an ID, and *possibly* an object of type `T` corresponding to that ID. Unbound holders do not contain a T and crash when trying to retrieve it. Bound holders do contain such a T.
+
+In neoforge, many modders use the `DeferredRegister<T>` utility. You pass it a block ID and a block constructor, and in one step it creates an unbound `Holder` for the block, creates a task to construct/register the block at the appropriate time, and binds the holder to the block immediately atter registering it. These holders are then stuck into an easily accessible class where it's easy to grab the block ID throughout the project. (Older versions of forge which predated `Holder` had the same idea.)
+
+The problem is that when you use a `Gen` system, the block constructor call is deep inside your `Gen` code so it can't be colocated with the holder pile. Instead, I propose a holder-first approach to doing your registration: instead of using DeferredRegister to create holders, just create unbound holders, and when you construct and register content, immediately bind them to all relevant holders.
+
+Because an unbound holder doesn't require a block constructor (it doesn't really know *what* it's registering yet), you regain the ability to stick them in convenient places.
+
+Go a step further and make your `register` method take `(Holder, T)` instead of `(Registry, ResourceLocation, T)`. Registration then becomes a problem about "binding holders" instead of a problem about "associating ids with things". Small mindset shift.
+
+In my project i actually created a clone of vanilla holder called `Latch` but only because I don't trust mojang to keep it around. I could experiment with the vanilla class.
