@@ -107,7 +107,7 @@ I'm local and arrive by bus, so my bus advice:
 * Our transit agency is COTA, the Central Ohio Transit Agency.
 * You can arrive by bus routes 1, 2, and a few others which go up High St.
 * Fares are $2. The best way to pay is with the "Transit" app on your phone; you can load an account with money, pay by scanning your phone screen, and enjoy fare capping ($4.50/day). The second-best way is with cash; they take bills and coins.
-* Don't bother with a bus pass. The only ones we have are one-day or sixty-day, no week or weekend passes. There is a reloadable card ("COTA Smartcard") but it's a hassle, you can only pick it up at one specific location.
+* Don't bother with a bus pass. The only ones we have are one-day or sixty-day, no week or weekend passes. There is a reloadable card ("COTA Smartcard") but it's a hassle, you can only pick it up at one specific location. You can keep money in your Transit app account so it's pretty much a reloadable card.
 * [COTA FAQ.](https://www.cota.com/contact/faq/)
 
 The hotel is in a somewhat unassuming building on the west side of High St. If you go to the east side of the road, into the conspicuous hotel with the *big* sign, you will instead wander into the convention center. It's doubly annoying because this other building is the business address of the hotel. Yes, I did this, even after already knowing it's not in the convention center. All of the buildings are connected. It's confusing.
