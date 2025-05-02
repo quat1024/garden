@@ -114,7 +114,7 @@ The hotel is in a somewhat unassuming building on the west side of High St. If y
 
 The skybridge is pretty cute.
 
-There was coffee in the snacks room provided by the hotel, but it goes quick and it's only provided in the morning. The fresh fruit in that room also went quick. Plenty of chips and carbohydrates all day, though.
+Anthrohio does have snacks which is somewhat unusual for cons. There was coffee in the snacks room (provided by the hotel), but it goes quick and it's only provided in the morning. The fresh fruit in that room also went quick. Plenty of chips and carbohydrates all day, though.
 
 They are chill with puphoods.
 
