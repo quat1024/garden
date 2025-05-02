@@ -17,6 +17,8 @@
 * [I'm sorry if this doesn't belong here](https://old.reddit.com/r/feedthebeast/comments/1hv4o2a/im_sorry_if_this_doesnt_belong_here/)
 
   > I need a Mod that Adds player like AI/Mobs, nothing complex but just being able to build and break, it would be nice if they could Upgrade their Gear as time goes on but I just need the world to feel more lived in than just me while all my friends aren't on their Minecraft Binge.
+  
+* [I have no friends and way too much free time, yall have any modpack suggestions to combat my crippling loneliness?](https://old.reddit.com/r/feedthebeast/comments/1kcleug/i_have_no_friends_and_way_too_much_free_time_yall/)
 
 ## Second category
 
@@ -27,3 +29,7 @@
 * [Any Ai mods that act like real players and can build, mine craft etc?](https://old.reddit.com/r/feedthebeast/comments/1ez4vnv/any_ai_mods_that_act_like_real_players_and_can/)
 
   > Recently i was strolling through my world and i can't help but feel a little lonely and this question just popped up.
+
+* from the comments on "any modpack suggestions to combat my crippling loneliness":
+
+  > Instead of a modpack, use something like Mindcraft, Minepal or the Touhou Little Maid mod to have an AI companion that talks.
