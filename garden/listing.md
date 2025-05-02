@@ -18,6 +18,7 @@ All files in my garden:
 * [dfu/structure-shy](/dfu/structure-shy)
 * [dfu/thestorysofar](/dfu/thestorysofar)
 * [executive-function](/executive-function)
+* [fur](/fur)
 * [garden](/garden)
 * [index](/index)
 * [inner-platform](/inner-platform)
