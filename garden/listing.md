@@ -10,6 +10,7 @@ All files in my garden:
 * [bool/index](/bool/index)
 * [broken-bone](/broken-bone)
 * [can-you-make-the-game-a-little-less-lonely](/can-you-make-the-game-a-little-less-lonely)
+* [char-min-glee](/char-min-glee)
 * [config](/config)
 * [datapacks-bad](/datapacks-bad)
 * [dfu/index](/dfu/index)
