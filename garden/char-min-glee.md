@@ -1,4 +1,4 @@
-# Dissecting char-min-glee by Jack Lance
+# Dissecting *"char min glee"* by Jack Lance
 
 *Char Min Glee* is [a "little game made in 560 characters of javascript"](https://jacklance.itch.io/char-min-glee) by the [late](https://joelthefox.github.io/2023-05-04-Jack-Lance/) [Jack Lance](https://jacklance.github.io/).
 
