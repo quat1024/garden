@@ -15,7 +15,7 @@ Here is a clone of the game playable on this webpage with a few tweaks (zoom fun
 <details><summary>Size</summary><div id="zoombuttons"></div></details>
 <details><summary>Level select</summary><div id="levelskip"></div></details>
 
-<style>#b button {font-size: var(--button-font-size, 100%);}</style>
+<style>#b { font-size: var(--button-font-size, 100%)} #b button {font-size: inherit}</style>
 
 <script>
 j=[];u=o=>{b.innerHTML=((e='<button onclick="')+'m(0)">⟲'+e+'j[0]?u(a=j.pop()):0">⤺');a.map((r,x)=>{b.innerHTML+='<br>';r.map((c,y)=>b.innerHTML+=(e+(c!='x'?`j.push(a.map(o=>[...o]));(q=a[x=${x}])[y=${y}]!='>'?(n=1,a.map((r,w)=>r.map((c,z)=>{if((o=w-x)*o+(o=y-z)*o==c*c)q[y]-=-c;n&=c!=0}))):(q[y]=q[y+1]|0,a[x][y+1]='>');u(n?(j=[],m(1)):0)">`+c:'">_')))})};m=o=>{n=0;u(a=l[i+=o].split`k`.map(a=>a.split``))};l=('001k0k0000l0x0kxx1k0l0xxxxxx0kk0x01k0xx0lEk0x1l1k0x0k0lE0002kE0003l100kkx00k00lE1kk00lEE04l0x0kxx0kxx0k001kxxx0l023ElxE4kkkxx3kkkk0lÜkWIN!').replace(/E/g,'>').split`l`;m(i=0)
