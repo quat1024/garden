@@ -107,7 +107,7 @@ m=o=>{n=0;u(a=l[i+=o].split`k`.map(a=>a.split``))}
 * `i += o` increments the level number `i` by `o` -- reset when `o == 0`, advance when `o == 1`,
 * `l[...]` indexes into the level table `l` by the new value of `i`, resulting in a string like `"001k0k0000"`,
 * `` .split`k` `` splits the string on `k` characters to break it into lines: `["001", "0", "0000"]`,
-* ``` .map(a=>a.split`` ``` further splits each string into character arrays: `[["0","0","1"],["0"],["0","0","0","0"]]`,
+* ``` .map(a=>a.split``) ``` further splits each string into character arrays: `[["0","0","1"],["0"],["0","0","0","0"]]`,
 * assigns the result to the global variable `a`,
 * calls `u`.
 
