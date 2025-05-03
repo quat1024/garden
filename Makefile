@@ -25,7 +25,7 @@ $(garden)/listing.md: $(subst $(garden)/listing.md,,$(garden-sources))
 # create .html files from .md sources using pandoc
 $(out)/%.html: $(garden)/%.md mytemplate.html filter.lua
 	mkdir -p $(@D)
-	pandoc --from=markdown+autolink_bare_uris+raw_attribute $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml
+	pandoc --from=markdown+autolink_bare_uris+raw_attribute $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml --highlight-style=kate
 
 # copy static resources as-is
 $(out)/%: $(static)/%
