@@ -36,6 +36,7 @@ Unsurprisingly this is the largest category.
 * [Streaming iframe hack](https://jakearchibald.com/2016/fun-hacks-faster-content/)
 * TODO: i could switch to [migadu email](https://www.migadu.com/index.html) ?
 * https://swtch.com/~rsc/regexp/regexp4.html (reading list)
+* https://gist.github.com/OroArmor/0093803f4cfc9666d7948b8ce768c71f
 
 ## Academia
 
