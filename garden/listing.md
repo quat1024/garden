@@ -20,6 +20,7 @@ All files in my garden:
 * [dfu/thestorysofar](/dfu/thestorysofar)
 * [executive-function](/executive-function)
 * [fur](/fur)
+* [fwa-25-vendors](/fwa-25-vendors)
 * [garden](/garden)
 * [index](/index)
 * [inner-platform](/inner-platform)
