@@ -12,7 +12,7 @@ I do not have the capacity to do the artist's alley; there's just so many people
 
 <form id="sortform">
 <fieldset><legend>Sort</legend>
-<input type=radio id=byvendor name="sortby" selected /><label for=byvendor>Alphabetically</label>
+<input type=radio id=byvendor name="sortby" checked /><label for=byvendor>Alphabetically</label>
 <input type=radio id=bytable name="sortby" /><label for=bytable>By table</label>
 </fieldset>
 </form>
