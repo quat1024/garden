@@ -411,7 +411,7 @@ h3:target {
 ### R6 - MangoPopArt
 
 * Website: https://mangopopart.com/
-* Bluesky: https://bsky.app/profile/did:plc:2cx3gam25tncggov6q5kkqs7
+* Bluesky: https://bsky.app/profile/mangopopart.bsky.social
 
 ### D8 - MOTEL777
 
