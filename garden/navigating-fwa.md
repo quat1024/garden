@@ -18,7 +18,7 @@ Note: In the Marquis, there are several rooms *called* "Event Registration" by t
 
 ## Floors of the Marquis
 
-There isn't much wayfinding in the Marquis and it can be difficult to tell what floor you're on. Here are the four main floors & what things are on them.
+There isn't much wayfinding in the Marquis and it can be difficult to tell what floor you're on. (If you head to the elevator column, the floor's name is written in large letters on the wall.)
 
 The main entrance (with the water feature) is on the Lobby Level, floor 3.
 
