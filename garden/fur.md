@@ -122,7 +122,7 @@ They are chill with puphoods.
 
 ## Transit
 
-You'll arrive at ATL, the busiest airport in the United States. There are dozens and dozens of not-too-unreasonably restaurants around if you're hungry. If you follow the signs to baggage claim, you'll probably head down some escalators to a pair of shuttles that runs back and forth between all the terminals.
+You'll arrive at ATL, the busiest airport in the United States. There are dozens and dozens of not-too-unreasonably priced restaurants around if you're hungry. If you follow the signs to baggage claim, you'll probably head down some escalators to a pair of shuttles that runs back and forth between all the terminals and baggage claim.
 
 Strongly consider taking MARTA from the airport to the hotel. It's fast, it's fun, and there's no point paying out the ass for an Uber when public transit is right there. You can purchase Breeze cards right before you enter the metro. (As of 2025 the MARTA stop at the airport is indeed working. There's a press release saying it's closed, but that was last year and they didn't write the damn date on the press release.) The MARTA can be somewhat unreliable though, so budget some money for a cab or a lyft, and budget an hour for delays just in case.
 
