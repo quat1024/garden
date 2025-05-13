@@ -39,6 +39,7 @@ All files in my garden:
 * [maven](/maven)
 * [mc-jvm-language](/mc-jvm-language)
 * [mill](/mill)
+* [navigating-fwa](/navigating-fwa)
 * [nook-simple-touch](/nook-simple-touch)
 * [not-destroying](/not-destroying)
 * [note-notes](/note-notes)
