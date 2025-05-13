@@ -17,7 +17,7 @@ There might be more pages in [the full listing](listing).
 ### Minecrafty stuff
 
 * ["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
-* [How Voldeloom works at a high level.](voldeloom-stages) Very detailed.
+* [How Voldeloom works at a high level.](voldeloom-stages)
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
 
@@ -53,6 +53,13 @@ Tools:
 * [Executive function](executive-function)
 * [Do not register for any protest action](protest-registering)
 
+### Furry subculture resources
+
+* [Advice about attending conventions.](fur)
+* [Advice about navigating the FWA hotel.](navigating-fwa)
+* [Every single vendor at FWA 2025.](fwa-25-vendors)
+
 ## What's not here
 
+* Anything useful or of importance to anyone.
 * Want to browse off this website as soon as possible? Click on something from [the link dump](link-dump).
