@@ -1,6 +1,6 @@
 # Fur cons
 
-Am I in a position to give furcon advice? I dunno, probably not (creds: I've wallflowered at Anthrohio 24 and 25 and am about to head off to FWA with a buddy.)
+Am I in a position to give furcon advice? I dunno, probably not (creds: I've wallflowered at Anthrohio 24 and 25 and had a blast at FWA with a buddy.)
 
 I don't know anything about fursuiting.
 
@@ -120,8 +120,80 @@ They are chill with puphoods.
 
 # FWA, in specific
 
-Now I haven't attended yet. But I can already be confident about a few things:
+## Transit
 
-* Take MARTA from the airport to the hotel. There's no point paying out the ass for an Uber when public transit is right there.
-  * As of 2025 the MARTA stop at the airport is indeed working. There's a press release saying it's closed, but that was last year and they didn't write the damn date on the press release.
-* This is a "big con", which means wearing a mask is twice as important!!
+You'll arrive at ATL, the busiest airport in the United States. There are dozens and dozens of not-too-unreasonably restaurants around if you're hungry. If you follow the signs to baggage claim, you'll probably head down some escalators to a pair of shuttles that runs back and forth between all the terminals.
+
+Strongly consider taking MARTA from the airport to the hotel. It's fast, it's fun, and there's no point paying out the ass for an Uber when public transit is right there. You can purchase Breeze cards right before you enter the metro. (As of 2025 the MARTA stop at the airport is indeed working. There's a press release saying it's closed, but that was last year and they didn't write the damn date on the press release.) The MARTA can be somewhat unreliable though, so budget some money for a cab or a lyft, and budget an hour for delays just in case.
+
+If you live in America and are leaving the day after the con, 9999999 other American furries are doing the same thing so budget an *extremely* generous amount of time for the TSA line -- it took me about 90 minutes to get through, and the line only grew from there. Show up at least four hours before your flight. The estimated TSA wait time is, of course, a lie; mentally double it.
+
+## Where to stay
+
+Not the Marquis. There are eight (!) elevators and someone it's still twenty elevators too few. Every single elevator is packed and it will take several tries before you find an elevator with room for you. You don't need to make this a part of your life.
+
+The Hyatt and Hilton wouldn't be terrible choices, but I also noticed lines for the elevator (especially at the Hilton, which is very tall). Also, very annoyingly, con staff will hog skybridges between hotels for queue lines.
+
+We stayed "off campus" at the Aloft, a few blocks west. I liked it! If you are walking a significant distance outside, it would definitely be a good idea to bring a friend to walk with you.
+
+## Layout
+
+It takes a while to get used to the hotel layout, especially the Marriott Marquis; [here's my notes](navigating-fwa) on that.
+
+## Size
+
+FWA 2025 was the largest furry convention in history. It was kinda falling apart at the seams. I'm gonna be honest; I didn't attend too many events because I didn't feel like wading through crowds or queueing for hours.
+
+The virtual queue system got too much shit, IMO. Really the problem was the sheer number of people.
+
+"Arriving early to beat the lines at registration" does not work. 500 people all have the same idea + security will prevent a line from forming too early. At least during 2025, they waived registration requirements for things on Thursday just because so many people weren't registered yet, so registering does not need to be your #1 priority.
+
+You will just have to brave the reg line, sorry, there's no cheat. It took us about an hour but someone brought balloons to slap around while we waited. Wear a mask, bring a *full* water bottle and hand towel from the hotel, and of course preregister!!
+
+## Food and drink
+
+First of all, head to the Publix and/or the CVS for some snacks you can keep in your hotel room.
+
+For lunch, everyone likes this place called "The Hub", which is a gigantic mall-ish food court. It is south of the Hyatt. To get there from the Marquis:
+
+* head to the Atrium Level (go up escalators until you run out of escalators to go up)
+* head west until the path forks three ways
+* head south into Marquis One Tower
+* head southwest across the diagonal skybridge
+
+If you eat from the chick fil a I will kill you. There's a Firehouse Subs and a Bull Gogi and a million other places. Why would you go to the chick fil a?
+
+Alternatively, only on weekdays around lunch time, there's this random food court from a northern hotel (truist tower or something?) It's accessible via a north skybridge from Marquis Two Tower. We liked the sandwiches from "Garden Deli" in the northwest corner; there's also a Dunkin and a bake shop and a few other places. Much less busy than "the hub" if you are looking for less chaos.
+
+## Things to bring
+
+* EARPLUGS. Bring a lot. Makes music and dance events 100x more tolerable. Some earplugs were provided near the door; they ran out fast.
+* Especially if you're not familiar with the weather down there: More than one shirt per day. 🌞🔥♨️💦.
+* The biggest water bottle you can find.
+* A backpack, or some other bag that you don't mind carrying around for hours and hours, to hold your deodorant stick, a small snack, the trinkets you pick up, a hand towel from the hotel (for sweat!), and any gear you're not wearing.
+
+Skip the towel (lol just borrow towels from the hotel), and maybe skip the jacket - on days when I wanted the jacket I didn't bring it with me that morning.
+
+## Other things
+
+They are extremely chill with pup hoods, lol. I have never seen more pups in my life *including* at Pride.
+
+When riding the Marquis elevators down, if you are able don't be picky about what floor it stops at. Get off at the Atrium Level or wherever it first stops and take stairs or ride escalators to your destination. Clears it up for other people.
+
+If you are a fursuiter: Good luck and Godspeed. No idea how you're supposed to avoid melting into a puddle.
+
+Places that are unusually well air-conditioned: entry and exit points to hotels, and (for some reason) the Furality portal room.
+
+There are Elkay ezh2o bottle fillers on the Marquis level toward the east end. 🚰
+
+Some say the real con happens on the 10th floor. It's a common spot for unofficial meetups.
+
+# On knowing your limits
+
+Never go to con floor while already tired. You will only get more tired. Go to bed.
+
+Knowing the symptoms of heat exhaustion is one thing. Recognizing them when they happen to yourself is another thing.
+
+Dont push yourself too hard just for FOMO. We definitely weren't able to hit everything on our iternary. Cherish the things you *did* do.
+
+Also -- I am not an expert on this topic, and I'm speaking vaguely to avoid embarrassing myself -- sometimes "doing too much fetish stuff in one day" can be a problem, sometimes "thinking about kink after experiencing something you need more time to process" can be a problem. If your kink battery is low, you can always leave. Try sleeping on it.
