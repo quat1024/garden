@@ -326,10 +326,10 @@ Class name on the left - the class name inside the real jar, class name on the r
 6: ","w")'>
 ```
 
-I haven't figured out what this class is good for yet, but there are hints of
+I think this is for HTML serialization of server responses, it works like this:
 
 * `<img src='` var4.d() `' alt='` var4.b() `' border='0'/>`
-* `<a href='javascript:void(0)' onclick='window.open(` ax.c() `","w")'>` var3 `</a>`
+* `<a href='javascript:void(0)' onclick='window.open("` ax.c() `","w")'>` var3 `</a>`
 
 ### `b.a.a.b`
 
