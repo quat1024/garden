@@ -22,6 +22,7 @@ Unsurprisingly this is the largest category.
 * [On Large Language Models](https://www.jsbarretto.com/blog/on-llms/) by Joshua Barretto
 * [A season on Iocaine](https://chronicles.mad-scientist.club/tales/a-season-on-iocaine/) / [The cost of poison](https://chronicles.mad-scientist.club/tales/the-cost-of-poison/) by the developer of [iocaine](https://iocaine.madhouse-project.org/)
 * [On "vibe coding"](https://tante.cc/2025/05/23/on-vibe-coding/) by tante
+* [Net-Negative Cursor](https://lukasatkinson.de/2025/net-negative-cursor/)
 
 ### Other stuff 
 
