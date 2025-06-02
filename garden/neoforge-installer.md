@@ -197,6 +197,8 @@ Looking back at the installer manifest now. These run top-to-bottom. I'll need t
 
 Jarsplitter means that ART and binarypatcher don't have to carry dead weight like images and json files, or remap classes that don't need remapping. The `-extra` jar does indeed end up on the classpath. Neat
 
+Since binpatches are done as a last step, if you were to replace parts of this toolchain you have to make sure to do everything exactly the same as neo does, and produce byte-for-byte identical classes. Fortunately the installer manifest pins the exact version and classpath of every processor that touches the minecraft jar.
+
 ### And that's the end of the installer
 
 tada
