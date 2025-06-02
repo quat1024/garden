@@ -79,4 +79,4 @@ Despite the `npx`, pagefind is not actually written in JS, they're just misusing
 
 The pagefind quick start guide mentions a `--serve` parameter. I think if you are dealing with a static site generator, you probably already have some way to serve the results locally (i have a `make serve` which runs [`miniserve`](https://github.com/svenstaro/miniserve)).
 
-As far as I know, the pagefind `--serve` option is not any different from any other serving option... but it looks like some kind of ["pagefind playground"](https://github.com/CloudCannon/pagefind/blob/d7d0b3a0f0eb12661cd2eb894ad02f10687a4ca0/pagefind/src/serve.rs) is in the works. Ooh.
+As far as I know, the pagefind `--serve` option is not any different from any other serving option... but it looks like some kind of ["pagefind playground"](https://unreleased.pagefind.app/pagefind/playground/) is in the works. Ooh.
