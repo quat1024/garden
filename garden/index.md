@@ -20,6 +20,7 @@ There might be more pages in [the full listing](listing).
 * [How Voldeloom works at a high level.](voldeloom-stages)
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
+* [How do Neoforge installers actually work](neoforge-installer)
 
 Opinions:
 
