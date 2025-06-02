@@ -16,15 +16,15 @@ Installation specs are loaded from the `install_profile.json` file in the root o
 
 * `String profile` (e.g. "NeoForge")
 * `String version` (e.g. "neoforge-21.5.75")
-* `String icon` (base64 icon with mimetype, e.g. "data:image/png;base64,AAAAAAA")
+* `String icon` (base64 icon with mimetype)
 * `String minecraft` (minecraft version, e.g. "1.21.5")
-* `String json` (I think this is the path to a vanilla launcher profile json inside the jar? Not too familiar with the vanilla launcher honestly)
-* `String logo` (path inside the jar to a logo, eg. "./big_logo.png")
-* `Artifact path`
+* `String json` (path to a vanilla launcher profile json inside the installer jar)
+* `String logo` (path inside the jar to a logo to display in the installer gui, eg. "./big_logo.png")
+* `Artifact path` uhh looks important! whats that for
 * `String urlIcon`
 * `String welcome` (message to display in the gui, eg "Welcome to the simple NeoForge installer")
 * `String mirrorList` (URL to obtain mirrors from, eg https://neoforged.net/mirrorlist.json )
-* `boolean hideClient, hideServer, hideExtract`
+* `boolean hideClient, hideServer, hideExtract` (gui buttons)
 * `Version.Library[] libraries` (looks like the exact same structure as the library type from piston-meta)
 * `List<Processor> processors`
 * `Map<String, DataFile> data`
@@ -55,6 +55,8 @@ Makes a copy of the installer jar which includes the following goodies inside th
   * all these libs end up under `maven/` concatted with the `path` mentioned in the library json
 
 If all three `--fat-include` options were passed, the installer copy also gets `Offline: true` set in MANIFEST.MF, which makes it act like `--offline` was passed all the time.
+
+All the "download something" methods check the contents of the `maven/` folder inside the jar before trying to contact the internet.
 
 ### Server installer
 
@@ -90,6 +92,8 @@ Tl;dr doesn't do anything fancy like downloading assets, the vanilla launcher ca
 ## Processor system
 
 Handled in `PostProcessors`
+
+### modifying the datamap
 
 First the install manifest's `data` is modified. Here is a datamap excerpt to illustrate.
 
@@ -127,7 +131,7 @@ Finally the datamap is amended with a few extra entries:
 
 These go alongside `MAPPINGS`, `MOJMAPS`, `MERGED_MAPPINGS`, `BINPATCH`, `MC_UNPACKED`, `MC_SLIM`, `MC_EXTRA`, `MC_SRG`, `PATCHED`, and `MCP_VERSION` from the installer manifest. Any argument to a processor invocation can substitute any of these variables.
 
-TIME TO ACTUALLY PROCESS.
+### processor driver loop
 
 * Giant hack: If the processor to run is `installertools` and the args list has `--task` followed by `DOWNLOAD_MOJMAPS`, skip it if the mojmaps are already downloaded locally. (Worth mentioning that the fatjar installers were taped onto the system very recently.)
 * Something about `outputs` that I don't really understand. I think the idea is that if a processor is expected to create a file at a certain location, that can be registered in `outputs` in the installer manifest json, and if the file already exists the processor will be skipped. This feature is not used by the installer though.
@@ -160,9 +164,9 @@ Just for reference, a sample processor json
 },
 ```
 
-### The actual processors
+### the actual processors
 
-These run top-to-bottom. I'll need to look at these closer. I have not reproduced all invocation arguments because there are a zillion
+Looking back at the installer manifest now. These run top-to-bottom. I'll need to look at these closer. I have not reproduced all invocation arguments because there are a zillion
 
 * On the server: [Installertools](https://github.com/neoforged/installertools) with `--task` [`EXTRACT_FILES`](https://github.com/neoforged/InstallerTools/blob/46f40cbc4eeb0098921b4f31182157d30467ae16/src/main/java/net/neoforged/installertools/ExtractFiles.java)
   * Pulls out `data/run.bat`, `data/run.sh` etc etc from the installer jar, chmods the shell scripts
@@ -189,9 +193,9 @@ These run top-to-bottom. I'll need to look at these closer. I have not reproduce
 * [Binarypatcher](https://github.com/neoforged/InstallerTools/tree/main/binarypatcher)
   * Applies the `<side>.lzma` file and puts the result in `{PATCHED}`
 
-`EXTRACT_FILES` is a little strange, really feels like the installer should do that itself.
+`EXTRACT_FILES` is a little strange, really feels like the installer should do that itself. Because it's done with an external tool, there is no way to perform variable substitution in the actual launch scripts, so launch scripts refer to `libraries/net/minecraft/server/20250325.162830/server-20250325.162830-extra.jar` by name instead of `{MC_EXTRA}`. Why bother with variable substitution if you need to hardcode things anyway... TODO, find their release engineering for installer jars.
 
-Jarsplitter means that ART and binarypatcher don't have to carry dead weight like images and json files, or remap classes that don't need remapping.
+Jarsplitter means that ART and binarypatcher don't have to carry dead weight like images and json files, or remap classes that don't need remapping. The `-extra` jar does indeed end up on the classpath. Neat
 
 ### And that's the end of the installer
 
