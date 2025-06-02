@@ -11,7 +11,7 @@ The [quick start guide](https://pagefind.app/docs/) is very helpful. I just run 
 This populates `./out/pagefind` with two kinds of file:
 
 * compressed search indexes, in `pagefind/index/<stuff>.pf_index` and `pagefind/fragment/<stuff>.pf_fragment`
-* an implementation of the search bar HTML widget, in `pagefind/pagefind-ui.css` and `pagefind/pagefind.js`
+* an implementation of the search bar HTML widget, in `pagefind/pagefind-ui.js` and `pagefind/pagefind-ui.css`
 
 ## Integrating the widget
 
