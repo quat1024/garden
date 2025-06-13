@@ -21,6 +21,7 @@ All files in my garden:
 * [dfu/structure-shy](/dfu/structure-shy)
 * [dfu/thestorysofar](/dfu/thestorysofar)
 * [executive-function](/executive-function)
+* [forge-bitrot](/forge-bitrot)
 * [fur](/fur)
 * [fwa-25-vendors](/fwa-25-vendors)
 * [garden](/garden)
