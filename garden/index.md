@@ -21,6 +21,7 @@ There might be more pages in [the full listing](listing).
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
 * [How do Neoforge installers actually work](neoforge-installer)
+* [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem](forge-bitrot)
 
 Opinions:
 
