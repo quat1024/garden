@@ -49,6 +49,7 @@ Wrt run configs, i would like the ability to make one giant run config containin
 * This resource about gradle "configurations" is probably helpful https://dev.to/autonomousapps/configuration-roles-and-the-blogging-industrial-complex-21mn
   * Especially for consuming artifacts published by other projects / source sets
 	* Can i avoid `multiloader-template`-style "manual concatenation of classpaths"
+* Also this https://docs.gradle.org/current/userguide/how_to_share_outputs_between_projects.html#variant-aware-sharing
 
 In `modfest-oneoffs`, my shading setup for Loom was like this https://github.com/quat1024/modfest-oneoffs/blob/1bc756d43b86a56e573fcf11787a4456e3ca7b02/build.gradle#L65-L110 . I never wrote anything like that for neoforge so I'll have to puzzle out how MDG works
 
