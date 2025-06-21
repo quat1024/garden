@@ -4,7 +4,7 @@ static := static
 out    := out
 
 # surely theres a simpler glob syntax...
-garden-sources := $(shell find $(garden) -type f) $(garden)/listing.md
+garden-sources := $(shell find $(garden) -name "*.md" -type f) $(garden)/listing.md
 garden-outs    := $(patsubst $(garden)/%.md,$(out)/%.html,$(garden-sources))
 
 static-sources := $(shell find $(static) -type f)
