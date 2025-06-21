@@ -4,7 +4,7 @@ Just somewhere on the internet to put notes and things you find interesting.
 
 ## My garden
 
-is a [handful of Markdown files assembled with `pandoc` and a shitty Makefile](https://github.com/quat1024/garden). I [edit](/note-notes) it with vscode. It's hosted via github pages; CI runs `make` and serves the contents of the `out` directory. This is fairly spartan; that is intentional.
+is a [handful of Markdown files](https://github.com/quat1024/garden) assembled with `pandoc` and a shitty [Makefile](makefile). I [edit](/note-notes) it with vscode. It's hosted via github pages; CI runs `make` and serves the contents of the `out` directory. This is fairly spartan; that is intentional.
 
 Using a pandoc "lua filter" I'm able to guess the `<title>` of the page from the first heading on the page (so I don't need to manually set a title), and rewrite intra-doc links (so I can just write `[text](page)` to create a link to `/page.html`). My makefile has a `make push` phony target that commits and pushes for me. This is all in service of making it easier to just *write* without worrying too much about the writing environment.
 

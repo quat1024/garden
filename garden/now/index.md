@@ -8,6 +8,8 @@ It's coming up on the end of "the semester I didn't take"... I didn't sign up fo
 
 Working on-and-off on modded Minecraft projects, including ["project sanity"](project-sanity), an experiment in building the necessary tooling to work on Minecraft mods in a "monorepo" to facilitate code-sharing and cut down on development headaches. My mental health (and consequently my work ethic) have plummeted recently, but this project is one that I am enjoying returning to.
 
+I felt the need to pencil-push the CSS on this website. I fixed a longstanding issue with codeblock coloring, tweaked the spacing, and now the footer is a little nicer I guess.
+
 Things I would like to do:
 
 * finish "project sanity" and start scaffolding real mods inside it (hello, 1.21.6)

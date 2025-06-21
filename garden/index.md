@@ -1,6 +1,6 @@
 # garden
 
-Hi, welcome to my brain. I [post my notes publicly](garden) because it's either this, or they rot forever on my hard drive.
+Hi, welcome to my brain. I [post my notes publicly](garden) because it's either this or they rot forever on my hard drive.
 
 Here is what I'm [thinking about right now](/now/index).
 

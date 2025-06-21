@@ -1,3 +1,8 @@
+# Makefile
+
+The makefile behind the [garden](garden). Not claiming it is any good.
+
+```makefile
 # surely theres a simpler glob syntax
 garden-sources := $(shell find garden -name "*.md" -type f) garden/makefile.md garden/listing.md
 garden-outs    := $(patsubst garden/%.md,out/%.html,$(garden-sources))
@@ -52,3 +57,4 @@ push:
 	git add .
 	git commit -m "lazy commit"
 	git push
+```

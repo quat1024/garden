@@ -35,7 +35,7 @@ function Link(el)
       end
 
       if el.target ~= t then
-        print("rewrote link from " .. el.target .. " to " .. t)
+        --print("rewrote link from " .. el.target .. " to " .. t)
         el.target = t
         return el
       end

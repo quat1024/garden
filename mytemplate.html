@@ -8,22 +8,13 @@
   <meta property="og:type" content="website"> <!-- its like a website in here -->
   <meta property="og:title" content="$pagetitle$">
   <meta property="theme-color" content="#950000">
-  <link rel="stylesheet" href="/styles.css?cbust=4" />
+  <link rel="stylesheet" href="/styles.css?cbust=5" />
   <style>$highlighting-css$</style>
 </head>
 <body>
-$if(toc)$
-<nav id="$idprefix$TOC" role="doc-toc">
-$if(toc-title)$
-<h2 id="$idprefix$toc-title">$toc-title$</h2>
-$endif$
-$table-of-contents$
-</nav>
-$endif$
+<main id="notfooter">
 $body$
-$for(include-after)$
-$include-after$
-$endfor$
+</main>
 <footer>Back to <a href="/">garden entrance</a> &ndash; <a href="/search.html">Search</a> &ndash; <a href="/listing.html">All pages</a> &ndash; Email: <a href="mailto:quat@highlysuspect.agency">quat@highlysuspect.agency</a></footer>
 </body>
 </html>
