@@ -1,61 +1,69 @@
 # garden
 
-This is [my](https://highlysuspect.agency) small [digital garden](garden), so my notes can stop rotting on my hard drive.
+Hi, welcome to my brain. I [post my notes publicly](garden) because it's either this, or they rot forever on my hard drive.
 
-There might be more pages in [the full listing](listing).
+Here is what I'm [thinking about right now](/now/index).
 
 ## What's here
 
-### Math and science
+### Class notes
 
-* [Collected notes on DataFixerUpper](/dfu/index). Minecrafty, but more theoretical-computer-sciencey.
-* [Reading OSTEP for class.](/ostep/index)
-* [Linear algebra stuff](/linalg/index)
-* [Boolean algebra stuff](/bool/index) (for an engineering class)
-* somethin about [Rails](/rails/index)
+* [OSTEP.](/ostep/index)
+* [Linear algebra](/linalg/index) and (engineering-style) [boolean algebra](/bool/index).
+* There was one class where we learned about [Rails](/rails/index) but I didn't like it too much.
 
 ### Minecrafty stuff
 
-* ["Apathy lang"](apathylang), workshopping a proposed fix for my Apathy mod.
+* [Collected notes on the DataFixerUpper papers.](/dfu/index)
+* [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem.](forge-bitrot)
+* [How do Neoforge installers actually work?](neoforge-installer)
 * [How Voldeloom works at a high level.](voldeloom-stages)
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
-* [How do Neoforge installers actually work](neoforge-installer)
-* [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem](forge-bitrot)
-
-Opinions:
-
-* [Another way to do datagen](another-datagen)
-* [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
+* ["Apathy lang"](apathylang)
+* [Another way to do datagen.](another-datagen)
+* [Why you shouldn't use chatgpt to diagnose Minecraft errors.](ai-error-diagnosis)
 * ["Can you make the game a little less lonely?"](can-you-make-the-game-a-little-less-lonely)
-* [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
-* [Reddit hivemind opinions](reddit)
+* [You should learn Java to mod Minecraft, not a different language.](mc-jvm-language)
+* [Reddit hivemind opinions.](reddit)
+* [Datapacks bad](datapacks-bad)
 
 Tools:
 
 * the [lang trimmer](lang-trimmer)
 
-### General Java and computery topics
+### Java stuff
 
 * [How does Maven work?](maven)
+* [The `mill` build system](mill)
 * [Processing zip files in Java](zip)
+
+### Specific pieces of software
+
 * [How do you set up SSH keys?](sshkey)
 * [How do you set up `signify`?](signify)
 * [Tmux cheat sheet](tmux)
-* [How to read and write Lean function definitions](/lean_functions)
+* [How to read and write Lean function definitions](lean_functions)
+* [The syncthing situation, as of mid-2025](syncthing)
+* [CIA jars?](cia-jars)
+* [Dissecting *"char min glee"* by Jack Lance](char-min-glee)
+* [the Nook Simple Touch (2011)](nook-simple-touch)
+* [Styling forms](styling-forms)
 * [Towards a good config system](config)
-
-### These heinous things called "opinions"
-
 * [The wrong abstraction.](wrong-abstraction)
 * [No, we're not destroying software.](not-destroying)
-* [Datapacks bad](datapacks-bad)
+
+### Whatever else
+
 * [Always a student](always-a-student)
 * [Note notes](note-notes)
 * [Executive function](executive-function)
 * [Do not register for any protest action](protest-registering)
+* [Breaking a bone](broken-bone)
 
 ### Furry subculture resources
+
+Oh no!
 
 * [Advice about attending conventions.](fur)
 * [Advice about navigating the FWA hotel.](navigating-fwa)
@@ -63,5 +71,5 @@ Tools:
 
 ## What's not here
 
-* Anything useful or of importance to anyone.
+* Anything useful or of importance to anyone
 * Want to browse off this website as soon as possible? Click on something from [the link dump](link-dump).

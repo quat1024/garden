@@ -40,3 +40,11 @@ The new problems are
 
 * need to re-learn how to walk -- I'd gotten in the habit of keeping my right foot flat and avoiding pushing on the toes, which I don't need to do anymore
 * generally just dealing with the fallout from two months of not walking. I am already in very poor shape and that didn't help. I should have done some exercises in bed or something
+
+## Months later
+
+I haven't used my crutches in several months. I have definitely re-learned how to walk. I occasionally still need to take stairs "sideways" when going down, but that's about all.
+
+I've had some random bouts of... I guess you could call it a "flare-up" once or twice. It's annoying but doesn't seem to lead to lasting injury and naproxen sodium really helps. I've just started keeping some with me.
+
+I'm still in poor shape, haha. But I am *able* to run. The reasons I'm not in shape no longer have nothing to do with my foot.
