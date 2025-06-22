@@ -111,13 +111,19 @@ Normally you only can't place portals on grating because it's applied to surface
 
 ### Illegal grab positions
 
-The singleplayer grab controller works by dragging the cube towards a point in front of you using a simulated spring. You may have noticed that if you hold a cube in a weird spot, or if you are holding a cube while being far away from it, the spring breaks and the game forces you to let go.
+The singleplayer grab controller works by dragging the cube towards a point in front of you (using a simulated spring?). You may have noticed that if you hold a cube in a weird spot, or if you are holding a cube while being far away from it, the spring breaks and the game forces you to let go.
 
 This is governed by an "error" variable, which can be shown on screen with `player_held_object_debug_error 1`. The error is increased when the spring is too long, and it's also *multiplied* by some constant if there is something between you and the cube. Once the error passes some threshold (100?) you are forced to drop the cube. The error decays to 0 over time.
 
 The multiplicative increase is supposed to *quickly*, but not *immediately*, cause you to drop the cube when you're grabbing it through a wall. But if the error value is already 0, the multiplicative increase doesn't do anything! So if you are careful you can hold objects in illegal positions.
 
 You can do this in puzzlemaker by placing a sheet of glass on the floor, enabling the debug command, holding a cube, and very very slowly and gently rotating the camera until the cube is on the far side of the glass.
+
+### "Grab glitch"
+
+In singleplayer, if you grab an object while it passes through a portal, it can start magnetizing towards you from the location it *exited* the portal. Depending on the portal positions this can appear as the object taking the "long way around" to reach your hands, floating through all the space *between* your portals to reach you, instead of just going through the portal.
+
+This appears to be tick-perfect, but I'm not sure which tick (the tick before it passes through, or after?)
 
 ### Sleeping cubes
 
@@ -230,9 +236,9 @@ But it has a number of bugs:
 
 ### Laser cube / funnel collision, part 2
 
-If you place laser cube in a funnel it loses collision with players, just like in singleplayer.
+If you place laser cube in a funnel it loses collision with players, just like in singleplayer. Then when you hold the cube and look straight down, your momentum will be [cancelled entirely](https://www.youtube.com/watch?v=61Cnb_wy9Qg). This can be used to hover in the air, fight against the force of a funnel, etc. This effect doesn't happen in singleplayer, only co-op.
 
-As a side effect, when P-Body holds this cube and looks straight down, its momentum will be cancelled. This can even be used to hover in the air.
+I believe the speedrunner types call it "Holding Laser Cube Levitation"
 
 ## Mapping errors
 
@@ -258,21 +264,21 @@ Some co-op maps have a light bridge which can be pointed into the exit area. If 
 
 ## Well-known speedrun tricks
 
-### Bunnyhopping, wallrunning, zigzagging, etc
-
-You know the drill by now, Portal 2 inherits some janky Quake code.
+Everyone has seen SGDQ portal speedruns so I'll only include the ones I think are more interesting / obscure.
 
 ### Button glitch
 
 Certain buttons can get stuck down if they are pressed and released in the same tick. I'll defer to the [speedrun geniuses](https://wiki.portal2.sr/Button_Glitch) on the explanation.
 
+There are actually three kinds of button glitch:
+
+* "simultaneous output button glitch", only relevant in certain maps because it depends how the inputs/outputs are set up and what the button is connected to
+* "button save glitch", triggerable on any button, but requires a save/load
+* "delayed output button glitch", triggerable on any button, but only by P-Body in co-op
+
 ### Faithplate Intro dialogue
 
 Placing any prop on the exit button causes glados to begin congratulating you. Saves time because the game will never advance to the next map while glados is yapping.
-
-### Excursion funnel glitch
-
-You can fly!
 
 ### Laser switching
 
