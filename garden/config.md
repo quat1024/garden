@@ -84,3 +84,95 @@ That's not to say there should be *no* crosstalk between these problems: it is c
 Information about how to serialize an value to/from a config file is ultimately up to the *field*, not the *type of the field*.
 
 This one's simple: it's the "using `int` to store a color" problem again. Most `int`s are not for colors and should be written in base 10, but `int`s that are for colors should be written in base 16. If you are generating a config GUI, the number should get a textfield/spinnerbox/whatever, and the color should get a color picker. It doesn't matter that they're both the same runtime type.
+
+# Programmer API styles
+
+The five schools of thought.
+
+* *Mutable external structure:* You have a `public final ConfigState` holding every config value.
+  * To read it, you call `get` with a *key* (like `ConfigOpt<T>`)
+  * To change it, you might have a `set(ConfigOpt<T>, T)` method on the `ConfigState`
+  * When it changes externally, it refreshes automatically, and calling `get` returns the up-to-date value 
+* *Immutable external structure:* Some kind of `public static ConfigState currentState` structure
+  * To read it, you call `get` with a *key*
+  * To change it, you have some other system
+  * When it changes externally, you swap the `ConfigState` with a new instance containing up-to-date values
+* *Mutable pojo mapping:* You have a `public class MyModConfig` holding the config
+  * To read it, you look at the `static` fields within
+  * To change it, you write to the `static` fields within and call some kind of "setDirty" method
+  * When it changes externally, it refreshes automatically, and reading the fields returns the up-to-date value
+* *Immutable pojo mapping:* You have a `public class MyModConfig` and a `public static MyModConfig config;` instance of it
+  * To read it, you look at the non-static `final` fields within
+  * To change it, you have some other system
+  * When it changes externally, you swap the `MyModConfig` with a new instance containing up-to-date values
+* *Mutable internal structure:* A pile of `ModConfigSpec.ConfigValue<T>` objects like forge
+  * To read it, you call `get` directly on the `ConfigValue` objects
+  * To change it, you call `set(T)` on the `ConfigValue` objects
+  * When it changes externally, it refreshes automatically, and calling `get` returns the up-to-date value
+
+"Immutable internal structure" doesn't exist because it would be poor api design lol, it's basically like trying to use `JsonObject` as your primary config representation. You load a config schema but don't really have a good way of accessing it in a typesafe way.
+
+Where do the config values live?
+
+* External structure: in a sidecar "state" structure
+* Internal structure: in the same structure describing the config schema
+* Pojo mapping: on a specially crafted Java object
+
+What do you do with "derived values":
+
+* Mutable configs: Hope you get a "config changed" callback to let you know the derived value is stale, then recompute all of your derived values
+* Immutable configs: Compute the derived values as you load the config
+
+How does a config evolve?
+
+* changing the config from in-game (through a GUI or similar)
+  * here are the important parts of a config GUI i think:
+    * of course, displaying the intermediate config as it is being edited
+    * an indication of which config options are dirty
+    * an indication of how many changes the user made in total ("save 5 changes?")
+    * a "discard changes" button, which is *distinct* from a "reset to default" button
+  * i think external structure wins.
+    * write a `ConfigDiff` which holds a mapping of which config options changed. a value is dirty if it exists in the configdiff, the number of changes is the size of the configdiff
+    * to "discard all changes" you clear out the configdiff
+    * you can create a special `ConfigState` that transparently applies changes from the diff. then querying "partially-changed config values" isn't any different from *any other type of config querying*, which is the killer feature imo
+  * with pojo mapping it's more messy, maybe you (somehow) clone the pojo to create a working-copy, and a value in the working copy is dirty if it doesn't `equals()` the corresponding value in the real pojo. to discard all changes, make a fresh clone. to count the changes... gotta `equals()` em all? hard to metaprogram about, too, reflection is needed. even harder if the pojo is immutable
+  * with internal structure... no idea honestly. you might basically need to write an "external structure"-like sidecar to hold partially changed values, or make "temporary changed but unsaved values" a first-class part of the internal structure (yuck)
+  * to be fair, you can sidestep some of the config gui complexity by keeping state inside the gui *widgets* instead of inside the config. like every single widget would have a `startValue` and `currentValue`, "reset to default" sets `currentValue = startValue`. hmm...
+* changing the config from the file being loaded manually (like when i attach "parse the config file" to a resource-reload listener)
+* changing the config from a config file being reloaded automatically (totally out of your control)
+  * mutable configs can be prone to "tearing" if the entire mutable structure is not updated at once
+  * but mutable configs are definitely the easiest! everything updates transparently in the background
+  * provided you don't have derived values...
+
+## My preferred config API style
+
+Is probably "mutable external structure" by my classification.
+
+* `ConfigOpt<T>` objects describe the available config options
+  * Name, comment, default value
+  * Knows how to write a `T` to a `String` and how to parse a `String` into a `T`. The first is infallible, the second is not.
+  * "Correctors" can tweak incorrect values until they are correct, like enforcing min/max on a number
+  * "Validators" can throw an exception if the value definitely breaks the rules
+
+`ConfigOpt` objects do not know the current state of any configs anywhere. It's just the description of a config value. They can safely be made global variables.
+
+* `ConfigSection` objects describe the hierarchical structure of the config file
+  * Sections can contain `ConfigOpt`s and more `ConfigSection`s
+  * Has an "accept" method for code to easily consume the recursive structure
+
+`ConfigOpt` objects don't care what section they are in. `ConfigSection`s also don't know the state. Just a description of the *shape* of the config file.
+
+* `ConfigState` is a function from `ConfigOpt<T> -> T`
+  * `ConfigState.Default` always returns the default value for the config option
+  * `ConfigState.Unset` also does that, but logs a warning that the config is being accessed too early - intended to populate a "dummy" config before the real one is parsed by the mod
+  * `ConfigState.Mapped` reads config values from a `IdentityHashMap<ConfigOpt<?>, ?>`
+
+This is where the "real" config values live. This pattern has served me well before - it's able to support both manually-refreshed configs and automatically-refreshed (forge-style) ones, kinda. Derived values are still tricky.
+
+Your mod squirrels away a `ConfigState` somewhere easily accessible. You query it by rubbing `ConfigOpt` objects on it; those can be globals.
+
+The function to write a config to a string takes a `ConfigState` so it knows what values to populate in the file. To write a fresh config of all-default values, you can use `ConfigState.Default`.
+
+### What to do with derived values
+
+Hmm, you could have something else you rub on the `ConfigState` that computes a value by querying the config a few more times. Then cache it in the `ConfigState` and dump the cache when the config changes. I'm not making too much sense, it's late.
