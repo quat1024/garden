@@ -36,6 +36,7 @@ All files in my garden:
 * [linalg/more](/linalg/more)
 * [linalg/spaces](/linalg/spaces)
 * [linalg/vectors](/linalg/vectors)
+* [lingo-2](/lingo-2)
 * [link-dump](/link-dump)
 * [makefile](/makefile)
 * [math-test](/math-test)
