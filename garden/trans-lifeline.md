@@ -2,7 +2,7 @@
 
 I have seen people sharing **877-330-6366** as a "Canadian LGBTQ hotline" which they have "opened/donated to Americans". This is **false**.
 
-* This number belongs to a **Trans Lifeline**, a nonprofit. It does not belong to "Canada".
+* This number belongs to **Trans Lifeline**, a nonprofit. It does not belong to "Canada".
 * It is not an "LGBTQ hotline", it is a *trans hotline*.
 * Trans Hotline has a perfectly good US number: **(877)-565-8860**.
 * Trans Hotline is *not* in danger of shutting down.
