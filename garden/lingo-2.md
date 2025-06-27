@@ -28,6 +28,8 @@ Sun - synonym
 
 Vertical bar thing - homophone
 
+* Vertical bar thing with a squiggle - rhyme?
+
 Star bubbles thing - insert a letter (could be any letter, but it still makes a word; the new letter can appear anywhere in the word, you can't anagram the existing letters).
 
 little bracket above a symbol seems to mean "opposite of that"; bracket over sun means antonym, bracket over bubbles means "drop a letter"
@@ -51,6 +53,22 @@ Scribble above a symbol: "Do it and also do it in reverse". Taught in The Partia
 Planet: Make it plural. Bracket-planet, make it less plural. Taught in The Darkroom
 
 The Partial has one puzzle where the blanks are on the top and the prefilled answer is on the bottom. Interesting. The Partial's symbol is symmetrical but other symbols aren't so that could be neat
+
+The Extravagant has a "blocks" symbol. it might have something do with being a "component", or a part of the whole (the thing on the top is a component of the thing on the bottom)
+
+* `HORN (blocks) -> RHINO`
+* `ENGINE (blocks) -> TRAIN`
+* `CABOOSE (blocks) -> TRAIN`
+
+bracketed blocks reverses which is the part and which is the whole, now the whole is on the top
+
+* `RHINO (unblocks) -> HORN`
+* `COMPASS (unblocks) -> NORTH`
+* `CACTUS (unblocks) -> THORN`
+
+"The snake" (it looks nothing like a snake) taught in TEACH/LEARN is for functions, you can do the thing on the bottom using the thing on the top. `PEN -> WRITE`, `AUTHOR -> WRITE`.
+
+New symbol in The Tree ("ziggurat")? And there's a new symbol outside of the tree (empty set)
 
 ## etc
 
@@ -82,21 +100,64 @@ And the garden on the right side:
 * red-blue: CONE, a detailed sculpture with a square, plus, dot, and a bracket?
 * blue: A small hedge maze
 
+The Great: I did the maze, it opened a door from the little tree-and-question-mark area to another section of The Great. But I've already been to that section through the IN/ROT doors. So what's that all about.
+
+The Impressive; I got the W from inside there but it feels like there is more, somehow. I see something behind the wall when I rotate the right-side panel sometimes
+
+This is totally cheating, but if you're using a texture pack you can sometimes figure out when you teleport in The Digital based on when the textures rotate
+
+~~The bottom copy of `THINK THINK THINK` above the The Orb room has turned green. Okay?~~ It is no longer green
+
+## The Digital second maze
+
+~~The Digital: The second maze. There's some C-shaped purple lines on the top of the cage room, and a similar "DO YOU SEA" painting thing in The Great first-area, but i'm not sure what they mean (following a C shaped path just leads to more maze?)~~
+
+~~I found a path in The Hinterlands. Not sure where I was supposed to learn that path from. It leads to The Gallery~~
+
+I finally went to the left of the area near The Impressive, which had opened some time after I last looked, and found a PAINTING -> ART which revealed the painting. So I might have done a little progression skip
+
+## The Gallery
+
+New area on the "Return To..." menu.
+
+left path - The Extravagant. Has a very large backwards E and a new symbol ("blocks"). I think i've seen that symbol in the shadows of The Great, left garden. If you jump at some of the paintings, you teleport to the other one. Tutorializes the "blocks" symbol and it gave me the E
+
+right path - The Parthenon. Structure with "WHO?" written in black and "WHERE?" written in cyan. one path leads to The Revitalized
+
+straight, left: A black painting which leads to (The Darkroom which I could already get to).
+
+straight: Behind the P painting is a letter-eater (but putting P in there doesn't do anything)
+
+straight, right: The Owl
+
+(After finding `C` in The Digital I filled in `TRICK`/`INK` in The Entry and it told me `LEAST BLUE LAST`. I have no idea what that means. It's now gone and replaced with a painting of The Owl.)
+
 ## current leads
 
-The Digital: The second maze. There's some C-shaped purple lines on the top of the cage room, and a similar "DO YOU SEA" painting thing in The Great first-area, but i'm not sure what they mean (following a C shaped path just leads to more maze?)
+The Great: ~~What the words in the green mazes mean~~ How to apply them into the other representation of the tower area lmao. Maybe the little sculptures represent symbols I need to apply?
 
-The Great: What the words in the green mazes mean. And the tan maze after CURT (I haven't done the actual maze part just because I think it's literally just a maze lol)
+The Great: Some time recently, the area near The Impressive opened up
 
-The Linear/(in general): If the count-down thing reaching 0 allows me to do anything? It looks interactable for some reason
+The Great: I need one more letter so I can finish TEACH/LEARN (might be in The Tree)
 
-After finding `C` in The Digital I filled in `TRICK`/`INK` in The Entry and it told me `LEAST BLUE LAST`. I have no idea what that means. But it opened up more The Entry rooms I guess. If I follow the red outlined hallway I can sometimes get into this room with 9 panels, ~~none of which are solvable atm.~~ some are solvable now that I have the S
+The Great: when I enter "where?" i see "QUESTION (unstatue) -> 4", not sure what the answer is
 
-Letter blockers:
+The Tree: What does the ziggurat symbol mean, and what does the emptyset symbol outside of The Tree mean
 
-* If I find `G` I can fill in `RIGHT` in The Impressive (accessible from The Great, go through IN/ROT area and turn left)
-	* I found G in the maze
-* If I find `E` I can fill in `LEARN` in The Great (after IN/ROT area, turning right)
+`COLOR` panels
+
+* The Digital (BLUE)
+* The Great (next to the gate near the right hedge maze)
+* The Great (next to The Partial entrance)
+* The Unkempt (ORANGE)
+
+Found in Control Center: LESS/REVERSED DOUBLE YOU/ORB'S ORANGE/PEA'S PREREQUISITE/INSIDE THE PAINTING	
+
+* REVERSED DOUBLE YOU - pretty clearly M, right
+* ORB'S ORANGE - the left chamber of The Orb with a big O in it
+* PEA'S PREREQUISITE - ?
+* INSIDE THE PAINTING - could refer to the painting in The Partial which plops you right in front of the R
+* Regardless i can't take action on this because I don't have the M, and don't know where it is
 
 ```{=html}
 </details>
