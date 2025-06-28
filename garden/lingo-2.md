@@ -16,6 +16,8 @@ Sometimes unsolving a panel matters, can do that by focusing the panel and press
 
 Some *panels* have a dot under them. I don't know what this means
 
+* It could mean "unhintable"? The Insert key doesn't work on them
+
 There is a "letter recovery" station in The Entry. This will pick up any letters left in the aqua colored square things which eat your letters and return them to you
 
 ~~For some reason pressing the equal-sign key types an H and at this point Idk if it's intentional~~ I have been told this is a controller support feature, presumably for players who enjoy suffering
@@ -24,51 +26,110 @@ If you head to the graphics settings and change the `STYLE` you can pick one whi
 
 ## symbols
 
-Sun - synonym
+### Sun
 
-Vertical bar thing - homophone
+Synonym.
 
-* Vertical bar thing with a squiggle - rhyme?
+Bracketed, it means antonym.
 
-Star bubbles thing - insert a letter (could be any letter, but it still makes a word; the new letter can appear anywhere in the word, you can't anagram the existing letters).
+### Vertical bar thing
 
-little bracket above a symbol seems to mean "opposite of that"; bracket over sun means antonym, bracket over bubbles means "drop a letter"
+Homophone.
 
-* Question: if there are multiple symbols do the intermediate states still have to form a word? Like, I saw `I (add) (add)` which is solved as `KIT`, and `NO (add) (add)` solved as `KNOT`, but both of these have intermediate states `IT` and `NOT`. Same for the two `TIN (delete) (add)` puzzles, both solved as `KIN` and `INK` where the intermediate is `IN`, a valid word
+With a squiggle: a rhyme.
 
-"Statue" (six pointed star with smaller six-pointed stars): I think, "follows from"? for example COWBOY (this symbol) HAT. Bracketed statue probably means "leads into". In the crossword-cluing sense.
+### Star bubbles thing
 
-Dot under a symbol: "do it again"
+Insert a letter (could be any letter, but it still makes a word; the new letter can appear anywhere in the word, you can't anagram the existing letters).
 
-* In "The Linear" one puzzle is impossible without knowing what this means (NOR -> a five letter word with only one (dotted) addition symbol)
-* turns out `NOR` -> `NORTH`
-* if there is indeed some rule about intermediate states, it wouldn't apply to the dot, neither `NORT` nor `NORH` are valid i think
+Bracketed, it means delete a letter.
 
-Scribble above a symbol: "Do it and also do it in reverse". Taught in The Partial.
+### "Statue"
+
+Six pointed star with smaller six-pointed stars in the lower corners.
+
+~~I think, "follows from"? for example COWBOY (this symbol) HAT. Bracketed statue probably means "leads into". In the crossword-cluing sense.~~ "Belongs to the category of". I think `X (statue) -> Y` means `X` belongs to the category of `Y`s, and unstatue means that `Y` is an example of `X`.
+
+* `QUEEN (statue) (unstatue) -> KING` (hmm)
+* `QUESTION (unstatue) -> WHAT`
+* `QUESTION (unstatue) -> WHY`
+* `CIRCLE (statue) -> SHAPE` (The Colorful)
+
+The commonly used statue-unstatue pair means "another thing in the same category as".
+
+### Dot under a symbol
+
+Do it again
+
+### Scribble above a symbol
+
+Do it again, and also do it in reverse. (taught in The Partial.)
 
 * Scribble above star bubble thing seems to mean "change a letter" aka add one and then drop one, (or drop one and then add one?)
-	* Intermediate states theory disproven I think, cant make these work
 * Inverted scribble might "replace the letter in the other direction", as in, swap the question & answer with another puzzle in the area lol
 
-Planet: Make it plural. Bracket-planet, make it less plural. Taught in The Darkroom
+It could also mean "misc variant" that's different for each symbol it applies to, idk
 
 The Partial has one puzzle where the blanks are on the top and the prefilled answer is on the bottom. Interesting. The Partial's symbol is symmetrical but other symbols aren't so that could be neat
 
-The Extravagant has a "blocks" symbol. it might have something do with being a "component", or a part of the whole (the thing on the top is a component of the thing on the bottom)
+### Planet
+
+Make it plural. Bracket-planet, make it less plural. Taught in The Darkroom.
+
+### Blocks
+
+The thing on the top is a component of the thing on the bottom. Taught in The Extravagant.
 
 * `HORN (blocks) -> RHINO`
 * `ENGINE (blocks) -> TRAIN`
 * `CABOOSE (blocks) -> TRAIN`
 
-bracketed blocks reverses which is the part and which is the whole, now the whole is on the top
+Bracketed blocks reverses which is the part and which is the whole, now the whole is on the top
 
 * `RHINO (unblocks) -> HORN`
 * `COMPASS (unblocks) -> NORTH`
 * `CACTUS (unblocks) -> THORN`
 
-"The snake" (it looks nothing like a snake) taught in TEACH/LEARN is for functions, you can do the thing on the bottom using the thing on the top. `PEN -> WRITE`, `AUTHOR -> WRITE`.
+### "The snake" (it looks nothing like a snake)
 
-New symbol in The Tree ("ziggurat")? And there's a new symbol outside of the tree (empty set)
+You can do the thing on the bottom using the thing on the top. Taught in TEACH/LEARN in The Great.
+
+* `PEN (snake) -> WRITE`
+* `AUTHOR (snake) -> WRITE`
+
+As usual unsnake reverses the order.
+
+### Ziggurat
+
+An "intensifier", applying the ziggurat makes it more intense, applying the unziggurat makes it more subdued.
+
+* `REST (zig) -> SLEEP`
+* `WALK (zig) -> RUN`
+* `WALK (zig) -> SPRINT`
+* `JUMP (unzig) -> HOP`
+* `SPRINT (unzig) -> RUN`
+
+### "empty set" symbol found outside the tree
+
+No idea.
+
+### Wtf to even call this
+
+Ellipse with five vertical ellipses that looks rather messy.
+
+* `MOTHER (this) -> FATHER`, guessed in The Colorful.
+* `WOMAN (this) -> MAN`, The Entry.
+
+Change gender?
+
+### Hollow X
+
+* `CLOUD (x) -> STORM`, guessed in The Colorful
+* `RAIN (unx) -> SNOW`
+
+### Target
+
+* `FIRE (target) -> ASH`, guessed in The Colorful
 
 ## etc
 
@@ -81,13 +142,13 @@ Control Center looks like some sort of fast-travel thing? It only connects to Th
 The Great, garden-area on the left side:
 
 * yellow-brown: FIBS ?
-* brown: Some kind of pixel-art of a tree
+* brown: Some kind of pixel-art of a tree (might represent one of the paintings?)
 * brown-green: THEY ?
-* green: 3d structure of trees. A bracket is visible but only in the shadow
+* green: 3d structure of trees. A *bracket* is visible but only in the shadow
 * green-purple: FACE ?
-* purple: A white spiral sculpture like the other ones in The Great. Two 90-degree angles frame it in the shadow
+* purple: A white spiral sculpture like the other ones in The Great framed by a *Blocks* pattern
 * purple-yellow: LISTEN ?
-* yellow: A moon. In the shadow is a sun.
+* yellow: A moon. In the shadow is a *sun*.
 
 And the garden on the right side:
 
@@ -101,8 +162,6 @@ And the garden on the right side:
 * blue: A small hedge maze
 
 The Great: I did the maze, it opened a door from the little tree-and-question-mark area to another section of The Great. But I've already been to that section through the IN/ROT doors. So what's that all about.
-
-The Impressive; I got the W from inside there but it feels like there is more, somehow. I see something behind the wall when I rotate the right-side panel sometimes
 
 This is totally cheating, but if you're using a texture pack you can sometimes figure out when you teleport in The Digital based on when the textures rotate
 
@@ -124,7 +183,7 @@ left path - The Extravagant. Has a very large backwards E and a new symbol ("blo
 
 right path - The Parthenon. Structure with "WHO?" written in black and "WHERE?" written in cyan. one path leads to The Revitalized
 
-straight, left: A black painting which leads to (The Darkroom which I could already get to).
+straight, left: A black painting which leads to The Darkroom (which I could already get to).
 
 straight: Behind the P painting is a letter-eater (but putting P in there doesn't do anything)
 
@@ -132,24 +191,64 @@ straight, right: The Owl
 
 (After finding `C` in The Digital I filled in `TRICK`/`INK` in The Entry and it told me `LEAST BLUE LAST`. I have no idea what that means. It's now gone and replaced with a painting of The Owl.)
 
+When i find more areas it looks like their paintings get added to The Gallery. I now have a painting to The Tree inhere.
+
+## The Tree
+
+Starting from the main entry door and going clockwise, the doors along the tree roots are
+
+* A painting with a red eye
+* A painting with an ocean and sun
+* A path to another area of The Unkempt
+	* Has some red (QJZXM) panels reading TRAIL, SCALE, PHASE, WAYS
+* The same path
+* A shortcut back to The Digital
+* The same path
+* A symmetrical painting with brown, pink, white, and cohost-purple colors
+* Stairs down to a countdown widget, probably counting down the number of solved puzzles in the tree
+* The same stairs
+* A path to Daedalus
+
+## The Unkempt
+
+The weird hints are an anagram of all the answers?
+
+`LET UNTRUE TIE` -> i found `TILE` through guessing, so what's left is `TUNTRUEE` -> found `TRUE` -> `TUNE`
+
+* `ROUTINE OUT CHUTE`, `ROUTINEOUTCHUTE`
+* minus OUTER is `OUTINCHUTE`, OUTINCHE are unique and `U T` have dupes
+* minus UNITE is `OUCHT` anagrams to TOUCH
+
+## The Jubilant
+
+next to the "COLOR -> RED". Has a ziggurat symbol and some red (QYJZXM) panels
+
 ## current leads
 
-The Great: ~~What the words in the green mazes mean~~ How to apply them into the other representation of the tower area lmao. Maybe the little sculptures represent symbols I need to apply?
+The Great: ~~What the words in the green mazes mean~~ How to apply them into the other representation of the tower area lmao. Maybe the little sculptures represent symbols I need to apply? (yes)
 
-The Great: Some time recently, the area near The Impressive opened up
+The Great: I need more letters so I can finish the TEACH/LEARN area (probably X). Also there's this puzzle `HEAL (unsnake) -> N????` which I am stuck on
 
-The Great: I need one more letter so I can finish TEACH/LEARN (might be in The Tree)
+The Great: in the right hedgemaze, just noticed `MISTREAT (undoors???) -> 4` where "doors" is the symbol found on the back of the text at the very start of The Entry. ~~It's red (QYJZXM)~~ No longer red as of (QJZX)
 
-The Great: when I enter "where?" i see "QUESTION (unstatue) -> 4", not sure what the answer is
+The Three Doors: the hell is happening in there. (It's in the new area in The Great)
 
-The Tree: What does the ziggurat symbol mean, and what does the emptyset symbol outside of The Tree mean
+The Owl: Stuck on a lot of very open-ended "add three letters" puzzles. Not even Insert helps since the letters to add are apparently not at the front
 
-`COLOR` panels
+The Tree/The Jubilant: I can't solve all the puzzles in here, partially because I am stupid and partially because I don't have all the letters (TODO check this again, i got a few letters)
+
+The Entry: I typed OPEN, and the LEFT (purple) / RIGHT (green) doors did not in fact open
+
+The Entry: When I typed "wander" a wall opened up, it's basically a mess back there. Some red panels as of QJYX. One panel to solve: `(bro) (unblocks) -> 5`
+
+List of `COLOR` panels i've found
 
 * The Digital (BLUE)
-* The Great (next to the gate near the right hedge maze)
-* The Great (next to The Partial entrance)
+* The Great (next to the gate near the right hedge maze) (GRAY)
+* The Great (next to The Partial entrance) (RED)
 * The Unkempt (ORANGE)
+* The Tree (BROWN)
+* The Impressive, by the left "wrong" entrance
 
 Found in Control Center: LESS/REVERSED DOUBLE YOU/ORB'S ORANGE/PEA'S PREREQUISITE/INSIDE THE PAINTING	
 
@@ -158,6 +257,18 @@ Found in Control Center: LESS/REVERSED DOUBLE YOU/ORB'S ORANGE/PEA'S PREREQUISIT
 * PEA'S PREREQUISITE - ?
 * INSIDE THE PAINTING - could refer to the painting in The Partial which plops you right in front of the R
 * Regardless i can't take action on this because I don't have the M, and don't know where it is
+
+## Adventurer's log (didn't start this at the start of the game)
+
+Got the letter `Y` from playing with the QUESTION area
+
+Figured out what the "statue" symbol actually means, seems to be "belongs to the category of"
+
+Found `M` in The Impressive. Wow that's kinda dumb, lol.
+
+The Great: filling in `SAVORY -> UNSAVORY` and `FLAVORS -> FAVORS` opened another painting to The Extravagant
+
+Reached a "(bracket) THE END" screen. Lol.
 
 ```{=html}
 </details>
