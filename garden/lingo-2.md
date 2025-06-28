@@ -256,7 +256,7 @@ Found in Control Center: LESS/REVERSED DOUBLE YOU/ORB'S ORANGE/PEA'S PREREQUISIT
 * ORB'S ORANGE - the left chamber of The Orb with a big O in it
 * PEA'S PREREQUISITE - ?
 * INSIDE THE PAINTING - could refer to the painting in The Partial which plops you right in front of the R
-* Regardless i can't take action on this because I don't have the M, and don't know where it is
+* ~~Regardless i can't take action on this because I don't have the M, and don't know where it is~~ oh i have the M now
 
 ## Adventurer's log (didn't start this at the start of the game)
 
