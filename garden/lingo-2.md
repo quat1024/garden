@@ -338,7 +338,9 @@ Where the Q is. Accessible behind one of the hidden/secret panels in Daedalus, n
 
 The Three Doors: the hell is happening in there. (It's in the new area in The Great)
 
-Daedalus (entry from The Tree): Some puzzles I can't figure out yet.
+Daedalus: Yeah.
+
+Daedalus, entry from The Tree: Two puzzles I can't figure out yet.
 
 The Entry: When I typed "wander" a wall opened up, it's basically a mess back there. Some red panels as of QJYX. One panel I can solve: `(bro [SNOW, MAN]) (unblocks) -> S????`. Needs some double-letters.
 
@@ -346,18 +348,22 @@ The Entry: Anything else in the new area next to the I, besides the CONTROL tuto
 
 The Unyielding: Need infinite-S to write HEALTH -> SICKNESS to the right of the bro statue room. Also some interesting letter-adding rooms (red and blue) which i gotta figure out but my brain is a little pear-shaped for the wordplay rn.
 
-The Jubilant: Every single panel has a dot under it. Lmfao.
+The Jubilant/The Quiet: Every single panel has a dot under it. Lmfao.
 
-The Darkroom: Has lots of new areas (The Double Sided, The Congruent, secret part of The Colorful that i need an infinite-O to get into, probably more)
+The Double Sided: Literally just a fucking maze? Ok?
+
+Maybe check The Darkroom for new areas again
 
 The Graveyard: Need to finish all the countdown widgets.
 
 The Tower: *Oh boy.*
 
-List of `COLOR` panels i've found and remembered to write down. Might need to scour the game again for color panels that I forgot to list here. Entering the corresponding color into the Control Center will open the door.
+The Great: Any leads on entering the big beehive block? I want to go in there...
+
+List of `COLOR` panels i've found and remembered to write down. Might need to scour the game again for color panels that I forgot to list here. (Entering the corresponding color into the Control Center will open the door.)
 
 * The Digital (BLUE)
-	* leads to The Unyielding, The Nuanced is in there, seems like a Whole Thing
+	* leads to The Unyielding, The Nuanced is in there. Seems like a Whole Thing
 * The Great (next to the gate near the right hedge maze) (GRAY)
 	* leads to Daedalus's "main entrance"
 * The Great (next to The Partial entrance) (RED)
@@ -367,7 +373,7 @@ List of `COLOR` panels i've found and remembered to write down. Might need to sc
 * The Tree / The Bearer (BROWN)
 	* The Bearer
 * The Impressive (GREEN)
-	* To the Plaza
+	* The Plaza
 * The Owl, "room 3" (MAGENTA)
 	* The Sturdy
 * The Entry next to the Control-key tutorial (WHITE)
