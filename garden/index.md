@@ -31,6 +31,7 @@ Here is what I'm [thinking about right now](/now/index).
 Tools:
 
 * the [lang trimmer](lang-trimmer)
+* [Versions for things](versions)
 
 ### Java stuff
 
