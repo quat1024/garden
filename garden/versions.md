@@ -36,7 +36,7 @@ Since at least java 11, valid options for `--release` are visible in `javac -hel
 
 |Game version|Java version|Note|
 |-----------:|:-----------|:---|
-|1.21.5 | Java 21 | Fabric wants Java 21 already in 1.21.1 |
+|1.20.5 | Java 21 ||
 |1.18.0 | Java 17 ||
 |1.17.0 | Java 16 | Most people use Java 17 |
 |1.12.0 | Java 8 ||
