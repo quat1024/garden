@@ -2,6 +2,12 @@
 
 Yet another netizen's "now" page which will fall out-of-date within two weeks.  As if you cared about what I'm up to anyway!
 
+## Jul 1, 2025
+
+The mods monorepo project is coming together, slowly. Yak shaving a full-featured config API i can use across fabric and forge, and yak shaving a custom file format to use because JSON sucks and TOML also sucks. Looking forward to integrating all the random tiny things that end up copy-pasted across all my projects.
+
+Although I haven't worked on it lately because i'm distracted by Anthrocon packing. Leaving for anthrocon tomorrow! wow !
+
 ## Jun 20, 2025
 
 It's coming up on the end of "the semester I didn't take"... I didn't sign up for summer classes and took a break instead, which I am regretting. I think the break was useful for the first week or two but now I am going stir crazy. At least it freed up some time to attend Anthrocon later?
