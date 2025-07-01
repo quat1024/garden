@@ -12,7 +12,7 @@ Although I haven't worked on it lately because i'm distracted by Anthrocon packi
 
 It's coming up on the end of "the semester I didn't take"... I didn't sign up for summer classes and took a break instead, which I am regretting. I think the break was useful for the first week or two but now I am going stir crazy. At least it freed up some time to attend Anthrocon later?
 
-Working on-and-off on modded Minecraft projects, including ["project sanity"](project-sanity), an experiment in building the necessary tooling to work on Minecraft mods in a "monorepo" to facilitate code-sharing and cut down on development headaches. My mental health (and consequently my work ethic) have plummeted recently, but this project is one that I am enjoying returning to.
+Working on-and-off on modded Minecraft projects, including ["project sanity"](/project-sanity), an experiment in building the necessary tooling to work on Minecraft mods in a "monorepo" to facilitate code-sharing and cut down on development headaches. My mental health (and consequently my work ethic) have plummeted recently, but this project is one that I am enjoying returning to.
 
 I felt the need to pencil-push the CSS on this website. I fixed a longstanding issue with codeblock coloring, tweaked the spacing, and now the footer is a little nicer I guess.
 
