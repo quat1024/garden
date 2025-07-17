@@ -1,14 +1,16 @@
 # Now
 
-Yet another netizen's "now" page which will fall out-of-date within two weeks.  As if you cared about what I'm up to anyway!
+Yet another netizen's "now" page which will fall out-of-date within two weeks.
 
 ## Jul 16, 2025
 
 Went to Anthrocon. It was good! I need more time/energy to collect thoughts.
 
-The monorepo continues to shamble along. The config API is mostly complete (or at least "good enough"). I developed a few small mods inside it, but can't release them yet because mixin refmaps are a big problem. Have some ideas to work around it though. I also need to organize the code a little better.
+The monorepo continues to shamble along. The config API I was cooking is mostly complete (or at least "good enough"). I developed a few small mods inside it, but can't release them yet because mixin refmaps are a big problem, have some ideas to work around it though. I also need to organize the buildscript code a little better. Again.
 
-Lately I've been feeling physically tired without much motivation to work on it though. I played video games on my DS and watched youtube videos and largely feel like I wasted my time.
+It feels like the monorepo is a place I'll find many of the right ideas for toybox (my attempt to burn modded minecraft tooling to the ground). Having a real project that forces me to work piecemeal isn't a bad way to find out what pieces I need for the meal.
+
+Lately I've been feeling physically tired without much motivation to work on it though. I played video games on my DS and watched youtube videos and largely feel like I wasted my time. My back hurts.
 
 ## Jul 1, 2025
 
