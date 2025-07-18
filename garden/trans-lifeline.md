@@ -4,10 +4,10 @@ I have seen people sharing **877-330-6366** as a "Canadian LGBTQ hotline" which 
 
 * This number belongs to **Trans Lifeline**, a nonprofit. It does not belong to "Canada".
 * It is not an "LGBTQ hotline", it is a *trans hotline*.
-* Trans Hotline has a perfectly good US number: **(877)-565-8860**.
-* Trans Hotline is *not* in danger of shutting down.
+* Trans Lifeline has a perfectly good US number: **(877)-565-8860**.
+* Trans Lifeline is *not* in danger of shutting down.
 	* It is not part of the 988 system. They have never accepted federal hotline funding.
-	* Instead, Trans Hotline is funded *by us:* https://translifeline.org/donate/
+	* Instead, Trans Lifeline is funded *by us:* https://translifeline.org/donate/
 
 Mislabeling their number as a general "LGBTQ hotline" has caused problems for them and their callers.
 
@@ -31,9 +31,9 @@ Here is another piece of misinformation I found in a Facebook comment:
 
 > *"I feel the Canadian line is at least not likely to call the police."*
 
-Trans Hotline will not call the police on you unless you ask. They have been sharply critical of 988's practice of nonconsensual police interventions, and have started a [\#SafeHotlines movement](https://translifeline.org/safe-hotlines/) against this practice.
+Trans Lifeline will not call the police on you unless you ask. They have been sharply critical of 988's practice of nonconsensual police interventions, and have started a [\#SafeHotlines movement](https://translifeline.org/safe-hotlines/) against this practice.
 
-See [the Trans Hotline FAQ](https://translifeline.org/hotline/#faq).
+See [the Trans Lifeline FAQ](https://translifeline.org/hotline/#faq).
 
 > **Will you connect or call the police/emergency services during my call?**
 > 
@@ -46,7 +46,7 @@ See [the Trans Hotline FAQ](https://translifeline.org/hotline/#faq).
 ### From their facebook post
 
 ```{=html}
-<img src="/translifeline/tll-paper.png" height=400 alt="header, 'Help us correct misinformation', the word FALSE stamped on a tweet reading 'As trump shuts down the suicide hotline, Canada has broadcasted their national hotline which now has a toll-free American number' (and then the Canadian Trans Hotline number)">
+<img src="/translifeline/tll-paper.png" height=400 alt="header, 'Help us correct misinformation', the word FALSE stamped on a tweet reading 'As trump shuts down the suicide hotline, Canada has broadcasted their national hotline which now has a toll-free American number' (and then the Canadian Trans Lifeline number)">
 ```
 
 ### A bluesky thread
@@ -85,7 +85,7 @@ CAN: (877) 330-6366</p>&mdash; Trans Lifeline (<a href="https://bsky.app/profile
 This one crosses-out a more modern incantation of this misinformation.
 
 ```{=html}
-<img src="/translifeline/tll-mine.png" height=400 alt="A crossed-out tweet with 'it's misinfo sorry' written over it in red text. The tweet reads 'To my American friends: As Trump shuts down your LGBT+ suicide and mental health crisis hotline during these trying times, Canada has added a US toll-free number to ours so you can get help anytime you need at no cost. Kindness and empathy have no borders.' and then the Canadian Trans Hotline number. Instagram-captioned '@occupy democrats' and 'Someone shared this with me. Worth putting out there.'">
+<img src="/translifeline/tll-mine.png" height=400 alt="A crossed-out tweet with 'it's misinfo sorry' written over it in red text. The tweet reads 'To my American friends: As Trump shuts down your LGBT+ suicide and mental health crisis hotline during these trying times, Canada has added a US toll-free number to ours so you can get help anytime you need at no cost. Kindness and empathy have no borders.' and then the Canadian Trans Lifeline number. Instagram-captioned '@occupy democrats' and 'Someone shared this with me. Worth putting out there.'">
 ```
 
 ## Links
