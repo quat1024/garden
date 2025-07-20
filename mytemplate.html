@@ -8,13 +8,24 @@
   <meta property="og:type" content="website"> <!-- its like a website in here -->
   <meta property="og:title" content="$pagetitle$">
   <meta property="theme-color" content="#950000">
-  <link rel="stylesheet" href="/styles.css?cbust=5" />
+  <link rel="stylesheet" href="/styles.css?cbust=7" />
   <style>$highlighting-css$</style>
 </head>
 <body>
 <main id="notfooter">
 $body$
 </main>
-<footer>Back to <a href="/">garden entrance</a> &ndash; <a href="/search.html">Search</a> &ndash; <a href="/listing.html">All pages</a> &ndash; Email: <a href="mailto:quat@highlysuspect.agency">quat@highlysuspect.agency</a></footer>
+<footer>
+  Back to <a href="/">garden entrance</a> &ndash;
+  <a href="/listing.html">All pages</a> &ndash;
+  <a href="/search.html">Search</a>
+  <hr>
+  Questions, feedback, corrections: <a href="mailto:quat@highlysuspect.agency">quat@highlysuspect.agency</a>
+  $if(quat_filename)$
+  <div id="view-source">
+  <a href="https://github.com/quat1024/garden/blob/trunk/$quat_filename$">.md</a>
+  </div>
+  $endif$
+</footer>
 </body>
 </html>

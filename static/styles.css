@@ -45,6 +45,24 @@ footer {
 	background-color: var(--bgaccent);
 	padding: 3rem 0;
 	text-align: center;
+	
+	position: relative;
+}
+
+footer hr {
+	border: none;
+	
+	max-width: min(60%, 400px);
+	height: 0.1rem;
+	background-color: var(--fgcolor);
+	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* diamond */
+}
+
+footer #view-source {
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.5rem;
+	opacity: 0.5;
 }
 
 /* rhythm */
@@ -71,7 +89,6 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 	height: 0.1em;
 	background: var(--fgcolor);
 	clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-	-webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 
 blockquote::before {
@@ -84,7 +101,6 @@ blockquote::before {
 	height: 100%;
 	background: var(--fgcolor);
 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
-	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
 
 table {
