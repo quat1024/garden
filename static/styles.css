@@ -39,6 +39,20 @@ body {
 	width: min(96%,45rem);
 }
 
+#notfooter img, #notfooter iframe {
+	max-width: 100%;
+	margin-inline: auto;
+}
+
+hr {
+	border: none;	
+	background-color: var(--fgcolor);
+	margin-inline: auto;
+	max-width: min(60%, 400px);
+	height: 0.1rem;
+	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* diamond */
+}
+
 footer {
 	flex-grow: 0;
 	width: 100%;
@@ -47,15 +61,6 @@ footer {
 	text-align: center;
 	
 	position: relative;
-}
-
-footer hr {
-	border: none;
-	
-	max-width: min(60%, 400px);
-	height: 0.1rem;
-	background-color: var(--fgcolor);
-	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* diamond */
 }
 
 footer #view-source {
@@ -71,11 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main > * + * {
-	margin: 1.2em 0;
+	margin-block: 1.2em;
 }
 
 blockquote {
-	margin: 0;
 	padding: 0.25em 1.5em;
 	position: relative;
 	background-color: var(--bgaccent);
@@ -111,6 +115,7 @@ th, td {
 	padding: 3px;
 }
 
+/* source */
 pre, div.sourceCode {
 	background-color: var(--bgaccent) !important;
 }
@@ -126,7 +131,7 @@ pre, code, a[href] {
 	word-wrap: break-word;
 }
 
-/* something is replacing tabs with spaces */
+/* something is replacing tabs with spaces?? lol */
 code.makefile .er {
 	text-decoration: none;
 }

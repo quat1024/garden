@@ -30,7 +30,7 @@ no-search: $(outs)
 all: no-search $(slow-outs)
 
 # a java tool, because sometimes you need a real programming language, not bash >.>
-$(tool-out): MakeIndex.java
+$(tool-out)/MakeIndex.class: MakeIndex.java
 	javac "$<" -d "$(@D)"
 
 # quine?
@@ -47,14 +47,14 @@ garden/makefile.md: Makefile MakeIndex.java
 garden-sources-no-listing := $(filter-out garden/listing.md,$(garden-sources))
 tmp/listing-dirty: FORCE
 	$(if $(filter-out $(shell cat "$@" 2>/dev/null),$(shell echo "$(garden-sources-no-listing)" | shasum)),echo "$(garden-sources-no-listing)" | shasum > $@)
-garden/listing.md: tmp/listing-dirty $(tool-out)
+garden/listing.md: tmp/listing-dirty $(tool-out)/MakeIndex.class
 	java -cp $(tool-out) MakeIndex gardenListing "garden/" "$@"
 
 # blog listing, using the same trick and the same tool
 blog-sources-no-index := $(filter-out blog/index.md,$(blog-sources))
 tmp/blog-listing-dirty: FORCE
 	$(if $(filter-out $(shell cat "$@" 2>/dev/null),$(shell echo "$(blog-sources-no-index)" | shasum)),echo "$(blog-sources-no-index)" | shasum > $@)
-garden/blog/index.md: tmp/blog-listing-dirty $(tool-out)
+garden/blog/index.md: tmp/blog-listing-dirty $(tool-out)/MakeIndex.class
 	java -cp $(tool-out) MakeIndex blogListing "blog/" "$@"
 
 # garden files (pattern rule)
@@ -158,8 +158,14 @@ class MakeIndex {
     List<String> out = new ArrayList<>();
     out.add("# Blog");
     out.add("");
+    out.add("This is my old blog. I don't blog as much now that I have the [garden](index), which is a bit more fun than blogging.\n\nPlease pardon my dust; I'm still migrating everything over to this site.");
+    out.add("");
     for(Meta m : metas) {
-      out.add("* " + m.date + " &ndash; " + m.mdLink("blog/", "/"));
+      // \u2b50 -> star
+      String pre = m.good ? "\u2b50 **" : m.draft ? "*" : "";
+      String post = m.good ? "**" : m.draft ? " (draft)*" : "";
+      
+      out.add("* " + m.date + " &ndash; " + pre + m.mdLink("blog/", "/") + post);
       if(m.blurb != null) {
         out.add("  ");
         out.add("  " + m.blurb);
@@ -176,6 +182,8 @@ class MakeIndex {
     String title;
     String date;
     String blurb;
+    boolean good;
+    boolean draft;
     
     int compareByTitle(Meta other) {
       return title.toLowerCase(Locale.ROOT).compareTo(other.title.toLowerCase(Locale.ROOT));
@@ -212,6 +220,8 @@ class MakeIndex {
         if(line.startsWith("title:")) m.title = line.substring(6).trim();
         if(line.startsWith("date:")) m.date = line.substring(5).trim();
         if(line.startsWith("blurb:")) m.blurb = line.substring(6).trim();
+        if(line.startsWith("good:")) m.good = true;
+        if(line.startsWith("draft:")) m.draft = true;
       }
       
       //parse titles out of the first heading in the document

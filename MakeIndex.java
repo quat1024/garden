@@ -56,11 +56,17 @@ class MakeIndex {
     List<String> out = new ArrayList<>();
     out.add("# Blog");
     out.add("");
+    out.add("There are " + metas.size() + " posts, but I don't blog as often now that I have the [garden](index).\n\nPlease pardon my dust, still migrating stuff here.");
+    out.add("");
     for(Meta m : metas) {
-      out.add("* " + m.date + " &ndash; " + m.mdLink("blog/", "/"));
+      // \u2b50 -> star
+      String pre = m.good ? "\u2b50 **" : m.draft ? "*" : "";
+      String post = m.good ? "**" : m.draft ? " (draft)*" : "";
+      
+      out.add("* " + m.date + " &ndash; " + pre + m.mdLink("blog/", "/") + post);
       if(m.blurb != null) {
         out.add("  ");
-        out.add("  " + m.blurb);
+        out.add("  > " + m.blurb);
       }
       out.add("");
     }
@@ -74,6 +80,8 @@ class MakeIndex {
     String title;
     String date;
     String blurb;
+    boolean good;
+    boolean draft;
     
     int compareByTitle(Meta other) {
       return title.toLowerCase(Locale.ROOT).compareTo(other.title.toLowerCase(Locale.ROOT));
@@ -110,6 +118,8 @@ class MakeIndex {
         if(line.startsWith("title:")) m.title = line.substring(6).trim();
         if(line.startsWith("date:")) m.date = line.substring(5).trim();
         if(line.startsWith("blurb:")) m.blurb = line.substring(6).trim();
+        if(line.startsWith("good:")) m.good = true;
+        if(line.startsWith("draft:")) m.draft = true;
       }
       
       //parse titles out of the first heading in the document
