@@ -13,6 +13,9 @@ slow-outs      := out/pagefind
 
 tool-out       := tmp/tool/
 
+$(shell mkdir -p out)
+$(shell mkdir -p tmp)
+
 # remove some ancient make cruft by defining this as empty...
 .SUFFIXES:
 
@@ -27,7 +30,6 @@ $(tool-out): MakeIndex.java
 
 # quine?
 garden/makefile.md: Makefile MakeIndex.java
-	mkdir -p $(@D)
 	printf '# Makefile\n\nThe makefile behind the [garden](garden). Not claiming it is any good.\n\n```makefile\n' > "$@"
 	cat Makefile >> "$@"
 	printf '\n```\n\n## `MakeIndex.java`\n\n```java\n' >> "$@"
@@ -39,7 +41,6 @@ garden/makefile.md: Makefile MakeIndex.java
 # the listing itself is generated with the java tool
 garden-sources-no-listing := $(filter-out garden/listing.md,$(garden-sources))
 tmp/listing-dirty: FORCE
-	mkdir -p tmp
 	$(if $(filter-out $(shell cat "$@" 2>/dev/null),$(shell echo "$(garden-sources-no-listing)" | shasum)),echo "$(garden-sources-no-listing)" | shasum > $@)
 garden/listing.md: tmp/listing-dirty $(tool-out)
 	java -cp $(tool-out) MakeIndex gardenListing "garden/" "$@"
@@ -47,7 +48,6 @@ garden/listing.md: tmp/listing-dirty $(tool-out)
 # blog listing, using the same trick and the same tool
 blog-sources-no-index := $(filter-out blog/index.md,$(blog-sources))
 tmp/blog-listing-dirty: FORCE
-	mkdir -p tmp
 	$(if $(filter-out $(shell cat "$@" 2>/dev/null),$(shell echo "$(blog-sources-no-index)" | shasum)),echo "$(blog-sources-no-index)" | shasum > $@)
 garden/blog/index.md: tmp/blog-listing-dirty $(tool-out)
 	java -cp $(tool-out) MakeIndex blogListing "blog/" "$@"
@@ -74,6 +74,8 @@ out/pagefind: $(outs)
 .PHONY: clean serve open push
 clean:
 	rm -rf ./out
+	rm -rf ./tmp
+	rm $(garden-special)
 
 serve:
 	miniserve -v out --index index.html
