@@ -158,7 +158,7 @@ class MakeIndex {
     List<String> out = new ArrayList<>();
     out.add("# Blog");
     out.add("");
-    out.add("This is my old blog. I don't blog as much now that I have the [garden](index), which is a bit more fun than blogging.\n\nPlease pardon my dust; I'm still migrating everything over to this site.");
+    out.add("There are " + metas.size() + " posts, but I don't blog as often now that I have the [garden](index).\n\nPlease pardon my dust, still migrating stuff here.");
     out.add("");
     for(Meta m : metas) {
       // \u2b50 -> star
@@ -168,7 +168,7 @@ class MakeIndex {
       out.add("* " + m.date + " &ndash; " + pre + m.mdLink("blog/", "/") + post);
       if(m.blurb != null) {
         out.add("  ");
-        out.add("  " + m.blurb);
+        out.add("  > " + m.blurb);
       }
       out.add("");
     }

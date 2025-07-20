@@ -2,13 +2,13 @@
 
 Hi, welcome to my brain. I [post my notes publicly](garden) because it's either this or they rot forever on my hard drive.
 
-Here is what I'm [thinking about right now](/now/index).
+Here is what I'm [thinking about right now](/now/).
 
 ## What's here
 
 ### A blog
 
-I am in the process of [migrating my blog over here](blog/index).
+I am in the process of [migrating my blog over here](blog/).
 
 ### Minecrafty stuff
 
@@ -33,9 +33,9 @@ Tools:
 
 ### Class notes
 
-* [OSTEP.](/ostep/index)
-* [Linear algebra](/linalg/index) and (engineering-style) [boolean algebra](/bool/index).
-* There was one class where we learned about [Rails](/rails/index) but I didn't like it too much.
+* [OSTEP.](/ostep/)
+* [Linear algebra](/linalg/) and (engineering-style) [boolean algebra](/bool/).
+* There was one class where we learned about [Rails](/rails/) but I didn't like it too much.
 
 ### Java stuff
 
