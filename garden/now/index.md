@@ -2,6 +2,14 @@
 
 Yet another netizen's "now" page which will fall out-of-date within two weeks.
 
+## Jul 19, 2025
+
+Putting modded MC projects on hold for now due to... a family situation unfolding at home.
+
+For today's project, thinking about working on finally decomissioning the `highlysuspect.agency` blog engine, and getting all the old blog posts over here.
+
+My back feels better?
+
 ## Jul 16, 2025
 
 Went to Anthrocon. It was good! I need more time/energy to collect thoughts.

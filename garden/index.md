@@ -6,12 +6,6 @@ Here is what I'm [thinking about right now](/now/index).
 
 ## What's here
 
-### Class notes
-
-* [OSTEP.](/ostep/index)
-* [Linear algebra](/linalg/index) and (engineering-style) [boolean algebra](/bool/index).
-* There was one class where we learned about [Rails](/rails/index) but I didn't like it too much.
-
 ### Minecrafty stuff
 
 * [Collected notes on the DataFixerUpper papers.](/dfu/index)
@@ -32,6 +26,12 @@ Tools:
 
 * the [lang trimmer](lang-trimmer)
 * [Versions for things](versions)
+
+### Class notes
+
+* [OSTEP.](/ostep/index)
+* [Linear algebra](/linalg/index) and (engineering-style) [boolean algebra](/bool/index).
+* There was one class where we learned about [Rails](/rails/index) but I didn't like it too much.
 
 ### Java stuff
 
