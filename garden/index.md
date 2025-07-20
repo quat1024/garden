@@ -6,6 +6,10 @@ Here is what I'm [thinking about right now](/now/index).
 
 ## What's here
 
+### A blog
+
+I am in the process of [migrating my blog over here](blog/index).
+
 ### Minecrafty stuff
 
 * [Collected notes on the DataFixerUpper papers.](/dfu/index)

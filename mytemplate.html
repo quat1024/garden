@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>$pagetitle$</title>
+  <title>$title$</title>
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta property="og:type" content="website"> <!-- its like a website in here -->
   <meta property="og:title" content="$pagetitle$">
   <meta property="theme-color" content="#950000">
   <link rel="stylesheet" href="/styles.css?cbust=7" />
-  <style>$highlighting-css$</style>
+  $if(highlighting-css)$<style>$highlighting-css$</style>$endif$
 </head>
 <body>
 <main id="notfooter">
 $body$
 </main>
 <footer>
-  Back to <a href="/">garden entrance</a> &ndash;
-  <a href="/listing.html">All pages</a> &ndash;
-  <a href="/search.html">Search</a>
+  <a href="/">Home</a> &ndash;
+  <a href="/search.html">Search</a> &ndash;
+  <a href="/listing.html">Garden pages</a> &ndash;
+  <a href="/blog/">Blog pages</a>
   <hr>
   Questions, feedback, corrections: <a href="mailto:quat@highlysuspect.agency">quat@highlysuspect.agency</a>
   $if(quat_filename)$
