@@ -439,9 +439,9 @@ Daedalus: Yeah.
 
 The Tower: Yeah.
 
-Daedalus, entry from The Tree: Two puzzles I can't figure out yet.
+Daedalus, ranbow painting in the gallery: One puzzle I can't figure out yet (`RAT(bubbles) (bubbles) -> R????`). Honestly I've thrown wordlists at it and nothing is working (e.x. https://www.visca.com/regexdict/ reports 13 results for `^r(at..|a.t.|a..t|.at.|.a.t|..at)$` and none of them work)
 
-The Entry: Lots of red panels, even now.
+The Entry: Lots of red panels over in that area on the right, even now.
 
 The Unyielding: CYAN 3x3 needs some infinite letters to solve (maybe T). Also figure out what the pedestals are all about
 
@@ -451,17 +451,13 @@ The Jubilant/The Quiet: Every single panel has a dot under it. Lmfao.
 
 The Congruent: new panel that probably needs infinite-I.
 
-The Repetitive: Grey panels around the infinite-H that i still don't know what to do with. Some red panels near the I (need infinite-O, infinite-T for HOTSHOTS)
+The Repetitive: Grey panels around the infinite-H that i still don't know what to do with. Some red panels near the I (and need infinite-O, infinite-T for HOTSHOTS)
 
 The Double Sided: Literally just a fucking maze? I am missing some necessary letters. Someone made a map https://steamcommunity.com/sharedfiles/filedetails/?id=3449604439 . It seems like this area mostly just has an optional collectible (there's optional collectibles...?) so it's not too bad to miss out on I guess
-
-Maybe check The Darkroom for new areas again?
 
 The Great: Any leads on entering the big beehive block? I want to go in there...
 
 Anywhere: Just found out you can walk backwards through all the one-way teal doors.
-
-* There's some Four Rooms stuff accessible in The Owl by walking backwards
 
 According to The Hinterlands, the infinite-letters I can unlock next are R, T, and I. Just got O and C.
 
@@ -665,14 +661,16 @@ Spoiled myself on the teal ending by watching Icely play, lol. I'll hold off on 
 
 Got infinite-O (just had to unsolve some panels in Daedalus, it was a ceiling gimmick, lol)
 
-Got infinite-C.
+Got infinite-C in The Congruent.
 
 random panel in the great (`(face) (doors) -> S???`)
 
 ```
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
-x   O   x     x   O x     
+xxxOO   x     x   O x     
 ```
+
+SHED.
 
 ```{=html}
 </details>
