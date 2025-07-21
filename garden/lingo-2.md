@@ -23,13 +23,13 @@ There is a "letter recovery" station in The Entry. This will pick up any letters
 
 ~~For some reason pressing the equal-sign key types an H and at this point Idk if it's intentional~~ This is a controller support feature
 
-If you head to the graphics settings and change the `STYLE` you can pick one which textures the walls, either for colorblindness or just for looks. This is nice when the plain walls get a bit boring
-
-### general (latergame stuff)
+If you head to the graphics settings and change the `STYLE` you can pick one which textures the walls, either for colorblindness or just for looks. This is nice when the plain walls get a bit boring or hard to read. The MELLOW PACK in particular makes The Darkroom so much easier to read
 
 Sometimes the blanks are on the top and the prefilled word is on the bottom. The symbols still work top-to-bottom.
 
-Red letters steal your letters ! you'd have to go find them again. (This might have been a one-off meme)
+Red letters steal your letters ! you'd have to go find them again. (This might have been a one-off meme actually)
+
+Possibly: Teal doors can be walked through backwards.
 
 ## symbols
 
@@ -72,8 +72,19 @@ Do it again
 
 A "variant" of a symbol
 
-* Star bubble thing, modified: ~~Change a letter instead of adding/removing one~~ Draw an additional stroke on the word, instead of just a generic letter change? F -> E for example since you're adding a line (I watched an Icely video)
+* Star bubble thing, modified: ~~Change a letter instead of adding/removing one~~ Draw on a letter. F -> E for example since you're adding a line. (I watched an Icely video)
 * Vertical bar thing, modified: A rhyme, instead of a homophone.
+
+Star-bubble-squiggle replacements. Each one of these only requires one usage of the symbol, even stuff like `L` -> `R` which requires doing a lot of art. You can do these transformations in reverse with the bracketed symbol (like erasing a bit). This is **not exhaustive**
+
+* `C` -> `G`, `S`
+* `D` -> `P`, `R`
+* `F` -> `P`, `R`
+* `I` -> `T`
+* `L` -> `C`, `D`, `F`, `G`, `H`, `R`, `S`
+* `N` -> `M`
+* `P` -> `B`, `R`
+* `U` -> `O`
 
 ### Planet
 
@@ -135,11 +146,14 @@ Hmm.
 
 ### Target
 
+Cause and effect, "leads to".
+
 * `FIRE (target) -> ASH`, guessed in The Colorful, also in The Lionized
 * `LIFE (target) -> DEATH`, The Lionized
 * `ROCK (target) -> SAND`
 * `LION (untarget) -> CUB`
 * `FROG (untarget) -> TADPOLE`
+* `BROODING -> RAGE`, `CARE -> LOVE`, `SUSPENSE -> FEAR`, `PRACTICE -> BEST`
 
 Seems to be taught for-real in The Lionized (accessible from The Between -> painting -> door)
 
@@ -244,11 +258,9 @@ The back garden, with muted colors:
 * Green/red: Inverse bubbles, then WORLDS/SWORDS
 	* WORDS
 
-The Great: I did the maze, it opened a door from the little tree-and-question-mark area to another section of The Great. But I've already been to that section through the IN/ROT doors. So what's that all about.
+This is totally cheating, but if you're using a texture pack you can sometimes figure out when you teleport based on when the textures rotate
 
-This is totally cheating, but if you're using a texture pack you can sometimes figure out when you teleport in The Digital based on when the textures rotate
-
-~~The bottom copy of `THINK THINK THINK` above the The Orb room has turned green. Okay?~~ It is no longer green
+~~The bottom copy of `THINK THINK THINK` above the The Orb room has turned green. Okay?~~ ~~It is no longer green~~ It is veeeerry slightly green in the default pack lol, but it's pretty vivid in other packs
 
 ## The Digital second maze
 
@@ -260,21 +272,9 @@ I finally went to the left of the area near The Impressive, which had opened som
 
 ## The Gallery
 
-New area on the "Return To..." menu.
-
-left path - The Extravagant. Has a very large backwards E and a new symbol ("blocks"). I think i've seen that symbol in the shadows of The Great, left garden. If you jump at some of the paintings, you teleport to the other one. Tutorializes the "blocks" symbol and it gave me the E
-
-right path - The Parthenon. Structure with "WHO?" written in black and "WHERE?" written in cyan. one path leads to The Revitalized
-
-straight, left: A black painting which leads to The Darkroom (which I could already get to).
-
-straight: Behind the P painting is a letter-eater (but putting P in there doesn't do anything)
-
-straight, right: The Owl
+New area on the "Return To..." menu. Contains The Extravagant (where you get E and are taught about Blocks), The Parthenon, and The Owl by default(?) but many areas add themselves as paintings here when you find them. Also has a letter eater thing.
 
 (After finding `C` in The Digital I filled in `TRICK`/`INK` in The Entry and it told me `LEAST BLUE LAST`. I have no idea what that means. It's now gone and replaced with a painting of The Owl.)
-
-When i find more areas it looks like their paintings get added to The Gallery. I now have a painting to The Tree inhere.
 
 ## The Tree
 
@@ -282,16 +282,19 @@ Starting from the main entry door and going clockwise, the doors along the tree 
 
 * A painting with a red eye
 * A painting with an ocean and sun
-* The same painting
+* A painting with an ocean and sun (same area)
+* The COLOR/BROWN pedestal taking you to The Bearer
 * A path to another area of The Unkempt
 	* Has a door to The Sun Temple
-* The same path
+* A path to another area of The Unkept (same area)
 * A shortcut back to The Digital
-* The same path
+* A shortcut back to The Digital (same area)
 * A symmetrical painting with brown, pink, white, and cohost-purple colors
-* Stairs down to a countdown widget, probably counting down the number of solved puzzles in the tree
-* The same stairs
+* Stairs down to a countdown widget
+* Stairs down (the same stairs)
 * A path to Daedalus
+
+Starting from the painting teleport, if you walk backwards you'll be between the two entrances to the ocean-and-sun painting.
 
 ## The Unkempt
 
@@ -305,37 +308,36 @@ The weird hints are an anagram of all the answers?
 
 ## The Congruent
 
-New area accessible from The Darkroom, seems to be a spoof of The Partial
+New area accessible from second room of The Darkroom, seems to be a spoof of The Partial
 
-Has a clue: 1 in cyan, 2 in pink, 3 in yellow, that make a G shape. Ok.
+Has a clue: 1 in cyan, 2 in pink, 3 in yellow. Spells L, C, G.
+
+Got infinite-C by putting C in the letter-remover, which made it disappear.
 
 ## "Control" key
 
 Displays as `[REDACTED]` in the hint menu.
 
 * Prevents puzzles from being solved when their last letter is typed?
-* No, actually: enters an alternate solution for each puzzle with a dot under the panel.
-
-(I tried this on the RETURN -> TURN in the fake entry but it didn't override auto-leaving the map)
+* No, actually: enters an alternate solution for each puzzle with a dot under the panel?
+* Actually many puzzles with alt solutions accept them without the control key being pressed.
+* I tried this on the RETURN -> TURN in the fake entry but it didn't override auto-leaving the map
 
 ## The Graveyard
 
-Apparently accessible through falling out-of-bounds. First place I did this was The Sun Temple.
+Accessible through falling out-of-bounds. First place I did this was The Sun Temple, also back side of The Great. Solvinng all countdown widgets in The Great gives you the black ending.
 
-Has representations of all the countdown widgets, the ones that aren't completed:
+The area loops but if you walk in a diagonal direction you can see a tree. Not sure if that means anything.
 
-* RED AGAINST BLUE (probably TEACH/LEARN)
-* BUILDING BUILDINGS
-* THE LANDSCAPES (could be the tower riddle thing)
-* THE THREE DOORS
+There's a panel i need infinite R to type on, too.
 
 ## The Between
 
-New area accessible from the first part of The Great. Groups of short puzzles that form a word when put together, where the concatenation is represented with the smiley-face. I need more infinite-letters to solve some of these.
+Accessible from the first part of The Great. Groups of short puzzles that form a word when put together, where the concatenation is represented with the smiley-face. I need more infinite-letters to solve some of these.
 
 ## The Quiet
 
-Where the Q is. Accessible behind one of the hidden/secret panels in Daedalus, near the orange pipe
+Where the Q is. Accessible behind one of the HIDDEN/SECRET panels in Daedalus, near the orange pipe.
 
 ## The Three Doors
 
@@ -355,42 +357,128 @@ And now the grave marker hit 0 so i'm done here i think
 
 ## The Bearer
 
-Entrance from The Unyielding (a green pipe). OVER LOOK might be handy once i get infinite O. Looks like infinite Q is unlocked here
+Entrance from The Unyielding (through a green pipe?) OVER LOOK might be handy once i get infinite O. Looks like infinite Q is unlocked here.
 
-There's a different entrance from somewhere else... The Tree (brown door)?
+There's a different entrance from The Tree through the BROWN door. Contains the actual infinite Q itself, a painting to The Butterfly (flanked by a red panel?) and an entrance to a tiny corner of Daedalus with red/yellow/white(?)cream(?)/blue(?)darkblue(?)royalblue(?) patches on the ceiling that idk what to do with
+
+## The Words
+
+Well i followed the directions literally and *wrote* `THEWORDS` into the first panel, and now I'm here. Got the blue ending.
+
+## The Sturdy
+
+Moving panels puzzle. Accepted words area UP/DOWN/LEFT/RIGHT/BACK. Solution: red BACK, cyan UP, orange BACK, blue DOWN, pink LEFT, green LEFT, purple LEFT, yellow UP.
+
+There's now a `COLORS (blocks) -> RAINBOW` panel in the middle of the room. It reveals a painting which takes you to Daedalus (it's a bit janky, jump towards the left side)
+
+## The Unyielding
+
+Now that the area has opened up from solving 2x2s and 3x3s time to start mapping things...
+
+Things-on-pedestals i found:
+
+* The smiley face on a gold pedestal
+* I on a blue pedestal (green)
+* E on a blue pedestal (NORTH/SOUTH room)
+* D on a blue pedestal (animal room)
+* O on a red pedestal (left side of the big room)
+* T on a red pedestal (big room kinda across from bee painting)
+* S on a red pedestal (through ORANGE in big room)
+
+The smiley face has a blue eye on the left, and a red eye on the right (looking away from the entrance from The Digital)
+
+Left to right starting in the smiley face room:
+
+* SICKNESS->HEALTH: The Nuanced (small area unlocking infinite N, wall panel TORE -> STORES, letter-remover)
+* black: shortcut to big room near T pedestal
+* cyan: a 3x3 that i can't solve yet (need infinite letters and also more brain power)
+	* Red panels (RAT/ATE/THEN, maybe need infinite T?)
+	* SEAL/SON/SEA -> 8 letters start with S
+	* TON/MAN/RAT -> 8 letters start with M
+* hallway behind the smiley face room: the yellow block
+* salmon: shortcut to big room
+* daisy: 2x2 panels (flower/refund)
+* HEALTH->SICKNESS: The Bearer
+
+The big room, left to right
+
+* GRAY: Tp to the right side of the big room
+* BLACK: shortcut back to smiley face room
+* ORANGE: S on a red pedestal, a WHIT->WHITEN panel
+* SALMON: back to the smiley face room. Entrance is near a REAM/DREAM panel
+* Small black hallway next to a white block: The Plaza
+* GREEN: I on a blue pedestal, a SEA -> SEARCH panel. Call be crazy but it looks like there's a hallway behind the I pedestal, that i can't reach because it's in the way
+* GRAY: Tp back to left side of room
+
+Continuing left, left-hand-rule style
+
+* Bee painting which takes you to the middle of the big room
+* Animal room (has the blue D)
+* Red/orange abstract painting exit
+* Brown tunnel which takes you to a 2x2, across from DAISY
+* (if you don't go into the brown tunnel) The blue arch which initially gets you in here and the BACK/FORTH shortcut to Control Center
+
+Right-hand-ruling from the big room takes you to the bee painting as well
+
+Through the brown tunnel there is an "east/west room" containing a small 2x2 as well. Going left-to-right behind WEST does nothing, going right-to-left takes you to the big room near the bee painting.
+
+Going right-to-left behind EAST takes you to the NORTH/SOUTH room, which has E on a blue pedestal. going behind SOUTH dumps you in the EAST/WEST room again (by way of teleporting you to the hallway behind the bee painting, actually, you can see two teleports with a texture pack)
+
+Going left-to-right behind NORTH takes you to the EAST/WEST room, and going right-to-left does nothing (but using two teleports lol; if you stop in-between you're just behind EAST again)
+
+The "yellow block":
+
+* Red on the left, blue on the right: Hallway behind the smiley face room (can see CYAN/SALMON)
+* Red on both sides: Hallway in the big room (can see BLACK/ORANGE)
+* Blue on the left, red on the right: Nothing(?)
+* Blue on both sides: Near the DAISY/BROWN 2x2s, so near the north/south room
 
 ## current leads
 
 Daedalus: Yeah.
 
+The Tower: Yeah.
+
 Daedalus, entry from The Tree: Two puzzles I can't figure out yet.
 
-The Entry: When I typed "wander" a wall opened up, it's basically a mess back there. Some red panels as of QJYX. One panel I can solve: `(bro [SNOW, MAN]) (unblocks) -> S????`. Needs some double-letters.
+The Entry: Lots of red panels, even now.
 
-The Entry: Anything else in the new area next to the I, besides the CONTROL tutorial?
+The Unyielding: CYAN 3x3 needs some infinite letters to solve (maybe T). Also figure out what the pedestals are all about
 
-The Unyielding: More letter-adding rooms to find
+The Unkempt: Panels which need infinite-D to solve.
 
 The Jubilant/The Quiet: Every single panel has a dot under it. Lmfao.
 
-The Double Sided: Literally just a fucking maze? Ok?
+The Congruent: new panel that probably needs infinite-I.
 
-Maybe check The Darkroom for new areas again
+The Repetitive: Grey panels around the infinite-H that i still don't know what to do with. Some red panels near the I (need infinite-O, infinite-T for HOTSHOTS)
 
-The Tower: *Oh boy.*
+The Double Sided: Literally just a fucking maze? I am missing some necessary letters. Someone made a map https://steamcommunity.com/sharedfiles/filedetails/?id=3449604439 . It seems like this area mostly just has an optional collectible (there's optional collectibles...?) so it's not too bad to miss out on I guess
+
+Maybe check The Darkroom for new areas again?
 
 The Great: Any leads on entering the big beehive block? I want to go in there...
+
+Anywhere: Just found out you can walk backwards through all the one-way teal doors.
+
+* There's some Four Rooms stuff accessible in The Owl by walking backwards
+
+According to The Hinterlands, the infinite-letters I can unlock next are R, T, and I. Just got O and C.
+
+* R: "PEER AMID THE EDGES OF THE WORLD" with a pyramid. Poke around in The Great/The Sun Temple? thought i already looked there though
+* T: "WHERE IS IT? WHICH DOOR? SO MANY QUESTIONS SO FEW ANSWERS. ...BUT WHY?"
+* I: "AN EYE FOR AN I", with red eye like the  ones in The Repetitive
 
 List of `COLOR` panels i've found and remembered to write down. Might need to scour the game again for color panels that I forgot to list here. (Entering the corresponding color into the Control Center will open the door.)
 
 * The Digital (BLUE)
-	* leads to The Unyielding, The Nuanced is in there. Seems like a Whole Thing
+	* The Unyielding
 * The Great (next to the gate near the right hedge maze) (GRAY)
-	* leads to Daedalus's "main entrance"
+	* Daedalus's "main entrance"
 * The Great (next to The Partial entrance) (RED)
-	* leads to The Jubilant
+	* The Jubilant
 * The Unkempt (ORANGE)
-	* Different spot in Daedalus which has the infinite O in it. Can't get to it yet though.
+	* Different spot in Daedalus which has the infinite O in it
 * The Tree / The Bearer (BROWN)
 	* The Bearer
 * The Impressive (GREEN)
@@ -402,19 +490,20 @@ List of `COLOR` panels i've found and remembered to write down. Might need to sc
 
 I guess I should start marking down dotted panels, huh?
 
-* The Entry, First panel in the game (HI -> BYE)
+* The Entry, first panel in the game (HI -> BYE, HI -> THEWORDS)
 * The Entry, TRICK/INK panels. I'd like to try TREAT but i don't have infinite T.
 * Entrance to The Sun Temple, and all of the panels within
-	* I don't have infinite O to write MOON, but `DELAY (delete 2) -> DAY` accepts `NIGHT` when holding control, so yeah
+	* I don't have infinite O to write MOON, but `DELAY (delete 2) -> DAY` accepts `NIGHT`, so yeah
 * Daedalus, WELCOME in the WELCOME BACK area
 * A bunch of Daedalus panels that say HIDDEN
-* HISS -> SNAKE has a dot
 * Basically half the panels in Daedalus let's be frank
 * The Great, all the QUESTION panels
 
 ## The Owl
 
 for the purposes of mapping i'll just assume "north" in each room is "whichever way the orange pixels face", which can be different room to room. Also, I didn't meticulously finish this map after finding the pixel droppers lol
+
+(n.b: yeah this means i put down "NORTH" as the direction you stand to make the owl appear upside-down. Oh well)
 
 ### room 1
 
@@ -434,7 +523,7 @@ for the purposes of mapping i'll just assume "north" in each room is "whichever 
 
 ### room 3
 
-* a color panel, looks like `MAGENTA` (need a A duplicate)
+* a color panel, looks like `MAGENTA`
 * PENCIL -> STENCIL
 * WING -> DRAWING
 
@@ -450,6 +539,8 @@ for the purposes of mapping i'll just assume "north" in each room is "whichever 
 * east to something i can't reach
 * south to room 3
 * west to room 5
+
+Cyan doors canbe walked backwards through!! and take you to Four Rooms
 
 Dropping the blue pixels will allow me to cross this room
 
@@ -564,7 +655,24 @@ Got the Q in The Quiet. This completes my entire keyboard.
 
 Got the purple ending in the Sun Temple.
 
-New session. Black ending in The Graveyard. Got infinite-S. Working my way through The Unyielding. Other stuff that happened but im editing this on my phone and closed without committing:/
+New session.
+
+Black ending in The Graveyard. Got infinite-S. Working my way through The Unyielding. Other stuff that happened but im editing this on my phone and closed without committing :/
+
+Stumbled into The Words and got the blue ending.
+
+Spoiled myself on the teal ending by watching Icely play, lol. I'll hold off on doing that ending until i find something that hints it from ingame?
+
+Got infinite-O (just had to unsolve some panels in Daedalus, it was a ceiling gimmick, lol)
+
+Got infinite-C.
+
+random panel in the great (`(face) (doors) -> S???`)
+
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+x   O   x     x   O x     
+```
 
 ```{=html}
 </details>
