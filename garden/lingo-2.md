@@ -353,9 +353,13 @@ LONE/CHANCE, left hall to grave marker and MINUTE/MINUTE (somehow), right hall t
 
 And now the grave marker hit 0 so i'm done here i think
 
-## current leads
+## The Bearer
 
-The Three Doors: the hell is happening in there. (It's in the new area in The Great)
+Entrance from The Unyielding (a green pipe). OVER LOOK might be handy once i get infinite O. Looks like infinite Q is unlocked here
+
+There's a different entrance from somewhere else... The Tree (brown door)?
+
+## current leads
 
 Daedalus: Yeah.
 
@@ -365,15 +369,13 @@ The Entry: When I typed "wander" a wall opened up, it's basically a mess back th
 
 The Entry: Anything else in the new area next to the I, besides the CONTROL tutorial?
 
-The Unyielding: Need infinite-S to write HEALTH -> SICKNESS to the right of the bro statue room. Also some interesting letter-adding rooms (red and blue) which i gotta figure out but my brain is a little pear-shaped for the wordplay rn.
+The Unyielding: More letter-adding rooms to find
 
 The Jubilant/The Quiet: Every single panel has a dot under it. Lmfao.
 
 The Double Sided: Literally just a fucking maze? Ok?
 
 Maybe check The Darkroom for new areas again
-
-The Graveyard: Need to finish all the countdown widgets.
 
 The Tower: *Oh boy.*
 
@@ -561,6 +563,8 @@ Guessed `MISTREAT (un-doors) -> REAM` in The Great. Not sure if it did anything 
 Got the Q in The Quiet. This completes my entire keyboard.
 
 Got the purple ending in the Sun Temple.
+
+New session. Black ending in The Graveyard. Got infinite-S. Working my way through The Unyielding. Other stuff that happened but im editing this on my phone and closed without committing:/
 
 ```{=html}
 </details>
