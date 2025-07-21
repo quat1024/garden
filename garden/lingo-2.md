@@ -641,7 +641,7 @@ Got into The Between, found The Lively, got infinite-L.
 
 Found and solved The Lionized, got infinite-E. Seems powerful...!
 
-Found and solved The Nuanced, got infinite-N. There is still a sign saying "TORE (add 2) -> 6" that I don't have the letters for.
+Found and solved The Nuanced, got infinite-N. ~~There is still a sign saying "TORE (add 2) -> 6" that I don't have the letters for.~~ Solved it later.
 
 Probably did some other stuff.
 
