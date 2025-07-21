@@ -657,7 +657,7 @@ Black ending in The Graveyard. Got infinite-S. Working my way through The Unyiel
 
 Stumbled into The Words and got the blue ending.
 
-Spoiled myself on the teal ending by watching Icely play, lol. I'll hold off on doing that ending until i find something that hints it from ingame?
+Spoiled myself on the teal ending by watching Icely play, lol. I'll hold off on doing that ending until i find something that hints it from ingame? I also corrected my understanding of the "change a letter" symbol (actually means "draw on a letter")
 
 Got infinite-O (just had to unsolve some panels in Daedalus, it was a ceiling gimmick, lol)
 
