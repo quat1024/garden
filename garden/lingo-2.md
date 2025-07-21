@@ -21,13 +21,15 @@ Some *panels* have a dot under them. I don't know what this means
 
 There is a "letter recovery" station in The Entry. This will pick up any letters left in the aqua colored square things which eat your letters and return them to you
 
-~~For some reason pressing the equal-sign key types an H and at this point Idk if it's intentional~~ I have been told this is a controller support feature, presumably for players who enjoy suffering
+~~For some reason pressing the equal-sign key types an H and at this point Idk if it's intentional~~ This is a controller support feature
 
 If you head to the graphics settings and change the `STYLE` you can pick one which textures the walls, either for colorblindness or just for looks. This is nice when the plain walls get a bit boring
 
 ### general (latergame stuff)
 
-Red letters steal your letters ! you'd have to go find them again.
+Sometimes the blanks are on the top and the prefilled word is on the bottom. The symbols still work top-to-bottom.
+
+Red letters steal your letters ! you'd have to go find them again. (This might have been a one-off meme)
 
 ## symbols
 
@@ -70,10 +72,8 @@ Do it again
 
 A "variant" of a symbol
 
-* Star bubble thing, modified: Change a letter instead of adding/removing one.
+* Star bubble thing, modified: ~~Change a letter instead of adding/removing one~~ Draw an additional stroke on the word, instead of just a generic letter change? F -> E for example since you're adding a line (I watched an Icely video)
 * Vertical bar thing, modified: A rhyme, instead of a homophone.
-
-The Partial has one puzzle where the blanks are on the top and the prefilled answer is on the bottom. Interesting. The Partial's symbol is symmetrical but other symbols aren't so that could be neat
 
 ### Planet
 
@@ -205,15 +205,18 @@ Control Center looks like some sort of fast-travel thing? It only connects to Th
 
 The Great, garden-area on the left side:
 
-* yellow-brown: FIBS ?
-* brown: Some kind of pixel-art of a tree (might represent one of the paintings?)
+* orange-brown: FIBS ?
+  * LIES
+* brown: Some kind of pixel-art of an autumn tree (might represent one of the paintings?) (could be the ziggurat since that's taught in the tree)
 * brown-green: THEY ?
-* green: 3d structure of trees. A *bracket* is visible but only in the shadow
+  * THE
+* green: 3d structure of trees. A *bracket* is visible but only in the shadow. (maybe this represented the bubbles, apparently it meant "drop a letter")
 * green-purple: FACE ?
+  * EYES
 * purple: A white spiral sculpture like the other ones in The Great framed by a *Blocks* pattern
-* purple-yellow: LISTEN ?
+* purple-orange: LISTEN ?
 	* HEAR (this panel has a dot)
-* yellow: A moon. In the shadow is a *sun*.
+* orange: A moon. In the shadow is a *sun*.
 
 And the garden on the right side:
 
@@ -333,6 +336,22 @@ New area accessible from the first part of The Great. Groups of short puzzles th
 ## The Quiet
 
 Where the Q is. Accessible behind one of the hidden/secret panels in Daedalus, near the orange pipe
+
+## The Three Doors
+
+FIRS/INITIAL, left and right doors loop, middle door to MINUTE/MINUTE, portal back to the great, left hall to LOOSE/STRINGS, right hall to GOLD/PORT
+
+MINUTE/MINUTE, all doors and portal to FIRS/INITIAL, left hall to blank/blank (THIRD/FOURTH), 
+
+blank/blank, portal and left and right doors to firs/initial, middle door to minute/minute, left hall to gold/port
+
+GOLD/PORT, portal to LONE/CHANCE, all doors to FIRS/INITIAL, right hall to blank/blank
+
+LOOSE/STRINGS (lose/threads), portal/left door/right door to FIRS/INITIAL, middle door to MINUTE/MINUTE. hmph.
+
+LONE/CHANCE, left hall to grave marker and MINUTE/MINUTE (somehow), right hall to DOOR/WAYS, left door to DEAD/END
+
+And now the grave marker hit 0 so i'm done here i think
 
 ## current leads
 
