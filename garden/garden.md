@@ -1,6 +1,8 @@
 # Digital gardening
 
-Just somewhere on the internet to put notes and things you find interesting.
+A "digital garden" is somewhere on the internet to put notes and things you find interesting.
+
+I have found gardening more fun than regular website-maintaining, so my entire website is now one big garden.
 
 ## My garden
 
@@ -20,7 +22,7 @@ There are [better formats](https://github.com/jgm/djot) than Markdown, but the m
 
 ## Why not garden
 
-There's plenty of reasons not to garden. I wrote about some [on my blog](https://highlysuspect.agency/posts/digital_gardens/).
+There's plenty of reasons not to garden. I wrote about some [on my blog](/blog/digital_gardens/).
 
 * *Too public:* You can't write private things in your notes.
 * *Complexity:* Hosting notes is tricky and clutters up the repo containing the notes.

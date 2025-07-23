@@ -1,29 +1,25 @@
 # garden
 
-Hi, welcome to my brain. I [post my notes publicly](garden) because it's either this or they rot forever on my hard drive.
+Hi, welcome to my brain.
 
-Here is what I'm [thinking about right now](/now/).
+* [Here is my blog.](/blog/)
+* [Here is what I'm thinking about right now.](/now/)
+* The rest of this page contains my notes. Read [why I post my notes publicly.](garden)
 
-## What's here
+## Minecrafty stuff
 
-### A blog
-
-I am in the process of [migrating my blog over here](blog/).
-
-### Minecrafty stuff
-
-* [Collected notes on the DataFixerUpper papers.](/dfu/index)
-* [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem.](forge-bitrot)
+* [Collected notes on the DataFixerUpper papers](/dfu/index)
+* [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem](forge-bitrot)
 * [How do Neoforge installers actually work?](neoforge-installer)
-* [How Voldeloom works at a high level.](voldeloom-stages)
-* [`binpatches.pack.lzma` in post-Launchwrapper Forge.](binpatches-pack-lzma)
+* [How Voldeloom works at a high level](voldeloom-stages)
+* [`binpatches.pack.lzma` in post-Launchwrapper Forge](binpatches-pack-lzma)
 * [How does `tiny-remapper` work?](remapper)
 * ["Apathy lang"](apathylang)
-* [Another way to do datagen.](another-datagen)
-* [Why you shouldn't use chatgpt to diagnose Minecraft errors.](ai-error-diagnosis)
+* [Another way to do datagen](another-datagen)
+* [Why you shouldn't use chatgpt to diagnose Minecraft errors](ai-error-diagnosis)
 * ["Can you make the game a little less lonely?"](can-you-make-the-game-a-little-less-lonely)
-* [You should learn Java to mod Minecraft, not a different language.](mc-jvm-language)
-* [Reddit hivemind opinions.](reddit)
+* [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
+* [Reddit hivemind opinions](reddit)
 * [Datapacks bad](datapacks-bad)
 
 Tools:
@@ -31,19 +27,13 @@ Tools:
 * the [lang trimmer](lang-trimmer)
 * [Versions for things](versions)
 
-### Class notes
+## Class notes
 
-* [OSTEP.](/ostep/)
+* [OSTEP](/ostep/)
 * [Linear algebra](/linalg/) and (engineering-style) [boolean algebra](/bool/).
 * There was one class where we learned about [Rails](/rails/) but I didn't like it too much.
 
-### Java stuff
-
-* [How does Maven work?](maven)
-* [The `mill` build system](mill)
-* [Processing zip files in Java](zip)
-
-### Specific pieces of software
+## Software
 
 * [How do you set up SSH keys?](sshkey)
 * [How do you set up `signify`?](signify)
@@ -55,26 +45,26 @@ Tools:
 * [the Nook Simple Touch (2011)](nook-simple-touch)
 * [Styling forms](styling-forms)
 * [Towards a good config system](config)
-* [The wrong abstraction.](wrong-abstraction)
-* [No, we're not destroying software.](not-destroying)
+* [The wrong abstraction](wrong-abstraction)
+* [No, we're not destroying software](not-destroying)
+* Java build system talk: [Maven](maven), [`mill`](mill).
 
-### Whatever else
+## Whatever else
 
-* [Always a student](always-a-student)
-* [Note notes](note-notes)
 * [Executive function](executive-function)
 * [Do not register for any protest action](protest-registering)
+* [Misinformation about Trans Lifeline's number](trans-lifeline)
 * [Breaking a bone](broken-bone)
+* [LINGO 2 notes](lingo-2)
 
-### Furry subculture resources
+## Furry subculture
 
-Oh no!
+* [Advice about attending conventions](fur)
+* [Advice about navigating the FWA hotel](navigating-fwa)
+* [Every single vendor at FWA 2025](fwa-25-vendors)
 
-* [Advice about attending conventions.](fur)
-* [Advice about navigating the FWA hotel.](navigating-fwa)
-* [Every single vendor at FWA 2025.](fwa-25-vendors)
+## Elsewhere
 
-## What's not here
+* [The link dump](link-dump)
 
-* Anything useful or of importance to anyone
-* Want to browse off this website as soon as possible? Click on something from [the link dump](link-dump).
+Missing something? An auto-generated listing of all notes is [here](listing).

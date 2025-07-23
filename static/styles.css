@@ -7,7 +7,7 @@ math {
   font-family: "LibertinusMath", "Cambria Math", serif;
 }
 
-* { box-sizing: border-box;}
+* { box-sizing: border-box; }
 
 :root {
 	font-family: sans-serif;
@@ -21,9 +21,18 @@ math {
 	color: var(--fgcolor);
 }
 
+@supports(background-color: Canvas) {
+	:root {
+		color-scheme: light dark;
+		--bgcolor: color-mix(in srgb, Canvas 98%, red);
+  	--fgcolor: CanvasText;
+	}
+}
+
 body {
 	width: 100%;
 	min-height: 100vh;
+	min-height: 100svh;
 	margin: 0 auto;
 	padding-top: 20px;
 	
@@ -31,28 +40,27 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap:1.2rem;
+	gap: 1.2rem;
 }
 
-#notfooter {
+main {
 	flex-grow: 1;
 	width: min(96%,45rem);
 }
 
-#notfooter img, #notfooter iframe {
+main img, main iframe {
 	max-width: 100%;
 	margin-inline: auto;
 }
 
-hr {
-	border: none;	
-	background-color: var(--fgcolor);
-	margin-inline: auto;
-	max-width: min(60%, 400px);
-	height: 0.1rem;
-	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* diamond */
+main time.publish_date {
+	display: block;
+	margin-block: 0.5rem;
+	font-style: italic;
+	text-align: right;
 }
 
+/* foot */
 footer {
 	flex-grow: 0;
 	width: 100%;
@@ -107,6 +115,16 @@ blockquote::before {
 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
 
+hr {
+	border: none;	
+	background-color: var(--fgcolor);
+	margin-inline: auto;
+	max-width: min(60%, 400px);
+	height: 0.1rem;
+	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* diamond */
+}
+
+/* tables */
 table {
 	border-collapse: collapse;
 }
@@ -115,7 +133,7 @@ th, td {
 	padding: 3px;
 }
 
-/* source */
+/* code */
 pre, div.sourceCode {
 	background-color: var(--bgaccent) !important;
 }

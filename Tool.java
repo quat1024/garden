@@ -4,7 +4,7 @@ import java.nio.charset.*;
 import java.nio.file.*;
 import java.nio.file.attribute.*;
 
-class MakeIndex {
+class Tool {
   public static void main(String[] args) throws IOException {
     System.out.println("hello");
     
