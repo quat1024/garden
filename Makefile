@@ -30,11 +30,13 @@ $(tool-out)/Tool.class: Tool.java
 	javac "$<" -d "$(@D)"
 
 # quine?
-garden/makefile.md: Makefile Tool.java
+garden/makefile.md: Makefile Tool.java get-highlighting-css.sh
 	printf '# Makefile\n\nThe makefile behind the [garden](garden). Not claiming it is any good.\n\n```makefile\n' > "$@"
 	cat Makefile >> "$@"
 	printf '\n```\n\n## `Tool.java`\n\n```java\n' >> "$@"
 	cat Tool.java >> "$@"
+	printf '\n```\n\n## `get-highlighting-css.sh`\n\n```sh\n' >> "$@"
+	cat get-highlighting-css.sh >> "$@"
 	printf '\n```' >> "$@"
 
 # garden listing, using a trick to make it only outdated when the list of files change, i don't care about the actual contents.
