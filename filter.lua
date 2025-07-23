@@ -24,7 +24,9 @@ local the_date
 local added_date = false
 local dateUnderHeaderPhs1 = {
   Meta = function(m)
-    the_date = pandoc.utils.stringify(m.date)
+    if m.date then
+      the_date = pandoc.utils.stringify(m.date)
+    end
   end
 }
 local dateUnderHeaderPhs2 = {
