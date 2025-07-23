@@ -24,7 +24,7 @@ math {
 @supports(background-color: Canvas) {
 	:root {
 		color-scheme: light dark;
-		--bgcolor: color-mix(in srgb, Canvas 98%, red);
+		--bgcolor: color-mix(in srgb, Canvas 99%, red);
   	--fgcolor: CanvasText;
 	}
 }
