@@ -10,6 +10,7 @@ Unsurprisingly this is the largest category.
 * [n2](https://neugierig.org/software/blog/2022/03/n2.html), notes on a "sequel" to Ninja.
 * ["Blinded By The Light DOM"](https://meyerweb.com/eric/thoughts/2023/11/01/blinded-by-the-light-dom/).
 * ["Software Design for Flexibility: a review"](https://wozniak.ca/blog/2022/03/01/1/index.html). Not a positive one.
+* [diagram.website](https://diagram.website/)
 
 ### Intentionally minimal software for learning
 

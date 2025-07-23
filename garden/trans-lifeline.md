@@ -46,7 +46,7 @@ See [the Trans Lifeline FAQ](https://translifeline.org/hotline/#faq).
 ### From their facebook post
 
 ```{=html}
-<img src="/translifeline/tll-paper.png" height=400 alt="header, 'Help us correct misinformation', the word FALSE stamped on a tweet reading 'As trump shuts down the suicide hotline, Canada has broadcasted their national hotline which now has a toll-free American number' (and then the Canadian Trans Lifeline number)">
+<img src="/img/translifeline/tll-paper.png" height=400 alt="header, 'Help us correct misinformation', the word FALSE stamped on a tweet reading 'As trump shuts down the suicide hotline, Canada has broadcasted their national hotline which now has a toll-free American number' (and then the Canadian Trans Lifeline number)">
 ```
 
 ### A bluesky thread
@@ -77,7 +77,7 @@ CAN: (877) 330-6366</p>&mdash; Trans Lifeline (<a href="https://bsky.app/profile
 ### Another image
 
 ```{=html}
-<img src="/translifeline/tll-false.jpg" height=400 alt="An image with FALSE stamped on it, crossed-out text is the same as the tweet in previous image">
+<img src="/img/translifeline/tll-false.jpg" height=400 alt="An image with FALSE stamped on it, crossed-out text is the same as the tweet in previous image">
 ```
 
 ### An image I made
@@ -85,7 +85,7 @@ CAN: (877) 330-6366</p>&mdash; Trans Lifeline (<a href="https://bsky.app/profile
 This one crosses-out a more modern incantation of this misinformation.
 
 ```{=html}
-<img src="/translifeline/tll-mine.png" height=400 alt="A crossed-out tweet with 'it's misinfo sorry' written over it in red text. The tweet reads 'To my American friends: As Trump shuts down your LGBT+ suicide and mental health crisis hotline during these trying times, Canada has added a US toll-free number to ours so you can get help anytime you need at no cost. Kindness and empathy have no borders.' and then the Canadian Trans Lifeline number. Instagram-captioned '@occupy democrats' and 'Someone shared this with me. Worth putting out there.'">
+<img src="/img/translifeline/tll-mine.png" height=400 alt="A crossed-out tweet with 'it's misinfo sorry' written over it in red text. The tweet reads 'To my American friends: As Trump shuts down your LGBT+ suicide and mental health crisis hotline during these trying times, Canada has added a US toll-free number to ours so you can get help anytime you need at no cost. Kindness and empathy have no borders.' and then the Canadian Trans Lifeline number. Instagram-captioned '@occupy democrats' and 'Someone shared this with me. Worth putting out there.'">
 ```
 
 ## Links

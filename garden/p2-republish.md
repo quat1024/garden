@@ -37,7 +37,7 @@ This item has ID `3425844055` in base 10.
   * Above the calculator buttons, there's a setting that says `QWORD`, `DWORD`, `WORD`, or `BYTE`; cycle it to `QWORD` (64-bits).
 * Click on `HEX` and paste in the hex file ID. In my case, I paste in `0x00000000CC323B57`.
 
-![](/p2-url/qword.png)
+![](/img/p2-url/qword.png)
 
 * Next to `DEC`, verify that this matches the item ID of the published map. I can see the number `3,425,844,055` which does indeed match.
 * Click on the `QWORD` label one time, cycling to `DWORD` mode (32 bits). The decimal readout now says `-869,123,241` for me.

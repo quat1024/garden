@@ -65,6 +65,7 @@ Tools:
 
 ## Elsewhere
 
-* [The link dump](link-dump)
+* Visit other blogs: [Blogroll](blogroll)
+* Visit other places: [The link dump](link-dump)
 
 Missing something? An auto-generated listing of all notes is [here](listing).
