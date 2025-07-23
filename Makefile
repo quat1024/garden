@@ -5,7 +5,8 @@ garden-outs    := $(patsubst garden/%.md,out/%.html,$(garden-sources))
 blog-sources   := $(shell find blog -name "*.md" -type f)
 blog-outs      := $(patsubst blog/%.md,out/blog/%/index.html,$(blog-sources))
 
-static-sources := $(shell find static -type f)
+static-special := out/highlighting-kate.css out/highlighting-zenburn.css
+static-sources := $(shell find static -type f) $(static-special)
 static-outs    := $(patsubst static/%,out/%,$(static-sources))
 
 outs           := $(garden-outs) $(blog-outs) $(static-outs)
@@ -62,7 +63,11 @@ out/blog/%/index.html: blog/%.md mytemplate.html filter.lua
 	mkdir -p $(@D)
 	pandoc --from=markdown+autolink_bare_uris+raw_attribute $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml --wrap=preserve --highlight-style=kate --variable=quat_filename="$<"
 
-# copy static resources as-is (pattern rule)
+# make pandoc cough up stylesheet information
+out/highlighting-%.css: get-highlighting-css.sh
+	./get-highlighting-css.sh $* > $@
+
+# copy all the other static resources as-is (pattern rule)
 out/%: static/%
 	mkdir -p $(@D)
 	cp $< $@

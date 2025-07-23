@@ -1,6 +1,6 @@
 # Listing
 
-There are currently <b>75</b> files in the garden.
+There are currently <b>73</b> files in the garden.
 
 * ["Operating Systems: Three Easy Pieces" notes](ostep/index)
 * ["point free program transformation" by alcino cunha & jorge sousa pinto](dfu/pointfreeprogramtransformation)
@@ -11,7 +11,6 @@ There are currently <b>75</b> files in the garden.
 * [Apathy has shit config system and we need a better one](apathylang)
 * [At Least One Link To Every Single Dealer's Den Vendor At FWA 2025](fwa-25-vendors)
 * [binpatches.pack.lzma](binpatches-pack-lzma)
-* [Blog](blog/index)
 * [Boolean algebra](bool/index)
 * [Breaking a bone](broken-bone)
 * [Bugs in Portal 2](p2-bugs)
@@ -36,7 +35,6 @@ There are currently <b>75</b> files in the garden.
 * [Linear algebra](linalg/index)
 * [LINGO 2 notes](lingo-2)
 * [Link dump](link-dump)
-* [Listing](listing)
 * [Makefile](makefile)
 * [Matrix inverse](linalg/inverse)
 * [Memory](ostep/memory)

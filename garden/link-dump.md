@@ -36,11 +36,13 @@ Unsurprisingly this is the largest category.
 * ["How Google is killing independent sites like ours"](https://housefresh.com/david-vs-digital-goliaths/).
 * [Something about old JS promises (without async/await)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) that i liked
 * [Streaming iframe hack](https://jakearchibald.com/2016/fun-hacks-faster-content/)
-* TODO: i could switch to [migadu email](https://www.migadu.com/index.html) ?
 * https://swtch.com/~rsc/regexp/regexp4.html (reading list)
 * https://gist.github.com/OroArmor/0093803f4cfc9666d7948b8ce768c71f
 * https://neoforged.net/news/enhanced-ao/ (lots of stuff about minecraft ao)
 * reading list https://cs.uwaterloo.ca/~plragde/flaneries/LACI/Introduction.html
+* [LPeg, lua PEG library](https://www.inf.puc-rio.br/~roberto/lpeg/#ex)
+* [fairly small lexer](https://github.com/no-context/moo/blob/main/moo.js)
+* [pocket sized html parser](https://github.com/developit/htm)
 
 ## Academia
 
