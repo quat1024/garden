@@ -30,13 +30,11 @@ $(tool-out)/Tool.class: Tool.java
 	javac "$<" -d "$(@D)"
 
 # quine?
-garden/makefile.md: Makefile Tool.java get-highlighting-css.sh
+garden/makefile.md: Makefile Tool.java
 	printf '# Makefile\n\nThe makefile behind the [garden](garden). Not claiming it is any good.\n\n```makefile\n' > "$@"
 	cat Makefile >> "$@"
 	printf '\n```\n\n## `Tool.java`\n\n```java\n' >> "$@"
 	cat Tool.java >> "$@"
-	printf '\n```\n\n## `get-highlighting-css.sh`\n\n```sh\n' >> "$@"
-	cat get-highlighting-css.sh >> "$@"
 	printf '\n```' >> "$@"
 
 # garden listing, using a trick to make it only outdated when the list of files change, i don't care about the actual contents.
@@ -65,9 +63,13 @@ out/blog/%/index.html: blog/%.md mytemplate.html filter.lua
 	mkdir -p $(@D)
 	pandoc --from=markdown+autolink_bare_uris+raw_attribute $< -o $@ --template=mytemplate.html --lua-filter=filter.lua --mathml --wrap=preserve --highlight-style=kate --variable=quat_filename="$<"
 
-# make pandoc cough up stylesheet information
-out/highlighting-%.css: get-highlighting-css.sh
-	./get-highlighting-css.sh $* > $@
+# making pandoc cough up syntax highlighting CSS stylesheets is a bit tricky, but can be done like this
+# the `a`{.c} thing is just a random block of markdown that makes pandoc initialize the syntax highlighter
+# cf. https://github.com/jgm/pandoc/issues/7860#issuecomment-1018696254
+tmp/dollar-highlighting-css-dollar.html:
+	echo '$$highlighting-css$$' > $@
+out/highlighting-%.css: tmp/dollar-highlighting-css-dollar.html
+	echo '`a`{.c}' | pandoc --highlight-style="$*" --template=tmp/dollar-highlighting-css-dollar.html > $@
 
 # copy all the other static resources as-is (pattern rule)
 out/%: static/%
@@ -80,7 +82,7 @@ out/pagefind: $(outs)
 
 .PHONY: clean cleanspecial serve open push
 cleanspecial:
-	rm $(garden-special)
+	rm -f $(garden-special) $(static-special)
 
 clean: cleanspecial
 	rm -rf ./out
