@@ -29,7 +29,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - uses: pandoc/actions/setup@v1
+      # - uses: pandoc/actions/setup@v1
+      - uses: quat1024/pandoc-actions/setup@v0.1
         with:
           version: "3.6.2"
       - run: make all --always-make --no-builtin-rules -j8
