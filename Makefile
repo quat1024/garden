@@ -76,11 +76,13 @@ out/%: static/%
 out/pagefind: $(outs)
 	npx -y pagefind --site out
 
-.PHONY: clean serve open push
-clean:
+.PHONY: clean cleanspecial serve open push
+cleanspecial:
+	rm $(garden-special)
+
+clean: cleanspecial
 	rm -rf ./out
 	rm -rf ./tmp
-	rm $(garden-special)
 
 serve:
 	miniserve -v out --index index.html

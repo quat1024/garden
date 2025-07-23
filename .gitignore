@@ -1,4 +1,5 @@
 out/
 tmp/
 garden/blog/index.md
+garden/makefile.md
 garden/listing.md
