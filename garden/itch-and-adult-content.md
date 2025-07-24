@@ -67,6 +67,6 @@ They briefly had a bluesky post up along the lines of "this is a difficult time 
 
 This reddit post formerly recommended using AI to help you write a letter to payment processors, although it has been edited to only include a softer mention of using AI to draft a letter at the end. The reddit poster decided to suggest AI as a middle-ground between "ok, everyone write your own well-researched letter" (which is difficult and not many will take the time to do it), and "ok, everyone cut and paste this form letter" (which is easy for processors to discard as a spam campaign):
 
-> I'm not affiliated with itch.io in any way, I don't care about AI. I wrote the post to try to make it as easy as possible for even the laziest person to get involved ^([source](https://old.reddit.com/r/itchio/comments/1m83s71/things_you_can_do_to_counteract_payment/n4yfh56/))
+> I'm not affiliated with itch.io in any way, I don't care about AI. I wrote the post to try to make it as easy as possible for even the laziest person to get involved *([source](https://old.reddit.com/r/itchio/comments/1m83s71/things_you_can_do_to_counteract_payment/n4yfh56/))*
 
 Itch linked a reddit post written by a third party, which happened to say you could use AI to draft a letter if you wanted to. It is a *leap* to say they now "support gen AI art". There were not other redditposts with the same collection of information in one place that they could have linked to; they could not self-publish the same information due to non-disparagement clauses.
