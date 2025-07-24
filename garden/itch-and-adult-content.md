@@ -1,6 +1,6 @@
 # `itch.io` and adult content
 
-Last updated July 2024, 2025, at around 3pm Eastern time, I guess. Metacontext: I'm just some guy, definitely not affilated with itch.io.
+Last updated July 2024, 2025, at around 4pm Eastern time, I guess. Metacontext: I'm just some guy, definitely not affilated with itch.io.
 
 ## "Standing up"
 
