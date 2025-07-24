@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="system">
 <head>
   <meta charset="utf-8">
   <title>$title$</title>
@@ -10,14 +10,30 @@
   $if(blurb)$<meta property="og:description" content="$blurb$">$endif$
   <meta property="theme-color" content="#950000">
   <meta name="fediverse:creator" content="@quat@woof.group">
-  <link rel="stylesheet" href="/styles.css?cbust=9">
+  <link rel="stylesheet" href="/styles.css?cbust=10">
 </head>
 <body>
 <nav>
   <span id="notes-at-hsa"><a href="/">notes</a><span>@</span><a href="https://highlysuspect.agency">HSA</a></span> &ndash;
   <a href="/listing.html">listing</a>
   <a href="/blog/">blog</a>
-  <a href="/search.html">search</a>  
+  <a href="/search.html">search</a>
+  <div class="flexgrow"></div>
+  <div>
+    colors: 
+    <select name="color-scheme-picker" id="color-scheme-picker">
+      <option value="system">system&nbsp;</option>
+      <option value="light">light&nbsp;</option>
+      <option value="dark">dark&nbsp;</option>
+    </select>
+  </div>
+  <script>
+    const picker = document.getElementById("color-scheme-picker");
+    document.documentElement.className = picker.value = localStorage.getItem("notes-colors") || "system";
+    picker.addEventListener("change", e => {
+      localStorage.setItem("notes-colors", document.documentElement.className = picker.value);
+    });
+  </script>
 </nav>
 <main id="notfooter">
 $body$
