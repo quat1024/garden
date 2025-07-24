@@ -1,6 +1,8 @@
 # `itch.io` and adult content
 
-Last updated July 2024, 2025, at around 4pm Eastern time, I guess. Metacontext: I'm just some guy, definitely not affilated with itch.io.
+Last updated July 2024, 2025, at around 4:30pm Eastern time (to add a bit about a congressional act).
+
+Metacontext: I'm just some guy, definitely not affilated with itch.io except I uploaded a shitty free game there when I was 15 I guess.
 
 ## "Standing up"
 
@@ -45,7 +47,7 @@ Itch has been nothing but supportive of independent games for over ten years. It
 
 You're buying time until another activist group hears about it.
 
-> With recent developments at itch, the landscape looks quite bleak for NSFW creators. 
+> With recent developments at itch, the landscape looks quite bleak for NSFW creators.  
 > That's why we started Welcome Change.  
 > We're a new storefront platform with a focus on adult and queer comics and stories.
 
@@ -54,6 +56,18 @@ You're buying time until another activist group hears about it.
 > Hey folks, we're having a hiccup with our payment processing, so we've temporarily disabled new purchases on Welcome Change. *[...]* We'll update you as soon as we've re-enabled purchasing!
 
 Oh. [That was a month ago](https://bsky.app/profile/wechange.me/post/3lsc25kam5k2v), there hasn't been an update.
+
+## the "Fair Access to Banking Act"
+
+You should know this bill is entirely Republican-led, and the banking in question is this:
+
+> Banks and financial institutions use their economic standing to categorically exclude law-abiding, legal industries by refusing to lend or provide services to them. This includes industries such as firearms, ammunition, crypto, federal prison contractors, as well as energy producers. *([Kevin Cramer](https://www.cramer.senate.gov/news/press-releases/cramer-reintroduces-fair-access-to-banking-act-to-protect-legal-industries-from-debanking), North Dakota (R), 2025)*
+
+> The Fair Access to Banking Act would prohibit banks from denying fair access to financial services under the standards of woke corporate cancel culture and prevent the weaponization for political purposes. This bill is endorsed by the National Shooting Sports Foundation (NSSF), National Rifle Association (NRA), National Mining Association (NMA), Blockchain Association, National Pawn Brokers Association, and the Kentucky Coal Association. *([Andy Barr](https://barr.house.gov/2023/4/barr-officially-reintroduces-the-fair-access-to-banking-act-calling-for-a-codification-of-the-fair-access-rule), Kentucky (R), 2023)*
+
+Just make sure you know what you're dealing with before you call senators.
+
+Load-bearing word here is *legal industries*; the angle *Collective Shout* is using is that selling adult media counts as child sexual exploitation, which is not a legal industry.
 
 # Nonsense
 
