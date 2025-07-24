@@ -1,6 +1,6 @@
 # `itch.io` and adult content
 
-Last updated July 24, 2025, at around 4:30pm Eastern time (to add a bit about a congressional act).
+Last updated July 24, 2025, at around 5pm Eastern time (to add a bit about JAST BLUE and a congressional act).
 
 Metacontext: I'm just some guy, definitely not affilated with itch.io except I uploaded a shitty free game there when I was 15 I guess.
 
@@ -56,6 +56,8 @@ You're buying time until another activist group hears about it.
 > Hey folks, we're having a hiccup with our payment processing, so we've temporarily disabled new purchases on Welcome Change. *[...]* We'll update you as soon as we've re-enabled purchasing!
 
 Oh. [That was a month ago](https://bsky.app/profile/wechange.me/post/3lsc25kam5k2v), there hasn't been an update.
+
+There are more *established* players in the space, such as [JAST BLUE](https://xcancel.com/JASTBLUE/status/1948262867821646200), as well as several companies in the Japanese market. At some point, though, they can only succeed because payment processors haven't glared at them hard enough. Is Itch *at fault*, or were they just the ones who happened to be targeted?
 
 ## the "Fair Access to Banking Act"
 
