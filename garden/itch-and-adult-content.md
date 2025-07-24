@@ -1,6 +1,6 @@
 # `itch.io` and adult content
 
-Last updated July 2024, 2025, at around 4:30pm Eastern time (to add a bit about a congressional act).
+Last updated July 24, 2025, at around 4:30pm Eastern time (to add a bit about a congressional act).
 
 Metacontext: I'm just some guy, definitely not affilated with itch.io except I uploaded a shitty free game there when I was 15 I guess.
 
