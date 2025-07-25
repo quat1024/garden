@@ -42,6 +42,7 @@ Tools:
 * [The syncthing situation, as of mid-2025](syncthing)
 * [CIA jars?](cia-jars)
 * [Dissecting *"char min glee"* by Jack Lance](char-min-glee)
+* [Dissecting `htm`](htm)
 * [the Nook Simple Touch (2011)](nook-simple-touch)
 * [Styling forms](styling-forms)
 * [Towards a good config system](config)
