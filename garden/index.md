@@ -10,6 +10,7 @@ Hi, welcome to my brain.
 
 * [Collected notes on the DataFixerUpper papers](/dfu/index)
 * [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem](forge-bitrot)
+* [Running a modpack on a server](modpack-on-server)
 * [How do Neoforge installers actually work?](neoforge-installer)
 * [How Voldeloom works at a high level](voldeloom-stages)
 * [`binpatches.pack.lzma` in post-Launchwrapper Forge](binpatches-pack-lzma)
@@ -21,6 +22,7 @@ Hi, welcome to my brain.
 * [You should learn Java to mod Minecraft, not a different language](mc-jvm-language)
 * [Reddit hivemind opinions](reddit)
 * [Datapacks bad](datapacks-bad)
+* [Portbeg tier list](portbeg-tier-list)
 
 Tools:
 
