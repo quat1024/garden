@@ -4,13 +4,17 @@
 
 I wanted to see how it works.
 
-## "hyperscript"
+## "Hyperscript"
 
 A loose standard for "a function which creates an HTML node, or something representing one". Originated in [hyperhype/hyperscript](https://github.com/hyperhype/hyperscript) as a DSL for building trees of HTML nodes, a simplified form of the function signature was [borrowed by `React.createElement`](https://react.dev/reference/react/createElement), and the rest is history.
 
-In the context of `htm`, a hyperscript function is any function of three arguments and returning a type `T`, where the first argument is the tag name, the second argument is a map of attributes to apply to the tag, and the third function is a list of children, which can be `T`s or just strings.
+In the context of `htm`, a hyperscript function is any function of three arguments and returning a type `T`. Often `T` represents some sort of `"virtual DOM" structure; it might also create real DOM objects.
 
-The goal of `htm` is to take a block of unparsed HTML and call this function.
+* First argument is the tag type, which can be a string or function (a "component", in react parlance).
+* Second argument is a map of attributes to apply to the tag.
+* Third function is an array of children, which can be `T`s or just strings.
+
+The goal of `htm` is to take a block of unparsed HTML and call this function to build the tree it represents.
 
 ## Template literal functions
 
@@ -24,7 +28,7 @@ bar(["aaaa", "bbbb", "cccc"], 1 + 1, 2 + 2);
 
 `bar` is called where the first argument is an array of all literal strings, and the rest of the arguments are the values of all substitutions between the literals. It's called in a varargs way. If the template literal begins/ends with a `${}` substitution, JS will pass an empty string before/after it, so that the number of literal strings is always one more than the number of substitutions.
 
-There's two patterns when writing a function intended to be used with template literal syntax. You can capture all the substitutions with a spread operator:
+When writing a function intended to be called with this syntax, you can capture all the substitutions with the varargs syntax:
 
 ```js
 function bar(statics, ...subs) { ... }
@@ -39,23 +43,11 @@ function bar(statics) {
 }
 ```
 
-The two patterns differ in how you index into the substituions. With the first approach the first substitution is at `subs[0]`, with the second it's at `subs[1]` because `arguments[0]` is taken up by `statics`.
-
-## `bind`
-
-Quoth the documentation:
-
-> To use our custom `h()` function, we need to create our own `html` tag function by binding `htm` to our `h()` function:
-> 
-> ```js
-> const html = htm.bind(h);
-> ```
-
-That'd be [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) from standard JS, and it means the innards of `htm` can access your hyperscript function by looking at `this`.
+With the first approach the first substitution is at `subs[0]`, with the second it's at `subs[1]` because `arguments[0]` is taken up by `statics`.
 
 ## Mini version
 
-The "mini version" (450 bytes) exports [this `build` function](https://github.com/developit/htm/blob/d62dcfdc721e47bc1923a2cb7a01ebd594ab0c25/src/build.mjs#L128-L292) as `htm`. Of course the `MINI` is constant-folded out.
+The "mini version" (450 bytes) exports [this `build` function](https://github.com/developit/htm/blob/d62dcfdc721e47bc1923a2cb7a01ebd594ab0c25/src/build.mjs#L128-L292) as `htm`. (Of course the `MINI` is constant-folded out.)
 
 `build` starts like this:
 
@@ -64,13 +56,13 @@ export const build = function(statics) {
 	const fields = arguments;
 ```
 
-Using the second approach to template literal functions. `statics` contains the string literals, and `fields` contains all the substituted values (one-indexed).
+Here, `statics` contains the string literals, and `fields` contains all the substituted values (one-indexed).
 
 ```js
 	const h = this;
 ```
 
-Reading the hyperscript function which was bound to `this`.
+To use `htm`, you write `htm.bind(myHyperscriptFunction)`. That's [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) from standard JS. `htm` is now reading the hyperscript function bound to `this`.
 
 ```js
 	let mode = MODE_TEXT; // a constant equal to 1
@@ -85,7 +77,7 @@ Reading the hyperscript function which was bound to `this`.
 * `quote` may contain `'` or `"`; HTML attributes can be delimited with either so we need to remember which type of quote actually closes the string.
 * `current` contains the actual HTML structure being built. `current[0]` is used as scratch space.
 
-### Tangent: what is `current`
+### Tangent: `current`
 
 "The current element" = the element the parser is in the middle of.
 
@@ -122,10 +114,9 @@ if (char === '/' && (mode < MODE_PROP_SET || statics[i][j+1] === '>')) {
 	}
 	//re-using "mode" as a temporary just since it happens to be clobberable (!)
 	mode = current;
-	//this line does a lot at once.
 	//* current = current[0] resets `current` to my parent element.
 	//* the left-hand side of the .push call is my parent element, so this appends
-	//  a child (me) to my parent element.
+	//  myself as my parent element's child.
 	//* the slice() call tears off the "linked list of ancestors" gunk and calls
 	//  the hyperscript function with the rest.
 	//
@@ -141,10 +132,7 @@ if (char === '/' && (mode < MODE_PROP_SET || statics[i][j+1] === '>')) {
 
 ### `commit`
 
-Next the function `commit` is defined. This function can be called in two different ways.
-
-* If the function is called with a numeric argument `i`, the `i`-th value from `arguments` is slotted into `current`.
-* Otherwise the contents of `buffer` are slotted into `current`.
+Next the function `commit` is defined. This function can be called in two different ways. If it's called with a numeric argument `i`, the `i`-th value from `arguments` is slotted into `current`, otherwise the contents of `buffer` are slotted into `current`. Then `buffer` is cleared.
 
 What it means to "slot something into `current`":
 
@@ -170,14 +158,16 @@ for (let i=0; i<statics.length; i++) {
 	//... process statics[i]...
 ```
 
-`if(i)` is the same as `if(i != 0)`, and the substitutions are 1-indexed. So this will first process `statics[0]`, commit `arguments[1]`, process `statics[1]`, commit `arguments[2]`, process `statics[2]` and so on. This is the correct order. (Not sure exactly why the `MODE_TEXT` check is there, probably flushing out the buffer from after the previous loop. There's one final `commit` call at the very end, after all the statics have been processed, which probably corresponds to the same operation.)
+So this will first process `statics[0]`, commit `arguments[1]`, process `statics[1]`, commit `arguments[2]`, process `statics[2]` and so on. This is the correct order.
+
+(Not sure exactly why the `MODE_TEXT` check is there, probably flushing out the buffer from after the previous loop? There's one final `commit` call at the very end, after all the statics have been processed which probably corresponds to the same operation.)
 
 Generally the parser builds up characters in `buffer` until some sort of state transition happens. `commit()` clears the buffer. Todo write about the states https://github.com/developit/htm/blob/d62dcfdc721e47bc1923a2cb7a01ebd594ab0c25/src/build.mjs#L208
 
 ## Non-mini version
 
-The full version does not directly call the hyperscript function from `build`. Instead, `current` is built out with a list of operations to perform like a little virtual machine, and the result is passed to a separate function `evaluate` which is responsible for calling the hyperscript function. Substitutions are also not performed yet; only the index of the variable to substitute is recorded.
+The full version does not directly call the hyperscript function from `build`. Instead, `current` is built out with a list of operations to perform like a little virtual machine. Substitutions are not performed yet; only the index of the variable to substitute is recorded.
 
-This is used for a caching feature.
+The "program" is cached indefinitely and a separate function `evaluate` is responsible for interpreting the program and calling the hyperscript function. The space formerly occupied by `current[0]` is re-used to track whether a substitution is actually used in the element's subtree; if not, the result of the hyperscript function is cached indefinitely as well.
 
-* If a variable substitution is not needed to build an element, the corresponding hyperscript fragment can be cached and reused
+`evalute` actually binds `current` to `this` when it calls your hyperscript function. This provides a way for the hyperscript function to disable element-level caching if it wants by running `this[0] = 3`, setting the same flag that `evaluate` sets if it determines a substitution was used.
