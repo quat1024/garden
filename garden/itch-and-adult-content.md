@@ -1,6 +1,6 @@
 # `itch.io` and adult content
 
-Last updated July 24, 2025, at around 5pm Eastern time (to add a bit about JAST BLUE and a congressional act).
+Last updated July 28, 2025, at around 6pm Eastern time (to add a bit about *Mouthwashing*).
 
 Metacontext: I'm just some guy, definitely not affilated with itch.io except I uploaded a shitty free game there when I was 15 I guess.
 
@@ -70,6 +70,18 @@ You should know this bill is entirely Republican-led, and the banking in questio
 Just make sure you know what you're dealing with before you call senators.
 
 Load-bearing word here is *legal industries*; the angle *Collective Shout* is using is that selling adult media counts as child sexual exploitation, which is not a legal industry.
+
+## *Mouthwashing* was delisted for content reasons
+
+*Mouthwashing* was delisted from Itch's search in October 2024 because, after the conclusion of their demo, they removed all downloadable files from the page and replaced them with a single link to Steam. Per [Itch documentation](https://itch.io/docs/creators/getting-indexed#why-isnt-my-project-showing-up), projects must have at least one downloadable file to be listed in search.
+
+> **Ensure you have files uploaded to the project page.** Your page must be purchasable, downloadable, or playable in the browser to be indexed. Empty placeholder pages will not be indexed.
+
+[Source from the creator of "Is it on Itch" Steam curator list](https://bsky.app/profile/lotusloveslotus.bsky.social/post/3lv2jbcgnnc2v).
+
+[Source from Itch](https://bsky.app/profile/itch.io/post/3lv2gsf3jlk2x).
+
+It is likely that the *Mouthwashing* developers did not know this action delisted their game from search. Itch's interface does not make it clear whether a game is listed or not.
 
 # Nonsense
 
