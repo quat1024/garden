@@ -51,6 +51,7 @@ Tools:
 * [The wrong abstraction](wrong-abstraction)
 * [No, we're not destroying software](not-destroying)
 * Java build system talk: [Maven](maven), [`mill`](mill).
+* [Fixing weird powershell colors](powershell-colors)
 
 ## Whatever else
 
