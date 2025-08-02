@@ -20,6 +20,8 @@
   
 * [I have no friends and way too much free time, yall have any modpack suggestions to combat my crippling loneliness?](https://old.reddit.com/r/feedthebeast/comments/1kcleug/i_have_no_friends_and_way_too_much_free_time_yall/)
 
+* [Making Minecraft less lonely?](https://old.reddit.com/r/feedthebeast/comments/1mfgaaa/making_minecraft_less_lonely/)
+
 ## Second category
 
 * [AI mod?](https://old.reddit.com/r/feedthebeast/comments/1itzdgk/ai_mod/)
