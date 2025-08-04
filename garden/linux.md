@@ -95,3 +95,34 @@ This is when I tried the safe mode trick and that worked okay.
 For some reason I couldn't access the stock Windows Recovery Environment (might have been in one of those partitions I deleted 👀) so it's fortunate changing the BIOS setting back to RAID/Intel RST allowed Windows to boot again.
 
 </details>
+
+## The actual installation part
+
+Not too hard. I used whatever out-of-the-box partition setup the installer made and didn't configure anything myself.
+
+Wifi just works ™️.
+
+## Post install
+
+Mint opens this nice first-run setup window.
+
+* Pick a color theme (i like red)
+* Set up "Timeshift" restore points
+* Driver installation
+* System updates
+
+### Graphics drivers
+
+I manually made a timeshift snapshot before mucking with drivers just in case. For some reason it crashed the first time without making a snapshot 😬
+
+This laptop has a slightly-failing "GTX 1050 Mobile". By default the open-source nouveau driver is used but I've heard people say the proprietary NVIDIA driver is better. The "driver manager" dialog lets you switch em easily. Reboot.
+
+### System updates
+
+Lots and lots of updates which were created after the installation media was burned. The first thing to update is mintupdate itself, then about 127 other packages totalling a gigabyte.
+
+## Things to look into later
+
+* How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
+* How to make GRUB bigger (and configure ir in general)? I forgot this computer had a 4k display, turned it to 1080p due to constant Windows DPI scaling woes, and GRUB is so freakin tiny
+* What on earth is going on with this Flatpak stuff
