@@ -4,11 +4,15 @@ I should have done this sooner. Windows 10 support ending is probably a good tim
 
 I *thought* I liked computer-tinkering but kept bouncing off the nerd linux distros because they needed too much tinkering. So I went for Linux Mint as something more complete out-of-the-box.
 
-## Shrinking the Windows partition
+I'm going to install it on my **Dell XPS 15 9560** laptop. I think that's the model name anyway.
 
 > n.b. I'm going with dualboot for now in case Linux doesn't work out or in case I need to use Windows-only software (the school semester is starting soon). This isn't an ideal setup because if I decide to fully use Linux, the linux partition will be located on the second half of the disk and I can't extend it backwards (...right?). Part of why I'm obsessively writing down everything is so that, in case I need to reinstall Linux, I will know what I did to the system.
 
-I deleted a bunch of old files. I use scoop package manager, so `scoop cleanup *` removed old versions of programs. Also installed wiztree and looked around for any large files I forgot about, which prompted me to uninstall some games I haven't played in a while. In total my Windows install consumes about 310gb off the 1tb SSD this laptop has, and that includes some goodies like the hibernation file and (incidentally) the Mint installer iso.
+## Shrinking the Windows partition
+
+To start, I deleted a bunch of old files. I use scoop package manager so `scoop cleanup *` removed old versions of programs. Also installed wiztree and looked around for any large files I forgot about, which prompted me to uninstall some games I haven't played in a while.
+
+In total my Windows install consumes about 310gb off the 1tb SSD this laptop has, and that includes some goodies like the hibernation file, the Mint installer iso, and some files like images and music that I don't need to keep on the windows install.
 
 Windows loves to put non-movable files at the end of its partitions so you can't shrink them. I had to disable and delete restore points (search "restore point" in start menu -> System Protection tab -> Configure -> Disable System Protection, and press Delete to remove the existing files) before Disk Management would allow shrinking the Windows partition. They can be turned back on after shrinking the partition, but tbh I've never used a restore point before.
 
@@ -23,7 +27,9 @@ In all, my system ssd had:
 
 Some of the unallocated space *might* be slack to keep an SDD happy?
 
-I went ahead and deleted the mystery partitions. Now that I think about it, might have been OEM factory troubleshooting stuff? Oh well. I've also heard that leaving some unallocated space on an SSD can make them happier but I've also heard that's an urban legend.
+I went ahead and deleted the mystery partitions. Now that I think about it, might have been OEM factory troubleshooting stuff? Oh well!!!
+
+I've also heard that leaving some unallocated space on an SSD can make them happier but I've also heard that's an urban legend, so maybe i'll keep a gig or two blank.
 
 The new plan:
 
@@ -44,6 +50,8 @@ This helps:
 * Press ESC without changing anything. The laptop will now reboot and for some reason it takes longer to boot this time.
 * Mash F12 again. Seems to be enough time to allow the sd card reader to initialize.
 
+Plugging in the adapter before rebooting out of Windows also helps.
+
 Poking around in the BIOS, looks like there are also options to enable SD boot using the onboard SD card reader instead of this adapter. Maybe turning off some fast start-related options could help too.
 
 ## "Rapid Storage Technology"
@@ -55,7 +63,9 @@ I don't have any RAID setups to worry about so it seems there are two steps:
 * set a registry key in Windows, which will cause it to avoid looking for intel rst
 * then, before the next boot, disable the feature BIOS side in favor of something called AHCI
 
-This sent me down a rabbit hole. It seems like Windows will automatically disable the relevant Intel RST options if it is booted in Safe Mode. The instructions here were much more useful than Ubuntu's page: https://gist.github.com/chenxiaolong/4beec93c464639a19ad82eeccc828c63
+This sent me down a rabbit hole.
+
+It seems like Windows will automatically disable the relevant Intel RST options if it is booted in Safe Mode. The instructions here were much more useful than Ubuntu's page: https://gist.github.com/chenxiaolong/4beec93c464639a19ad82eeccc828c63
 
 Basically:
 
