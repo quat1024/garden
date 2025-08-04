@@ -44,6 +44,44 @@ This helps:
 * Press ESC without changing anything. The laptop will now reboot and for some reason it takes longer to boot this time.
 * Mash F12 again. Seems to be enough time to allow the sd card reader to initialize.
 
+Poking around in the BIOS, looks like there are also options to enable SD boot using the onboard SD card reader instead of this adapter. Maybe turning off some fast start-related options could help too.
+
 ## "Rapid Storage Technology"
 
 I was prompted by the installer to turn off "Intel Rapid Storage Technology" with a link to https://help.ubuntu.com/rst .
+
+I don't have any RAID setups to worry about so it seems there are two steps:
+
+* set a registry key in Windows, which will cause it to avoid looking for intel rst
+* then, before the next boot, disable the feature BIOS side in favor of something called AHCI
+
+This sent me down a rabbit hole. It seems like Windows will automatically disable the relevant Intel RST options if it is booted in Safe Mode. The instructions here were much more useful than Ubuntu's page: https://gist.github.com/chenxiaolong/4beec93c464639a19ad82eeccc828c63
+
+Basically:
+
+* Run a command to boot windows into Safe Mode on next startup.
+  
+  ```cmd
+  bcdedit /set {current} safeboot minimal
+  bcdedit /set safeboot minimal
+  ```
+
+  I'm not sure whether you need the `{current}` so I just tried both.
+
+* Reboot into the BIOS and change "System Configuration -> SATA Operation" to AHCI.
+* Boot Windows into safe mode. It will automatically disable Intel RST.
+* Boot Windows normally to check if it works.
+
+<details><summary>The rabbit hole in question</summary>
+
+1. First i went to the BIOS just to check if there was any AHCI setting. There is, under  "System Configuration -> SATA Operation".
+2. Then in windows, the relevant registry keys are on that page. Rebooted.
+3. Changed the bios setting to AHCI. Rebooted.
+4. The computer then booted into "dell supportassist" instead of Windows. Not good! Reread the page again .. forgot to change all the regedit keys. Ughhh. Fortunately Windows was able to boot again after flipping the option back to RST in the bios.
+5. Changed more registry keys. Rebooted and changed BIOS setting back to AHCI. Windows still wouldn't boot.
+
+This is when I tried the safe mode trick and that worked okay.
+
+For some reason I couldn't access the stock Windows Recovery Environment (might have been in one of those partitions I deleted 👀) so it's fortunate changing the BIOS setting back to RAID/Intel RST allowed Windows to boot again.
+
+</details>
