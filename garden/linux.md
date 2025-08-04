@@ -32,3 +32,18 @@ The new plan:
 * allocate the rest to linux
 
 You can't create linux filesystem partitions in Windows Disk Management, so I'm off to reboot into the Mint installer.
+
+## Weird Tip!
+
+I'm booting the linux install media off a cheap SD card adapter, it's all I have. Sometimes the adapter takes too long to start up or something and I can't choose it as a boot option.
+
+This helps:
+
+* Boot the laptop, mash F12 to get to boot options, usb device isn't there.
+* Go to "boot options" as if I want to change between legacy boot/UEFI boot options.
+* Press ESC without changing anything. The laptop will now reboot and for some reason it takes longer to boot this time.
+* Mash F12 again. Seems to be enough time to allow the sd card reader to initialize.
+
+## "Rapid Storage Technology"
+
+I was prompted by the installer to turn off "Intel Rapid Storage Technology" with a link to https://help.ubuntu.com/rst .
