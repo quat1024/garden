@@ -143,6 +143,32 @@ This leaves the appimage. Which worked!
 
 (There's also a deb packaged by something called makedeb? Not sure what that is.)
 
+## Minecraft
+
+It runs at native resolution, which is kind of a problem on a hidpi display when you're fillrate limited...
+
+Entering fullscreen literally doubles the framerate though. I haven't tried mods like Sodium yet.
+
+Kat told me about `gamescope` which can be used as a wrapper command to run games at lower resolutions and upscale them (the Steam Deck uses it?). Sounds like fun but I think I'll need to compile it myself.
+
+## The text editor
+
+It's called "xed" and it's pretty nice, except by default there's a "bracket completion" plugin which adds closing quotes even when typing contractions in English text... sometimes people write things that aren't computer programs you know!!
+
+Can turn that off with Edit -> Preferences -> Plugins -> Bracket Completion. It'd be nice to configure it to only happen when not typing in Markdown files but alas there is no configuration.
+
+## Steam
+
+I installed Steam through the installer program in Software Manager. Uneventful.
+
+### Portal 2
+
+For some reason mouselook wasn't working at first. I thought it'd be some freak bug but it turns out `cl_mouselook` was just set to 0. Lol.
+
+Fullscreen seems... faked, somehow. Like even when the game is set to fullscreen 720p, it's just being upscaled to fill the whole display instead of changing my resolution to 720p. The mouse cursor is tiny, stuff can get composited over the game.
+
+Puzzlemaker does not work, I guess it's not able to run the compiler tools.
+
 ## Things to look into later
 
 * How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
