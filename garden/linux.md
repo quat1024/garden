@@ -167,10 +167,11 @@ For some reason mouselook wasn't working at first. I thought it'd be some freak 
 
 Fullscreen seems... faked, somehow. Like even when the game is set to fullscreen 720p, it's just being upscaled to fill the whole display instead of changing my resolution to 720p. The mouse cursor is tiny, stuff can get composited over the game.
 
-Puzzlemaker does not work, I guess it's not able to run the compiler tools.
+Puzzlemaker compiling does not work, I guess it's not able to run the compiler tools.
 
 ## Things to look into later
 
 * How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
 * How to make GRUB bigger (and configure ir in general)? I forgot this computer had a 4k display, turned it to 1080p due to constant Windows DPI scaling woes, and GRUB is so freakin tiny
 * What on earth is going on with this Flatpak stuff
+* Git credentials. There is Microsoft's `git-credential-manager`, which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).
