@@ -121,6 +121,28 @@ This laptop has a slightly-failing "GTX 1050 Mobile". By default the open-source
 
 Lots and lots of updates which were created after the installation media was burned. The first thing to update is mintupdate itself, then about 127 other packages totalling a gigabyte.
 
+## IntelliJ IDEA
+
+I just extracted the tar gz into a random folder (i created `~/Programs`) and it worked fine.
+
+## Java
+
+The packages in question: `openjdk-8-jdk`, `openjdk-17-jdk`, `openjdk-21-jdk`.
+
+These JDKs all get installed separately in `/usr/lib/jvm/`. When configuring a path to Java it'd be best to use this path instead of the `/usr/bin/java` symlink.
+
+To configure the version of "system Java" if it is needed, there is a script called `update-java-alternatives`. This script basically just calls `update-alternatives` (a standard package system feature) on all the java binaries like java, javac, javadoc, javap etc etc.
+
+## Prism Launcher
+
+The flatpak gave me sandboxing-related shit (TODO: write the shit, i microblogged about it)
+
+The standalone tar gzs didn't work out of the box, probably needed to install Qt libraries on my system.
+
+This leaves the appimage. Which worked!
+
+(There's also a deb packaged by something called makedeb? Not sure what that is.)
+
 ## Things to look into later
 
 * How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
