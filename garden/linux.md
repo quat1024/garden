@@ -197,7 +197,35 @@ And this will be further complicated by the fact that I'm actually on Mint which
 
 This place https://wiki.debian.org/Packaging is probably a good place to start looking.
 
-I heard about a tool called `pbuilder` which can help you scaffold clean chroots to build packages with a better knowledge of the "system packages" that leak into the environment. Could be interesting. See also [landley/toybox](https://github.com/landley/toybox/blob/b8186ba3c4d9548da2ae8b8aaf388b2a04f1966b/scripts/install.sh#L96)'s "airlock" stuff.
+I heard about a tool called `pbuilder` which can help you scaffold clean chroots to build packages with a better knowledge of the "system packages" that leak into the environment. Could be interesting. See also [landley/toybox](https://github.com/landley/toybox/blob/b8186ba3c4d9548da2ae8b8aaf388b2a04f1966b/scripts/install.sh#L96)'s "airlock" stuff. Of course, also, contianers.
+
+## Grub
+
+The bootloader. It's that thing you see when you first turn on the computer. On my computer, because I'm dual-booting, it has a menu allowing me to pick between Linux and Windows.
+
+I think configuration happens like this:
+
+* you configure the scripts in `/etc/default/grub` and maybe add some dropins in `/etc/default/grub.d`
+    * I guess there's also ones in `/etc/grub.d` (no `default`). But arch wiki says don't touch those
+* you run `update-grub`, which runs those scripts and puts the results in `/boot/grub/grub.cfg`. The grub bootloader itself reads that file (it's a little language they call "shell-like scripting")
+    * I also see a program called `grub-mkconfig`, what's the difference
+    * Oh `update-grub` is literally just a script which runs `grub-mkconfig -o /boot/grub/grub.cfg`
+
+I made a dropin at `/etc/default/grub.d/69_quat.cfg`.
+
+By default the grub menu is way too small owing to the laptop's 4k display. You can change the video mode using the `GRUB_GFXMODE` variable in one of those dropin files but I don't want to know what happens if I accidentally pick a value that my system doesn't support. Maybe the best solution is to boot into the (teeny tiny) GRUB terminal and run `videoinfo`?
+
+## "Drop-in files"
+
+Those `.d` directories you find around the place.
+
+I think the idea:
+
+* installing a program creates a default configuration file, with options from the program author (and whoever packaged it for the distro)
+* if the program is updated, this file might be overwritten with new defaults
+* so to provide space for users to configure their stuff without getting stomped on by the package manager, the program also enunmerates files in these `something.d` directories and loads those config files too
+
+It isn't a formal standard, just some place that software packagers set aside for users.
 
 ## Things to look into later
 
