@@ -239,11 +239,20 @@ I think the idea:
 
 It isn't a formal standard, just some place that software packagers set aside for users.
 
+## Performance!
+
+I am pleasantly surprised by system performance. After the bootloader finishes the rest of the system boots quite quickly. At one point I thought my Windows install was hosed, but I guess it always took that long to boot and I've been putting up with it.
+
+And the Makefile used to build this site locally takes about five-ten seconds from a cold cache on Windows, but took only about one second on Linux!
+
+I'd guess most of the speedup is from better filesystem performance (ext4 vs NTFS) better performance in "spawning a million tiny processes" workloads, and performance differences with the shells ("git bash" seems *much* slower than `cmd` on Windows, but who the hell wants to use `cmd` and `nmake`???)
+
 ## Things to look into later
 
-* How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
-* What on earth is going on with this Flatpak stuff
+* What on earth is going on with this Flatpak stuff. What is Flatpak. Why is Flatpak.
 * You can disable mouse acceleration through the graphical interface but you can't disable *trackpad* acceleration. Ugh!!!
 * Gotta set up gamescope
-* Git credentials. There is Microsoft's `git-credential-manager`, which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).\
+* Git credentials. There is Microsoft's `git-credential-manager` which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).
     * I'd like to figure out the GNOME keyring in general, put some ssh keys there maybe...
+
+I'd also like to research more systemd topics: useful commands for administration and checking in on things, what are "unit files" and how can I write my own, any useful "targets" to know, where are the logs and do I need to clean them, how to list important units, shit like that.
