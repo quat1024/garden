@@ -247,6 +247,27 @@ And the Makefile used to build this site locally takes about five-ten seconds fr
 
 I'd guess most of the speedup is from better filesystem performance (ext4 vs NTFS) better performance in "spawning a million tiny processes" workloads, and performance differences with the shells ("git bash" seems *much* slower than `cmd` on Windows, but who the hell wants to use `cmd` and `nmake`???)
 
+## No sound!!!
+
+I lived it!! A Linux sound problem!! The only sound device showing up was "Dummy Output" which is weird because sound DID work before.
+
+* Did `journalctl -k | grep -Ei HDA`, as i've seen some people recommend, and saw an error like this:
+
+      snd_soc_avs 0000:00:1f.3: request topology "intel/avs/hda-8086280b-tplg.bin" failed: -2
+
+* Googled the filename and ended up here https://bbs.archlinux.org/viewtopic.php?id=298583
+* User `V1del` suggested "blacklisting the kernel module `snd_soc_avs`" with a link to more info
+
+I created the file `/etc/modprobe.d/quat-blacklist.conf` containing
+
+```ini
+# OH THERE IS NO SOUND
+# https://bbs.archlinux.org/viewtopic.php?id=298583
+blacklist snd_soc_avs
+```
+
+Rebooted and sound worked yay. But it's apparently a race condition, maybe I just got luckier this boot.
+
 ## Things to look into later
 
 * What on earth is going on with this Flatpak stuff. What is Flatpak. Why is Flatpak.
