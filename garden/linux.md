@@ -106,10 +106,16 @@ Wifi just works ™️.
 
 Mint opens this nice first-run setup window.
 
-* Pick a color theme (i like red)
+* Pick a color theme
 * Set up "Timeshift" restore points
 * Driver installation
 * System updates
+
+### Color theme and fonts
+
+I don't like the Ubuntu font very much so I went with the preinstalled Noto as a system font, and installed Jetbrains Mono through the software manager for the monospace font (although the preinstalled Bitstream something-or-other wasn't bad either). Coming from Windows/stock Android, it's interesting to me that changing the system fonts is allowed and encouraged.
+
+I picked a red theme. It's nice but sometimes the red is used as an accent color in a place I don't expect, then it looks like an error...!
 
 ### Graphics drivers
 
@@ -145,11 +151,11 @@ This leaves the appimage. Which worked!
 
 ## Minecraft
 
-It runs at native resolution, which is kind of a problem on a hidpi display when you're fillrate limited...
+It runs at native resolution, which is kind of a problem on a hidpi display when you're fillrate limited... (Most of my Windows hidpi-related problems were related to trying to upscale Minecraft.)
 
 Entering fullscreen literally doubles the framerate though. I haven't tried mods like Sodium yet.
 
-Kat told me about `gamescope` which can be used as a wrapper command to run games at lower resolutions and upscale them (the Steam Deck uses it?). Sounds like fun but I think I'll need to compile it myself or find a sketchy deb.
+Kat told me about `gamescope` which can be used as a wrapper command to run games at lower resolutions and upscale them (the Steam Deck uses it?). Sounds like fun but I think I'll need to compile it myself or find a sketchy deb. (Also this reminds me, probably worth something to add wrapper command support to my Minecraft toolchains. would it be possible to run Minecraft through `gamescope` and still debug it?)
 
 ## The text editor
 
@@ -161,9 +167,11 @@ You can set autosave to happen every 1 minute. While it's autosaving it will eat
 
 ## Bluetooth keyboard
 
-Well it straight up doesn't work through the graphical interface. You can pair and connect but typing on the keyboard doesn't work. Cool!
+Well it straight up doesn't work through the graphical interface. You can pair and connect, but typing on the keyboard doesn't work. Cool!
 
 Through googling I found [this blogspammy page](https://computingforgeeks.com/connect-to-bluetooth-device-from-linux-terminal/) about connecting to things using `bluetoothctl`, which has an absolutely fucking useless man page BTW, i had to google around to find it's part of "BlueZ".
+
+At least it survived a reboot (I can even type my login password with the bluetooth keyboard). I'm not sure if it will survive a unpair/repair and I don't intend to find out :D
 
 ## Steam
 
@@ -173,7 +181,7 @@ I installed Steam through the installer program in Software Manager. Went uneven
 
 For some reason mouselook wasn't working at first. I thought it'd be some freak bug but it turns out `cl_mouselook` was just set to 0. Lol.
 
-Fullscreen seems... faked, somehow. Like even when the game is set to fullscreen 720p, it's just being upscaled to fill the whole display instead of changing my resolution to 720p. The mouse cursor is tiny, stuff can get composited over the game.
+Fullscreen seems... faked, somehow? Like even when the game is set to fullscreen 720p, it's just being upscaled to fill the whole display instead of changing my resolution to 720p. The mouse cursor is tiny, stuff can get composited over the game.
 
 Puzzlemaker compiling does not work, I guess it's not able to run the compiler tools. TODO.
 
@@ -203,9 +211,9 @@ I heard about a tool called `pbuilder` which can help you scaffold clean chroots
 
 The bootloader. It's that thing you see when you first turn on the computer. On my computer, because I'm dual-booting, it has a menu allowing me to pick between Linux and Windows.
 
-I think configuration happens like this:
+I think the configuration works like this:
 
-* you configure the scripts in `/etc/default/grub` and maybe add some dropins in `/etc/default/grub.d`
+* you configure the script in `/etc/default/grub`, and/or add some dropins in `/etc/default/grub.d`
     * I guess there's also ones in `/etc/grub.d` (no `default`). But arch wiki says don't touch those
 * you run `update-grub`, which runs those scripts and puts the results in `/boot/grub/grub.cfg`. The grub bootloader itself reads that file (it's a little language they call "shell-like scripting")
     * I also see a program called `grub-mkconfig`, what's the difference
@@ -213,7 +221,11 @@ I think configuration happens like this:
 
 I made a dropin at `/etc/default/grub.d/69_quat.cfg`.
 
-By default the grub menu is way too small owing to the laptop's 4k display. You can change the video mode using the `GRUB_GFXMODE` variable in one of those dropin files but I don't want to know what happens if I accidentally pick a value that my system doesn't support. Maybe the best solution is to boot into the (teeny tiny) GRUB terminal and run `videoinfo`?
+By default the grub menu is way too small owing to the laptop's 4k display; not only that but the program is clearly lagging from having to drive that many pixels. You can change the video mode using the `GRUB_GFXMODE` variable in one of those dropin files, but I don't want to know what happens if I accidentally pick a value that my system doesn't support. Instead I booted into the teeny tiny GRUB terminal and ran `videoinfo` to list the video modes. It was currently using `3840x2160x32` which is a bit much. I added `GRUB_GFXMODE=1024x768x32` to my dropin file, one of the supported options.
+
+While I was there I also added `GRUB_TIMEOUT=5` to reduce the automatic countdown from 10 to 5 seconds.
+
+One `update-grub` later and wahey it works. The Mint logo used as a boot splash is a little stretched-looking now (that'll happen when you stretch a 4:3 resolution to a 16:9 display). I don't care.
 
 ## "Drop-in files"
 
@@ -230,6 +242,8 @@ It isn't a formal standard, just some place that software packagers set aside fo
 ## Things to look into later
 
 * How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
-* How to make GRUB bigger (and configure it in general)? I forgot this computer had a 4k display, turned it to 1080p due to constant Windows DPI scaling woes, and GRUB is so freakin tiny
 * What on earth is going on with this Flatpak stuff
-* Git credentials. There is Microsoft's `git-credential-manager`, which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).
+* You can disable mouse acceleration through the graphical interface but you can't disable *trackpad* acceleration. Ugh!!!
+* Gotta set up gamescope
+* Git credentials. There is Microsoft's `git-credential-manager`, which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).\
+    * I'd like to figure out the GNOME keyring in general, put some ssh keys there maybe...
