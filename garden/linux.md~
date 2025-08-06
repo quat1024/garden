@@ -197,11 +197,11 @@ And this will be further complicated by the fact that I'm actually on Mint which
 
 This place https://wiki.debian.org/Packaging is probably a good place to start looking.
 
-I heard about a tool called `pbuilder` which can help you scaffold clean chroots to build packages with a better knowledge of the "system packages" that leak into the environment. Could be interesting. See also [landley/toybox](https://github.com/landley/toybox/blob/b8186ba3c4d9548da2ae8b8aaf388b2a04f1966b/scripts/install.sh#L96)'s "airlock" stuff.
+I heard about a tool called `pbuilder` which can help you scaffold clean chroots to build packages with a better knowledge of the "system packages" that leak into the environment. Could be interesting. See also 
 
 ## Things to look into later
 
 * How's the DPI scaling situation, especially wrt. games I want to upscale instead of run at native resolution (for performance reasons)
-* How to make GRUB bigger (and configure it in general)? I forgot this computer had a 4k display, turned it to 1080p due to constant Windows DPI scaling woes, and GRUB is so freakin tiny
+* How to make GRUB bigger (and configure ir in general)? I forgot this computer had a 4k display, turned it to 1080p due to constant Windows DPI scaling woes, and GRUB is so freakin tiny
 * What on earth is going on with this Flatpak stuff
 * Git credentials. There is Microsoft's `git-credential-manager`, which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).
