@@ -2,6 +2,16 @@
 
 Yet another netizen's "now" page which will fall out-of-date within two weeks.
 
+## Aug 8, 2025
+
+Project Sanity continues apace although I should have picked a better name for it. I fought a war against refmaps and won, so it compiled its first production-ready mods. Maybe I'll even be able to release a few of this new generation of my mods, sooner rather than later.
+
+[Installed Linux Mint](/linux) on my laptop in preparation for the upcoming Windows 10 decommissioning. I think it's pretty great, surprised I didn't do this sooner. Everything feels faster.
+
+Playing some mostly-vanilla Minecraft to unwind. It's been a long time since I just *played Minecraft* and enjoyed it for what it is. I feel a bit inspired again!
+
+Scheduled for classes. Mostly non-CS electives this time. Feeling somewhat mentally well, for once, although the situation at home isn't much better.
+
 ## Jul 19, 2025
 
 Putting modded MC projects on hold for now due to... a family situation unfolding at home.
