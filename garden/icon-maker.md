@@ -3,7 +3,9 @@
 Some color picker tools:
 
 * [una's colorspace toy](https://unascribed.com/junk/colorspaces.html)
-* [Materal Design colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors).
+* [Materal Design colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
+
+uses "jetbrains mono" font, i added it as a webfont, if you don't have it installed might need to wiggle a slider
 
 ```{=html}
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
