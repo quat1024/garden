@@ -89,7 +89,8 @@ clean: cleanspecial
 	rm -rf ./tmp
 
 serve:
-	miniserve -v out --index index.html
+	#miniserve -v out --index index.html
+	cd out && python3 -m http.server 8080
 
 open:
 	start http://[::1]:8080
