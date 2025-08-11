@@ -28,6 +28,7 @@ Tools:
 
 * the [lang trimmer](lang-trimmer)
 * [Versions for things](versions)
+* [Season 2 Icon Generator](icon-maker)
 
 ## Class notes
 
