@@ -8,6 +8,8 @@ Hi, welcome to my brain.
 
 ## Minecrafty stuff
 
+Some documentation for my Minecraft mods is available [here](/mods/).
+
 * [Collected notes on the DataFixerUpper papers](/dfu/index)
 * [Forge, Bitrot, and You; or, The `e04c5335922c5e457f0a7cd62c93c4a7f699f829` Problem](forge-bitrot)
 * [Running a modpack on a server](modpack-on-server)
