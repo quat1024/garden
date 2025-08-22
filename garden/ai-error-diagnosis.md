@@ -17,7 +17,7 @@ Caused by: java.lang.IllegalStateException: There should be exactly one IXplatAb
 	... 15 more
 ```
 
-This is a genuine problem with Patchouli booting - it's not able to find the platform-specific support code. There is [an open issue about it](https://github.com/VazkiiMods/Patchouli/issues/792); we don't really know what causes it yet. Something is breaking the ServiceLoader it uses within `IXplatAbstractions#find`? That shouldn't ever happen.
+This was a genuine problem with Patchouli booting - it wasn't able to locate the modloader-specific support code. There is [an issue about it](https://github.com/VazkiiMods/Patchouli/issues/792). It turned out to be an obscure classloading issue that crops up when Forge's multithreaded modloading schedules a Patchouli addon to load before Patchouli *and* on a different thread. A random race condition. (It's been fixed in the newest versions.)
 
 Anyway, user B shows up and pastes this wall-of-text into the discord channel. It is clearly generated with ChatGPT, something they later admit to.
 
@@ -147,7 +147,7 @@ More generic broadly-applicable advice.
 
 # Takeaways
 
-* It's crystal-clear to me that Patchouli is causing the problem. It even matches an existing bug pattern found on the github. But this AI report makes no mention of Patchouli.
+* It's crystal-clear to me that Patchouli is causing the problem. It even matches a bug pattern found on the github. But this AI report makes no mention of Patchouli.
 * The advice it gives is completely generic.
 * It will send you on red herrings.
 * Wasting support-channel space on
@@ -164,14 +164,15 @@ More generic broadly-applicable advice.
   
   helps nobody.
 
-However, the general advice it gives isn't too terrible?
+The *general* advice it gives isn't horrible?
 
 * Yes, "some mods may not work well with others".
 * Yes, check the crash report file.
   * Obviously if you're asking for help with your crash report file, you already did that.
-	* This is infinitely better than posting "help it crashed", posting a screenshot of Neo's terrible error GUI, or God forbid [the "exit code"](https://highlysuspect.agency/exit-code-1/).
+  * This is infinitely better than posting "help it crashed", posting a screenshot of Neo's terrible error GUI, or God forbid [the "exit code"](https://highlysuspect.agency/exit-code-1/).
 * Yes, try updating mods to the latest version.
   * (Generally if you're playing someone else's modpack, though, be careful about updating mods willy-nilly)
 * Yes, try removing some mods temporarily and seeing if that fixes the problem. If you don't know where to start, try removing half the mods.
+  * But you have to remember to never load your main world with mods removed, or else you will permanently destroy everything related to those mods.
 
-It's just -- you don't need an AI to tell you that, given that it applies to literally every Minecraft problem, and half of all non-Minecraft tech support problems too.
+It's just -- you don't need an AI to examine your crash report to tell you that stuff. It applies to literally every Minecraft problem, and applies to half of all non-Minecraft tech support problems too.
