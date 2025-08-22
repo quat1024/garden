@@ -45,9 +45,9 @@ Prior to *Season 2*, stickiness behaved differently. There was no *Sticky Syrup*
 
 Packages cannot be used to cause "nbt overflow" even though they are recursive. This is because packages can only contain one type of item at a time and there is a recursion limit.
 
-If a package block entity contains the NBT `{bcLocked:1b}`, the block is "locked" and cannot be interacted with. Note that the block can still be broken and this tag is not copied onto the item, so you need another solution for making packages unbreakable if you want to use this tag. (This was added hastily for Blanketcon.)
-
 In the Package Crafter, Packages can be crafted out of any `BlockItem` representing a solid-enough block. The item tag `packages:banned_from_package_maker` can further forbid items from being used to craft Packages if there are items causing display issues.
+
+The item tag `packages:things_you_need_for_package_crafting` contains valid items for the lower-right slot of the Package Crafter. If you change this away from copper ingots, please adjust the language keys on the tooltip as well.
 
 Any item can be put in a package except for:
 
@@ -61,6 +61,8 @@ The item tag `packages:banned_from_package` can further restrict items from ente
 In the config file, "package maker allowlist mode" can be enabled. Then only items in the `packages:allowlist_package_maker_frame` and `packages:allowlist_package_maker_inner` tags are permitted in the Package Crafter in the respective slots.
 
 The block tag `packages:sticky` can be used to control "sticky" blocks for the old stickiness mechanic.
+
+If a package block entity contains the NBT `{bcLocked:1b}`, the block is "locked" and cannot be interacted with. Note that the block can still be broken and this tag is not copied onto the item. You need another solution for making packages unbreakable if you want to use this tag. (This was added hastily for Blanketcon.)
 
 In 1.21.1, the data component types used by Packages are:
 
