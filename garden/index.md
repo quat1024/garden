@@ -25,6 +25,7 @@ Some documentation for my Minecraft mods is available [here](/mods/).
 * [Reddit hivemind opinions](reddit)
 * [Datapacks bad](datapacks-bad)
 * [Portbeg tier list](portbeg-tier-list)
+* [Modded minecraft security concerns](modded-security)
 
 Tools:
 
@@ -40,6 +41,7 @@ Tools:
 
 ## Software
 
+* Join me on my [Linux](linux) adventure.
 * [How do you set up SSH keys?](sshkey)
 * [How do you set up `signify`?](signify)
 * [Tmux cheat sheet](tmux)

@@ -193,3 +193,7 @@ Common modding versions:
 | 1.21.5 | 55 | 71 |
 
 Mods end up sharing `pack.mcmeta` across the resource and data pack just due to how modloaders load the mod jar as a resourcepack and a datapack. Forge, from 1.18 through 1.20.1 (and maybe later but who cares right), had a [split `pack_format`](https://github.com/MinecraftForge/MinecraftForge/pull/8612) thing for the pedants; neoforge has apparently [removed the requirement to add `pack.mcmeta` in the first place](https://docs.neoforged.net/docs/resources/#packmcmeta). But all versions accept `"pack_format": 99999` :)
+
+## Other
+
+Piston-meta: https://piston-meta.mojang.com/mc/game/version_manifest_v2.json
