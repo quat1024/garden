@@ -34,12 +34,13 @@ Stickiness is a property of the *block*; when you break and replace a package yo
 
 ### Old system
 
-Prior to *Season 2*, stickiness behaved differently. There was no *Sticky Syrup* item. Instead, a package became sticky when it was placed next to a slime or honey block. The old stickiness mechanic is, for the time being, reenableable inthe config file.
+Prior to *Season 2*, stickiness behaved differently. There was no *Sticky Syrup* item. Instead, a package temporarily became sticky when it was placed next to a slime or honey block. The old stickiness mechanic is, for the time being, reenableable in the config file.
 
-## Oddities
+## Curiosities
 
-* When you "take stack", if you're already holding an incomplete stack of the same item that's in the Package, it will give you as many items as it can without them needing to spill into another inventory slot. You can shift-click again to take more stacks.
-* Packages don't make insertion/removal sounds if you are invisible.
+* If you ctrl-right-click an empty package with an empty hand, it will insert whatever item you have the *most* of. One way to organize your inventory after a mining trip is to line up five or six empty packages and ctrl-right-click on each one.
+* When you shift-left-click a package, if you're already holding an incomplete stack of the same item that's in the package, it will actually *replenish the stack* back up to 64. To take more stacks you can keep shift-left-clicking.
+* Packages don't make insertion/removal sounds if you have the Invisibility effect. Do with this information what you will.
 
 ## Modpacker info
 
