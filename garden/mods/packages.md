@@ -38,8 +38,9 @@ Prior to *Season 2*, stickiness behaved differently. There was no *Sticky Syrup*
 
 ## Curiosities
 
-* If you ctrl-right-click an empty package with an empty hand, it will insert whatever item you have the *most* of. One way to organize your inventory after a mining trip is to line up five or six empty packages and ctrl-right-click on each one.
+* If you ctrl-right-click an empty package with an empty hand, it will insert whatever item you have the *most* of. One way to organize your inventory after a mining trip is to line up five or six empty packages and ctrl-right-click on each one in turn.
 * When you shift-left-click a package, if you're already holding an incomplete stack of the same item that's in the package, it will actually *replenish the stack* back up to 64. To take more stacks you can keep shift-left-clicking.
+* If you're holding an axe, you can still mine packages from the front.
 * Packages don't make insertion/removal sounds if you have the Invisibility effect. Do with this information what you will.
 
 ## Modpacker info
