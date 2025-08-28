@@ -292,6 +292,64 @@ Probably not a big concern for desktop use-cases, unless you have [some sort of 
 
 TODO: What is `/etc/profile.d/` for? Is there a different place these variables can go?
 
+## Running things on the dedicated GPU
+
+The laptop has an nvidia gtx 1080 or something as well as Intel 630 integrated graphics. I noticed the dedicated GPU wasn't being used when playing games.
+
+Less of a problem in practice than I thought, the integrated graphics are surprisingly decent and this laptop has always had thermal issues w/ the gpu. I just put minecraft on 30fps and it's fine on integrated graphcs. Barely spins the fans! Even at 4k! How the hell?
+
+Still I paid for the GPU so I should probably figure out how to use it.
+
+### Putting the whole desktop on the dedicated gpu
+
+There's a widget in the lower-right of the screen. I think it came as part of the nvidia proprietary drivers. Clicking on it changes the entire desktop between three rendering modes:
+
+* "nvidia on-demand", the default
+* "intel (power saving mode)"
+* "nvidia (performance mode)"
+
+It requires a logout and login to change, so i've never really used it.
+
+The bottom two options control whether *everything*, including the desktop, is rendered with integrated graphics or dedicated graphics. This does lead to "power saving" but only because the dedicated gpu is ridiciulously power hungry.
+
+The top option is more complicated:
+
+### Running only *some* programs on the dedicated gpu
+
+Using the dedicated GPU for some things and the integrated GPU for other things is an *involved* task for both pieces of hardware. If you want to run the desktop on integrated graphics but run a game on dedicated graphics, the dedicated card needs some way to render pixels into a buffer where the integrated card can see them, since it's the one actually connected to the display.
+
+Nvidia calls this [nvidia optimus](https://www.nvidia.com/en-us/geforce/technologies/optimus/technology/). Check out that funny chart on the page lol
+
+[Prime](https://wiki.archlinux.org/title/PRIME) is the Linux kernel's support for this.
+
+*I use the NVIDIA proprietary drivers.* It seems like there is/used-to-be [a program called `prime-run`](https://wiki.archlinux.org/title/PRIME#PRIME_render_offload)? I can't find this program on mint. [There's some environment variables](https://askubuntu.com/questions/1364762/prime-run-command-not-found) which are maybe what the prime-run program does:
+
+```sh
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __VK_LAYER_NV_optimus=NVIDIA_only
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+```
+
+Setting these (one-by-one) in the prism launcher "environment variables" dialog caused minecraft to run on the dedicated GPU, then caused my laptop to nearly turn off from the power draw.
+
+It seems if you use the open-source drivers, [DRI_PRIME=1](https://wiki.archlinux.org/title/PRIME#For_open_source_drivers_-_PRIME) can be set to enable the optimus stuff. This apparently does not work on the proprietary drivers! When I booted minecraft with this variable I got sent to the `llvmpipe` dimension.
+
+Genious oomfie to the rescue
+
+> PRIME is the Linux kernel support for this *[hybrid graphics]*, `DRI_PRIME=1` is how you force Mesa to use it (i.e. to force it to not render on the GPU connected to the monitor, which in your case made it fall back to software rendering)
+> the equivalent on modern Nvidia Linux drivers is `__NV_PRIME_RENDER_OFFLOAD=1`, but for OpenGL you also need `__GLX_VENDOR_LIBRARY_NAME=nvidia` so that it uses the Nvidia userspace drivers instead of Mesa
+> 
+> https://60228.dev/@leo/115104075646927934
+> 
+> for completeness, `VK_ICD_FILENAMES` and `__VK_LAYER_NV_optimus` are redundant with each other and neither should be necessary in the first place. Vulkan has proper support for multiple GPUs that each use different drivers, overriding `VK_ICD_FILENAMES` prevents Mesa from loading and `__VK_LAYER_NV_optimus=NVIDIA_only` makes the Nvidia drivers hide all non-Nvidia GPUs
+> 
+> https://60228.dev/@leo/115104086407560578
+> 
+> `__NV_PRIME_RENDER_OFFLOAD=1` has a different meaning for Vulkan than OpenGL, for Vulkan it makes the Nvidia driver sort itself before Mesa instead of afterwards (since most applications just do the equivalent of `gpus[0]`)
+> 
+> https://60228.dev/@leo/115104090778768470
+
 ## Things to look into later
 
 * What on earth is going on with this Flatpak stuff. What is Flatpak. Why is Flatpak.
