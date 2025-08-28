@@ -268,12 +268,34 @@ blacklist snd_soc_avs
 
 Rebooted and sound worked yay. But it's apparently a race condition, maybe I just got luckier this boot.
 
+## xinput2 thing on Firefox
+
+Following directions [here](https://old.reddit.com/r/linux/comments/72mfv8/), although I used the graphical file manager instead of `sudo tee`. Created a file at `/etc/profile.d/quat.sh` with these contents.
+
+```sh
+# better scrolling
+# https://old.reddit.com/r/linux/comments/72mfv8/
+
+export MOZ_USE_XINPUT2=1
+```
+
+and made sure to mark the file i created as "executable".
+
+This fixed:
+
+* two-finger trackpad scrolling being *way* too fast, and clearly emulating a mousewheel, scrolling a few lines at a time instead of continually
+* touchscreen inputs selecting text instead of scrolling the document
+
+I did not disable the firefox-side "smooth scrolling" option since it also disables smooth scrolling when using an actual mousewheel plugged into the laptop.
+
+Probably not a big concern for desktop use-cases, unless you have [some sort of high-resolution scrolling device](https://ploopy.co/shop/knob/).
+
+TODO: What is `/etc/profile.d/` for? Is there a different place these variables can go?
+
 ## Things to look into later
 
 * What on earth is going on with this Flatpak stuff. What is Flatpak. Why is Flatpak.
 * You can disable mouse acceleration through the graphical interface but you can't disable *trackpad* acceleration. Ugh!!!
 * Gotta set up gamescope
-* Git credentials. There is Microsoft's `git-credential-manager` which i use on Windows, but i wonder if there's something that integrates with the [GNOME keyring](https://wiki.gnome.org/Projects/GnomeKeyring)? (i think that's what the the "Passwords and Keys" application is a frontend for).
-    * I'd like to figure out the GNOME keyring in general, put some ssh keys there maybe...
 
 I'd also like to research more systemd topics: useful commands for administration and checking in on things, what are "unit files" and how can I write my own, any useful "targets" to know, where are the logs and do I need to clean them, how to list important units, shit like that.
