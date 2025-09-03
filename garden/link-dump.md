@@ -17,6 +17,7 @@ Unsurprisingly this is the largest category.
 * [vs3](https://github.com/silversquirl/vs3). "Static site generator" in bash.
 * [tinywm](http://incise.org/tinywm.html), might be useful for learning how to write window managers.
 * ["A virtual DOM in 200 lines of Javascript"](https://lazamar.github.io/virtual-dom/)
+* [Type inference for json documents](https://www.haskellforall.com/2025/08/type-inference-for-plain-data.html) (also this blog is good)
 
 ### Putting up with LLMs
 
