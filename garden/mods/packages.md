@@ -79,6 +79,14 @@ It was unascribed's idea to allow in-inventory interactions like a Bundle.
 
 ## Changelog (Season 2)
 
+### v2025.09.11
+
+* In-game version number is now zero-padded, just like it is on mod hosting platforms. [GH#1](https://github.com/quat1024/mods/issues/1) 
+* Update bundled copy of ModderNameLib to 2025.09.11.
+* (1.20.1) Fix a scenario where if a mod forgets to call `Package#canPlaceItem`, it can lead to a dupe bug. It will now void the offending items instead (there isn't much else I can do). [GH#8](https://github.com/quat1024/mods/issues/8)
+* (1.21.1) Restructure the package and package-crafter retexturing logic. It's a lot simpler now (and uses some of the new moddernamelib code).
+  * This will come to 1.20.1 at a later time
+
 ### v2025.08.21
 
 * Now available for 1.21.1 Fabric as well as 1.20.1.
