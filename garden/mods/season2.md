@@ -30,6 +30,23 @@ It is called "Modder Name Lib" because "moddernamelib" is a derisive term for "l
 
 ## Changelog
 
+### v2025.09.11
+
+* In-game version number is now zero-padded, just like it is on mod hosting platforms. [GH#1](https://github.com/quat1024/mods/issues/1) 
+* Update bundled copy of ModderNameLib to 2025.09.11.
+
+#### ModderNameLib
+
+* (1.20.1) Fix Fabric 1.20.1 mods crashing on startup when using Java 17. Sorry about that. [GH#7](https://github.com/quat1024/mods/issues/7)
+* (1.21.1) Include a small amount of code for working with "retexturable models".
+  * This will come to 1.20.1 at a later time.
+
+#### Packages
+
+* (1.20.1) Fix a scenario where if a mod forgets to call `Package#canPlaceItem`, it can lead to a dupe bug. It will now void the offending items instead (there isn't much else I can do). [GH#8](https://github.com/quat1024/mods/issues/8)
+* (1.21.1) Restructure the package and package-crafter retexturing logic. It's a lot simpler now (and uses some of the new moddernamelib code).
+  * This will come to 1.20.1 at a later time
+
 ### v2025.08.21
 
 This is a test release of mods created with my new modding pipeline. Please report any bugs/crashes. 
