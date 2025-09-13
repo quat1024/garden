@@ -30,6 +30,19 @@ It is called "Modder Name Lib" because "moddernamelib" is a derisive term for "l
 
 ## Changelog
 
+### v2025.09.12
+
+#### ModderNameLib
+
+* "Latches", a datatype MNL uses to refer to things it's going to register, are now deduplicated
+* (1.20.1) Backport the "retexturable model" code from 1.21.1
+
+#### Packages
+
+* Remove usage of a deprecated fabric-rendering-api method
+* (1.20.1) Backport the improved model retexturing engine from 1.21.1
+* (1.20.1) Fix horrible dupe bug lmao
+
 ### v2025.09.11
 
 * In-game version number is now zero-padded, just like it is on mod hosting platforms. [GH#1](https://github.com/quat1024/mods/issues/1) 

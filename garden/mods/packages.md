@@ -79,6 +79,12 @@ It was unascribed's idea to allow in-inventory interactions like a Bundle.
 
 ## Changelog (Season 2)
 
+### v2025.09.12
+
+* Remove usage of a deprecated fabric-rendering-api method
+* (1.20.1) Backport the improved model retexturing engine from 1.21.1
+* (1.20.1) Fix horrible dupe bug lmao
+
 ### v2025.09.11
 
 * In-game version number is now zero-padded, just like it is on mod hosting platforms. [GH#1](https://github.com/quat1024/mods/issues/1) 
