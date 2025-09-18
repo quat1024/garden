@@ -84,7 +84,9 @@ class Tool {
     boolean draft;
     
     int compareByTitle(Meta other) {
-      return title.toLowerCase(Locale.ROOT).compareTo(other.title.toLowerCase(Locale.ROOT));
+      String myTitle = title.toLowerCase(Locale.ROOT).replaceAll("[^a-z]", "");
+      String theirTitle = other.title.toLowerCase(Locale.ROOT).replaceAll("[^a-z]", "");
+      return myTitle.compareTo(theirTitle);
     }
     
     int compareByDate(Meta other) {
