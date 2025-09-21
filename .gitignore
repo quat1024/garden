@@ -1,5 +1,6 @@
 out/
 tmp/
+precompiled-pagefind/
 garden/blog/index.md
 garden/makefile.md
 garden/listing.md

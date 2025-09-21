@@ -14,6 +14,9 @@ slow-outs      := out/pagefind
 
 tool-out       := tmp/tool/
 
+PAGEFIND := ./precompiled-pagefind/pagefind
+# or npx -y pagefind
+
 $(shell mkdir -p out)
 $(shell mkdir -p tmp)
 
@@ -78,9 +81,9 @@ out/%: static/%
 	
 # run pagefind nly oafter creating html files
 out/pagefind: $(outs)
-	npx -y pagefind --site out
+	$(PAGEFIND) --site out
 
-.PHONY: clean cleanspecial serve open push
+.PHONY: clean cleanspecial serve open deploy push
 cleanspecial:
 	rm -f $(garden-special) $(static-special)
 
@@ -95,10 +98,16 @@ serve:
 open:
 	start http://[::1]:8080
 
+deploy:
+	./deploy.sh
+
+# i have muscle-memory that "make push" deploys the site
+
 push:
 	git add .
 	git commit -m "lazy commit"
 	git push
+	./deploy.sh
 
 # fake perpetually out-of-date target, used by the listing trick
 FORCE:
