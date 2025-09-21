@@ -98,7 +98,7 @@ serve:
 open:
 	start http://[::1]:8080
 
-deploy:
+deploy: all
 	./deploy.sh
 
 # i have muscle-memory that "make push" deploys the site
